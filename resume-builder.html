@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Free Professional Resume Builder | Create CV Online | AllToolsFree</title>
+    <meta name="description" content="Build a professional resume for free with Jiban70's AllToolsFree. Live preview, modern templates, and instant PDF download. No registration required.">
+    <meta name="keywords" content="resume builder, free cv maker, online resume creator, professional cv template, Jiban70 career tools, AllToolsFree resume, download resume pdf, job application tools 2025">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/resume-builder.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); }
+
+        nav { max-width: 1400px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        .builder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: calc(100vh - 80px);
+            gap: 0;
+        }
+
+        /* LEFT SIDE: INPUT FORM */
+        .form-side {
+            padding: 40px;
+            overflow-y: auto;
+            background: #020617;
+            border-right: 1px solid var(--glass-border);
+        }
+
+        .input-section { margin-bottom: 30px; }
+        h3 { margin-bottom: 20px; color: var(--primary); text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+
+        .field { margin-bottom: 15px; }
+        label { display: block; font-size: 12px; color: #94a3b8; margin-bottom: 5px; }
+        input, textarea {
+            width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--glass-border);
+            background: #1e293b; color: white; outline: none; transition: 0.3s;
+        }
+        input:focus { border-color: var(--primary); }
+
+        /* RIGHT SIDE: PREVIEW */
+        .preview-side {
+            padding: 40px;
+            background: #334155;
+            display: flex;
+            justify-content: center;
+            overflow-y: auto;
+        }
+
+        /* THE ACTUAL RESUME PAPER */
+        #resume-paper {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            color: #333;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: scale(0.85);
+            transform-origin: top center;
+        }
+
+        .res-header { border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 25px; }
+        .res-name { font-size: 32px; font-weight: 800; text-transform: uppercase; color: #1e293b; }
+        .res-contact { font-size: 12px; color: #64748b; margin-top: 5px; }
+
+        .res-section-title { font-size: 16px; font-weight: 800; color: #2563eb; margin-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
+        .res-body { font-size: 13px; line-height: 1.6; margin-bottom: 20px; font-family: 'Inter', sans-serif; white-space: pre-line; }
+
+        .btn-print {
+            position: fixed; bottom: 30px; right: 30px;
+            padding: 15px 30px; background: var(--primary); color: white;
+            border: none; border-radius: 50px; font-weight: 800; cursor: pointer;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        @media print {
+            body * { visibility: hidden; }
+            #resume-paper, #resume-paper * { visibility: visible; }
+            #resume-paper { position: absolute; left: 0; top: 0; transform: scale(1); box-shadow: none; width: 100%; }
+        }
+
+        @media (max-width: 1000px) {
+            .builder-grid { grid-template-columns: 1fr; }
+            .preview-side { display: none; } /* Hide preview on mobile for better UX */
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; font-weight: 800; color: #22c55e;"><i class="fas fa-file-export"></i> ATS-OPTIMIZED EXPORT</div>
+</nav>
+
+<div class="builder-grid">
+    <div class="form-side">
+        <div class="input-section">
+            <h3><i class="fas fa-user"></i> Personal Information</h3>
+            <div class="field"><label>Full Name</label><input type="text" id="in-name" placeholder="John Doe" oninput="updateResume()"></div>
+            <div class="field"><label>Email & Phone</label><input type="text" id="in-contact" placeholder="john@email.com | +1 234 567" oninput="updateResume()"></div>
+            <div class="field"><label>Location</label><input type="text" id="in-loc" placeholder="New York, USA" oninput="updateResume()"></div>
+        </div>
+
+        <div class="input-section">
+            <h3><i class="fas fa-briefcase"></i> Professional Summary</h3>
+            <div class="field"><textarea id="in-sum" rows="4" placeholder="Briefly describe your career goals..." oninput="updateResume()"></textarea></div>
+        </div>
+
+        <div class="input-section">
+            <h3><i class="fas fa-history"></i> Experience</h3>
+            <div class="field"><textarea id="in-exp" rows="6" placeholder="Job Title | Company | Dates&#10;- Key achievement 1&#10;- Key achievement 2" oninput="updateResume()"></textarea></div>
+        </div>
+
+        <div class="input-section">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="field"><textarea id="in-edu" rows="3" placeholder="Degree Name | University | Graduation Date" oninput="updateResume()"></textarea></div>
+        </div>
+
+        <div class="input-section">
+            <h3><i class="fas fa-tools"></i> Skills</h3>
+            <div class="field"><input type="text" id="in-skills" placeholder="JavaScript, Project Management, SEO" oninput="updateResume()"></div>
+        </div>
+    </div>
+
+    <div class="preview-side">
+        <div id="resume-paper">
+            <div class="res-header">
+                <div class="res-name" id="out-name">Your Name</div>
+                <div class="res-contact">
+                    <span id="out-contact">Email | Phone</span> • <span id="out-loc">Location</span>
+                </div>
+            </div>
+
+            <div class="res-section-title">PROFESSIONAL SUMMARY</div>
+            <div class="res-body" id="out-sum">Enter your summary details to see them appear here in real-time.</div>
+
+            <div class="res-section-title">WORK EXPERIENCE</div>
+            <div class="res-body" id="out-exp">List your professional history.</div>
+
+            <div class="res-section-title">EDUCATION</div>
+            <div class="res-body" id="out-edu">Add your academic background.</div>
+
+            <div class="res-section-title">SKILLS & EXPERTISE</div>
+            <div class="res-body" id="out-skills">Your top skills.</div>
+        </div>
+    </div>
+</div>
+
+<button class="btn-print" onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
+
+<script>
+    function updateResume() {
+        const fields = [
+            {in: 'in-name', out: 'out-name', default: 'Your Name'},
+            {in: 'in-contact', out: 'out-contact', default: 'john@email.com | +123'},
+            {in: 'in-loc', out: 'out-loc', default: 'Location'},
+            {in: 'in-sum', out: 'out-sum', default: 'Summary appears here...'},
+            {in: 'in-exp', out: 'out-exp', default: 'Experience appears here...'},
+            {in: 'in-edu', out: 'out-edu', default: 'Education appears here...'},
+            {in: 'in-skills', out: 'out-skills', default: 'Skill 1, Skill 2'}
+        ];
+
+        fields.forEach(field => {
+            const val = document.getElementById(field.in).value;
+            document.getElementById(field.out).innerText = val || field.default;
+        });
+    }
+</script>
+</body>
+</html>

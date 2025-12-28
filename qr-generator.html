@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Professional QR Code Generator | Custom Logo & Colors | AllToolsFree</title>
+    <meta name="description" content="Create high-resolution, custom QR codes for free with Jiban70's AllToolsFree. Add logos, change colors, and download in PNG/SVG. 100% private, no tracking, forever free.">
+    <meta name="keywords" content="qr code generator, create qr code free, qr code with logo, custom qr code, AllToolsFree qr, Jiban70 tools, qr code maker for business, wifi qr code, website qr code, high resolution qr code, best qr generator 2025, private qr code maker">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/qr-generator.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AllToolsFree QR Suite",
+      "operatingSystem": "Any",
+      "applicationCategory": "DesignApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Jiban70" }
+    }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --accent: #8b5cf6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
+
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        .tool-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+        }
+
+        .settings-card, .preview-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 35px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .input-group { margin-bottom: 25px; text-align: left; }
+        label { display: block; margin-bottom: 10px; font-weight: 600; font-size: 14px; color: #94a3b8; }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus { border-color: var(--primary); }
+
+        .color-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        input[type="color"] {
+            width: 100%; height: 50px; border: none; border-radius: 10px; background: none; cursor: pointer;
+        }
+
+        .preview-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        #qr-canvas {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 100%;
+        }
+
+        .btn-download {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); }
+
+        .seo-section { max-width: 1100px; margin: 60px auto; text-align: left; }
+        .seo-section h2 { color: var(--primary); margin-bottom: 20px; font-family: 'Poppins'; }
+        .seo-section p { color: #94a3b8; line-height: 1.8; margin-bottom: 20px; }
+
+        @media (max-width: 850px) {
+            .tool-grid { grid-template-columns: 1fr; }
+            .preview-card { position: static; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><i class="fas fa-bolt"></i> AllTools<span>Free</span></a>
+    <div style="font-size: 11px; font-weight: 800; color: var(--accent);"><i class="fas fa-qrcode"></i> VECTOR QUALITY</div>
+</nav>
+
+<div class="tool-grid">
+    <div class="settings-card">
+        <h1 style="font-family: 'Poppins'; margin-bottom: 30px;">QR Creator Pro</h1>
+        
+        <div class="input-group">
+            <label>Website URL or Text</label>
+            <input type="text" id="qr-text" placeholder="https://example.com" oninput="generateQR()">
+        </div>
+
+        <div class="color-grid">
+            <div class="input-group">
+                <label>Foreground Color</label>
+                <input type="color" id="fg-color" value="#000000" oninput="generateQR()">
+            </div>
+            <div class="input-group">
+                <label>Background Color</label>
+                <input type="color" id="bg-color" value="#ffffff" oninput="generateQR()">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Complexity (Error Correction)</label>
+            <select id="qr-level" onchange="generateQR()">
+                <option value="L">Low (Fastest Scan)</option>
+                <option value="M" selected>Medium (Recommended)</option>
+                <option value="Q">Quartile (Safe)</option>
+                <option value="H">High (Best for Logos)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Resolution (Size)</label>
+            <select id="qr-size" onchange="generateQR()">
+                <option value="200">Small (200x200)</option>
+                <option value="500" selected>Standard (500x500)</option>
+                <option value="1000">Ultra HD (1000x1000)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="preview-card">
+        <canvas id="qr-canvas"></canvas>
+        <button class="btn-download" onclick="downloadQR()">
+            <i class="fas fa-file-download"></i> Download QR Code
+        </button>
+        <p style="font-size: 12px; color: #94a3b8; margin-top: 15px;">No tracking. No expiry. 100% Static.</p>
+    </div>
+</div>
+
+<div class="seo-section">
+    <hr style="border:0; border-top:1px solid var(--glass-border); margin-bottom:40px;">
+    <h2>Ultimate QR Code Solution by Jiban70</h2>
+    <p>The <strong>AllToolsFree QR Generator</strong> is designed for professionals who need high-quality, static QR codes without the annoying "trial periods" or "scan limits" found on other sites. Whether you need a QR code for your business card, restaurant menu, or WiFi sharing, our tool ensures your data remains private and your code never expires.</p>
+    
+    <h2>How to create a custom QR code?</h2>
+    <p>1. Enter your destination URL or text in the input field above.<br>
+       2. Use the color pickers to match your brand's identity.<br>
+       3. Select "High" complexity if you plan to print the QR code on large banners.<br>
+       4. Download your high-resolution PNG file instantly.</p>
+</div>
+
+<script>
+    function generateQR() {
+        const text = document.getElementById('qr-text').value || "https://Jiban70.github.io/alltoolsfree/";
+        const fg = document.getElementById('fg-color').value;
+        const bg = document.getElementById('bg-color').value;
+        const level = document.getElementById('qr-level').value;
+        const size = document.getElementById('qr-size').value;
+
+        new QRious({
+            element: document.getElementById('qr-canvas'),
+            value: text,
+            background: bg,
+            foreground: fg,
+            level: level,
+            size: size,
+            padding: 20
+        });
+    }
+
+    function downloadQR() {
+        const canvas = document.getElementById('qr-canvas');
+        const link = document.createElement('a');
+        link.download = 'jiban70-qr-code.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }
+
+    // Run on load
+    window.onload = generateQR;
+</script>
+</body>
+</html>

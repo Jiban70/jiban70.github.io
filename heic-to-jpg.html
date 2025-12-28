@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HEIC to JPG Converter Online | Free & Private | AllToolsFree</title>
+    <meta name="description" content="Convert Apple iPhone HEIC photos to JPG for free with Jiban70's AllToolsFree. No upload required, 100% private browser-based conversion. Fast, high-quality, and secure.">
+    <meta name="keywords" content="heic to jpg, convert heic to jpg online, iphone photo converter, free heic converter, Jiban70 heic tool, AllToolsFree converter, heic to jpeg, convert apple photos to windows, private heic converter, best heic to jpg 2025, no upload heic converter">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/heic-to-jpg.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AllToolsFree HEIC to JPG Converter",
+      "operatingSystem": "Any",
+      "applicationCategory": "MultimediaApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Jiban70" }
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.3/dist/heic2any.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --accent: #f43f5e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
+
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        .tool-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 0 80px rgba(244, 63, 94, 0.1);
+        }
+
+        .upload-area {
+            border: 3px dashed var(--accent);
+            border-radius: 25px;
+            padding: 60px 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            background: rgba(244, 63, 94, 0.05);
+            transition: 0.3s;
+        }
+        .upload-area:hover { background: rgba(244, 63, 94, 0.1); transform: scale(1.01); }
+
+        #loading { display: none; margin: 20px 0; }
+        .loader { border: 4px solid rgba(255,255,255,0.1); border-top: 4px solid var(--accent); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .btn-convert {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--accent), #e11d48);
+            color: white;
+            border: none;
+            border-radius: 18px;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+            transition: 0.3s;
+        }
+        .btn-convert:hover { transform: translateY(-5px); }
+
+        .seo-content { margin-top: 50px; text-align: left; border-top: 1px solid var(--glass-border); padding-top: 30px; }
+        .seo-content h2 { font-size: 20px; color: var(--accent); margin-bottom: 10px; }
+        .seo-content p { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><i class="fas fa-bolt"></i> AllTools<span>Free</span></a>
+    <div style="font-size: 12px; color: var(--accent); font-weight: 700;"><i class="fas fa-apple-alt"></i> IOS COMPATIBLE</div>
+</nav>
+
+<div class="tool-container">
+    <h1 style="font-family: 'Poppins'; font-size: 32px;">HEIC to JPG Converter</h1>
+    <p style="color: #94a3b8; margin-bottom: 40px;">Convert iPhone photos to high-quality JPG instantly.</p>
+
+    <div class="upload-area" id="dropZone" onclick="document.getElementById('heicInput').click()">
+        <i class="fas fa-images" style="font-size: 60px; color: var(--accent); margin-bottom: 20px;"></i>
+        <h3 id="fileName">Select HEIC Image</h3>
+        <p style="color: #94a3b8;">Click to browse (Maximum Privacy)</p>
+        <input type="file" id="heicInput" accept=".heic" style="display:none">
+    </div>
+
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Converting... Please do not close the tab.</p>
+    </div>
+
+    <button id="convertBtn" class="btn-convert" style="display:none;" onclick="startConversion()">Download as JPG</button>
+
+    <div class="seo-content">
+        <h2>What is HEIC?</h2>
+        <p>HEIC (High Efficiency Image Container) is the default photo format for Apple iPhones. While it saves space, it won't open on many Windows PCs or Android phones. <strong>AllToolsFree by Jiban70</strong> provides a secure, no-upload solution to convert your private memories into the universally accepted JPG format.</p>
+    </div>
+</div>
+
+<script>
+    const input = document.getElementById('heicInput');
+    const loading = document.getElementById('loading');
+    const convertBtn = document.getElementById('convertBtn');
+    const fileNameDisplay = document.getElementById('fileName');
+    let selectedFile;
+
+    input.onchange = (e) => {
+        selectedFile = e.target.files[0];
+        if (selectedFile) {
+            fileNameDisplay.innerText = selectedFile.name;
+            convertBtn.style.display = 'block';
+        }
+    };
+
+    async function startConversion() {
+        loading.style.display = 'block';
+        convertBtn.style.display = 'none';
+
+        try {
+            const blob = await heic2any({
+                blob: selectedFile,
+                toType: "image/jpeg",
+                quality: 0.8
+            });
+
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = selectedFile.name.replace(".heic", ".jpg");
+            link.click();
+            
+            loading.style.display = 'none';
+            fileNameDisplay.innerText = "Success! Saved as JPG";
+        } catch (err) {
+            console.error(err);
+            alert("Error converting file. Make sure it's a valid HEIC image.");
+            loading.style.display = 'none';
+            convertBtn.style.display = 'block';
+        }
+    }
+</script>
+</body>
+</html>

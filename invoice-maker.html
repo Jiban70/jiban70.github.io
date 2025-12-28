@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Professional Global Invoice Generator | Multi-Currency | AllToolsFree</title>
+    <meta name="description" content="Create professional invoices for free with Jiban70's AllToolsFree. Supports all global currencies, tax calculations, and instant PDF export. Perfect for freelancers and small businesses.">
+    <meta name="keywords" content="invoice maker, free invoice generator, multi-currency invoice, billing tool online, Jiban70 business tools, AllToolsFree invoice, GST invoice maker, VAT invoice generator, professional receipt maker 2025">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/invoice-maker.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --bg-dark: #020617;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --glass-border: rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; padding: 20px; }
+
+        nav { max-width: 1100px; margin: 0 auto 30px; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo { font-family: 'Poppins'; font-size: 22px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        /* THE INVOICE PAPER */
+        .invoice-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            color: var(--text-dark);
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .header-section { display: flex; justify-content: space-between; margin-bottom: 40px; }
+        .invoice-title { font-family: 'Poppins'; font-size: 40px; color: var(--primary); text-transform: uppercase; }
+
+        .bill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        input, textarea { width: 100%; border: 1px solid #e2e8f0; padding: 10px; margin-top: 5px; border-radius: 5px; font-size: 14px; outline: none; }
+        input:focus { border-color: var(--primary); }
+
+        /* ITEM TABLE */
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+        th { background: #f8fafc; text-align: left; padding: 12px; font-size: 12px; color: #64748b; text-transform: uppercase; }
+        td { padding: 10px; border-bottom: 1px solid #f1f5f9; }
+
+        .btn-add { background: var(--primary); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 15px; font-weight: 700; }
+        .btn-remove { color: #ef4444; border: none; background: none; cursor: pointer; }
+
+        /* TOTALS */
+        .totals-section { display: flex; flex-direction: column; align-items: flex-end; margin-top: 30px; gap: 10px; }
+        .total-row { display: flex; gap: 50px; font-weight: 600; }
+        .grand-total { font-size: 24px; color: var(--primary); border-top: 2px solid #e2e8f0; padding-top: 10px; margin-top: 10px; }
+
+        .toolbar {
+            max-width: 900px; margin: 30px auto; display: flex; gap: 15px; background: #0f172a; padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .currency-select { padding: 10px; border-radius: 8px; background: #1e293b; color: white; border: 1px solid var(--primary); }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .toolbar, nav, .btn-add, .btn-remove, .seo-content { display: none !important; }
+            .invoice-wrapper { box-shadow: none; border: none; width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; font-weight: 800; color: #10b981;"><i class="fas fa-file-invoice-dollar"></i> PDF ENGINE v2.5</div>
+</nav>
+
+<div class="toolbar">
+    <div style="flex-grow: 1;">
+        <label style="font-size: 11px; font-weight: 800; display: block; margin-bottom: 5px;">SELECT CURRENCY</label>
+        <select class="currency-select" id="currency" onchange="updateCalculations()">
+            <option value="$">USD - Dollar ($)</option>
+            <option value="€">EUR - Euro (€)</option>
+            <option value="£">GBP - Pound (£)</option>
+            <option value="₹">INR - Rupee (₹)</option>
+            <option value="¥">JPY - Yen (¥)</option>
+            <option value="A$">AUD - Dollar (A$)</option>
+            <option value="C$">CAD - Dollar (C$)</option>
+            <option value="CHF">CHF - Franc (CHF)</option>
+            <option value="৳">BDT - Taka (৳)</option>
+            <option value="د.إ">AED - Dirham (د.إ)</option>
+            <option value="SR">SAR - Riyal (SR)</option>
+        </select>
+    </div>
+    <button onclick="window.print()" class="btn-add" style="background: #10b981; height: 45px; align-self: flex-end;"><i class="fas fa-print"></i> Download PDF Invoice</button>
+</div>
+
+<div class="invoice-wrapper">
+    <div class="header-section">
+        <div>
+            <h1 class="invoice-title">Invoice</h1>
+            <input type="text" placeholder="Invoice #001" style="font-weight: 800; border: none; font-size: 18px;">
+        </div>
+        <div style="text-align: right;">
+            <input type="text" placeholder="Your Business Name" style="text-align: right; border: none; font-weight: 800; font-size: 18px;">
+            <textarea placeholder="Your Address & Details" style="text-align: right; border: none;"></textarea>
+        </div>
+    </div>
+
+    <div class="bill-grid">
+        <div>
+            <label style="font-size: 11px; font-weight: 800; color: #64748b;">BILL TO</label>
+            <input type="text" placeholder="Client Name">
+            <textarea placeholder="Client Address / Email" rows="3"></textarea>
+        </div>
+        <div>
+            <label style="font-size: 11px; font-weight: 800; color: #64748b;">INVOICE DETAILS</label>
+            <div style="display: flex; gap: 10px;">
+                <input type="date" value="2025-12-28">
+                <input type="text" placeholder="Due Date">
+            </div>
+        </div>
+    </div>
+
+    <table id="itemsTable">
+        <thead>
+            <tr>
+                <th style="width: 50%;">Description</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" value="Project Consultation"></td>
+                <td><input type="number" value="1" class="qty" oninput="updateCalculations()"></td>
+                <td><input type="number" value="500" class="price" oninput="updateCalculations()"></td>
+                <td class="row-total">0.00</td>
+                <td><button class="btn-remove" onclick="removeRow(this)"><i class="fas fa-trash"></i></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn-add" onclick="addRow()"><i class="fas fa-plus"></i> Add Line Item</button>
+
+    <div class="totals-section">
+        <div class="total-row">
+            <span>Subtotal</span>
+            <span id="subtotal">0.00</span>
+        </div>
+        <div class="total-row">
+            <span>Tax (%)</span>
+            <input type="number" id="taxRate" value="0" style="width: 60px; padding: 2px;" oninput="updateCalculations()">
+        </div>
+        <div class="total-row grand-total">
+            <span>Total</span>
+            <span id="grandTotal">0.00</span>
+        </div>
+    </div>
+</div>
+
+<div class="seo-content" style="max-width: 900px; margin: 50px auto; color: #94a3b8; line-height: 1.8;">
+    <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin-bottom:40px;">
+    <h2>Multi-Currency Invoice Generator by Jiban70</h2>
+    <p>The <strong>AllToolsFree Invoice Maker</strong> is built for the global economy. Whether you are a freelancer in Bangladesh charging in Taka (৳) or a consultant in New York charging in Dollars ($), our tool adapts to your needs. This tool uses client-side rendering to generate a professional PDF without storing any of your sensitive financial data on a server.</p>
+</div>
+
+<script>
+    function addRow() {
+        const tbody = document.querySelector('#itemsTable tbody');
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td><input type="text" placeholder="Item description"></td>
+            <td><input type="number" value="1" class="qty" oninput="updateCalculations()"></td>
+            <td><input type="number" value="0" class="price" oninput="updateCalculations()"></td>
+            <td class="row-total">0.00</td>
+            <td><button class="btn-remove" onclick="removeRow(this)"><i class="fas fa-trash"></i></button></td>
+        `;
+        tbody.appendChild(tr);
+        updateCalculations();
+    }
+
+    function removeRow(btn) {
+        btn.closest('tr').remove();
+        updateCalculations();
+    }
+
+    function updateCalculations() {
+        const symbol = document.getElementById('currency').value;
+        const rows = document.querySelectorAll('#itemsTable tbody tr');
+        let subtotal = 0;
+
+        rows.forEach(row => {
+            const qty = parseFloat(row.querySelector('.qty').value) || 0;
+            const price = parseFloat(row.querySelector('.price').value) || 0;
+            const total = qty * price;
+            subtotal += total;
+            row.querySelector('.row-total').innerText = symbol + total.toFixed(2);
+        });
+
+        const taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
+        const taxAmount = subtotal * (taxRate / 100);
+        const grandTotal = subtotal + taxAmount;
+
+        document.getElementById('subtotal').innerText = symbol + subtotal.toFixed(2);
+        document.getElementById('grandTotal').innerText = symbol + grandTotal.toFixed(2);
+    }
+
+    window.onload = updateCalculations;
+</script>
+</body>
+</html>

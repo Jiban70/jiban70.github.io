@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AllToolsFree | Ultimate 100+ Free Online Utility Suite by Jiban70</title>
+    <meta name="description" content="Access 100+ professional tools for free. Background remover, PDF tools, Resume builder, SEO analyzer, and more. 100% private, browser-based, and no signup required.">
+    <meta name="keywords" content="free online tools, background remover, resume builder, plagiarism checker, unit converter, invoice maker, youtube thumbnail downloader, Jiban70, AllToolsFree, SEO tools 2025, developer tools, student utilities">
+    
+    <meta property="og:title" content="AllToolsFree - The Swiss Army Knife of the Internet">
+    <meta property="og:description" content="Professional tools for everyone. Fast, Free, and Secure.">
+    <meta property="og:image" content="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/toolbox.svg">
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --accent: #10b981;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; }
+
+        /* NEON BACKGROUND EFFECT */
+        body::before {
+            content: ""; position: fixed; top: -10%; left: -10%; width: 40%; height: 40%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        nav { max-width: 1200px; margin: 0 auto; padding: 30px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Poppins'; font-size: 28px; font-weight: 900; color: #fff; text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .hero { text-align: center; padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(40px, 8vw, 70px); line-height: 1.1; margin-bottom: 20px; letter-spacing: -2px; }
+        .hero p { color: #94a3b8; font-size: 18px; margin-bottom: 40px; }
+
+        .search-container { position: relative; max-width: 600px; margin: 0 auto 60px; }
+        #toolSearch { width: 100%; padding: 20px 60px; border-radius: 20px; border: 1px solid var(--glass-border); background: var(--card-bg); color: white; font-size: 16px; outline: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .search-icon { position: absolute; left: 25px; top: 50%; transform: translateY(-50%); color: var(--primary); }
+
+        /* GRID SYSTEM */
+        .tool-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 0 20px; }
+        
+        .tool-card {
+            background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 24px; padding: 30px;
+            text-decoration: none; color: inherit; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex; flex-direction: column; align-items: flex-start;
+        }
+        .tool-card:hover { transform: translateY(-10px); border-color: var(--primary); background: rgba(59, 130, 246, 0.05); }
+        
+        .icon-box { width: 60px; height: 60px; border-radius: 15px; background: rgba(59, 130, 246, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+        .tool-card h3 { font-size: 20px; margin-bottom: 10px; font-family: 'Poppins'; }
+        .tool-card p { color: #94a3b8; font-size: 14px; line-height: 1.5; }
+
+        /* FOOTER CLUSTER */
+        .footer-seo { margin-top: 100px; padding: 60px 20px; background: rgba(0,0,0,0.3); border-top: 1px solid var(--glass-border); text-align: center; }
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 1000px; margin: 30px auto; }
+        .tag { font-size: 12px; color: #64748b; text-decoration: none; padding: 6px 15px; background: rgba(255,255,255,0.03); border-radius: 50px; border: 1px solid var(--glass-border); }
+
+        .legal-links { margin-top: 40px; }
+        .legal-links a { color: #94a3b8; text-decoration: none; margin: 0 15px; font-size: 14px; }
+        .legal-links a:hover { color: var(--primary); }
+
+        @media (max-width: 600px) { .tool-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 12px; font-weight: 800; color: var(--accent);"><i class="fas fa-bolt"></i> PRO VERSION 2025</div>
+</nav>
+
+<header class="hero">
+    <h1>Supercharge Your <span style="color: var(--primary);">Workflow.</span></h1>
+    <p>The web's most powerful collection of free, private, and fast tools. No registration, no limits, no nonsense.</p>
+    
+    <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="toolSearch" placeholder="Search 100+ tools (e.g. 'pdf', 'resume', 'bg remover')..." onkeyup="filterTools()">
+    </div>
+</header>
+
+<main class="tool-grid" id="toolGrid">
+    <a href="bg-remover.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <h3>BG Remover</h3>
+        <p>Remove image backgrounds instantly using AI technology.</p>
+    </a>
+
+    <a href="profile-maker.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-user-circle"></i></div>
+        <h3>Profile Maker</h3>
+        <p>Create professional circular DPs with neon glow borders.</p>
+    </a>
+
+    <a href="youtube-metadata.html" class="tool-card">
+        <div class="icon-box"><i class="fab fa-youtube"></i></div>
+        <h3>YT SEO Extractor</h3>
+        <p>Download 4K thumbnails and extract viral SEO tags.</p>
+    </a>
+
+    <a href="resume-builder.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-file-invoice"></i></div>
+        <h3>Resume Builder</h3>
+        <p>ATS-optimized professional resume creator with PDF export.</p>
+    </a>
+
+    <a href="invoice-maker.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-file-signature"></i></div>
+        <h3>Invoice Maker</h3>
+        <p>Global multi-currency billing and receipt generator.</p>
+    </a>
+
+    <a href="finance-calc.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-calculator"></i></div>
+        <h3>Loan Calculator</h3>
+        <p>Calculate EMI and see full yearly amortization schedules.</p>
+    </a>
+
+    <a href="plagiarism-checker.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-spell-check"></i></div>
+        <h3>Plagiarism Guard</h3>
+        <p>Deep scan content for uniqueness and check word density.</p>
+    </a>
+
+    <a href="unit-converter.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-ruler-combined"></i></div>
+        <h3>Unit Converter</h3>
+        <p>Universal physics-grade measurement conversion engine.</p>
+    </a>
+
+    <a href="privacy.html" class="tool-card">
+        <div class="icon-box"><i class="fas fa-shield-halved"></i></div>
+        <h3>Privacy Policy</h3>
+        <p>Learn how we protect your data with zero-server processing.</p>
+    </a>
+</main>
+
+<footer class="footer-seo">
+    <div class="seo-heading">Semantic SEO Tag Cluster</div>
+    <div class="tag-cloud">
+        <a href="#" class="tag">Free Background Remover</a>
+        <a href="#" class="tag">Online Resume Maker 2025</a>
+        <a href="#" class="tag">YouTube Tag Extractor</a>
+        <a href="#" class="tag">PDF to Image Converter</a>
+        <a href="#" class="tag">GST Calculator Online</a>
+        <a href="#" class="tag">Word Counter for SEO</a>
+        <a href="#" class="tag">Keyword Density Tool</a>
+        <a href="#" class="tag">Transparent PNG Maker</a>
+        <a href="#" class="tag">Best Unit Converter</a>
+        <a href="#" class="tag">Private Image Editor</a>
+    </div>
+
+    <div class="legal-links">
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <p style="margin-top: 30px; font-size: 12px; color: #475569;">&copy; 2025 AllToolsFree. Built with ❤️ by Jiban70.</p>
+</footer>
+
+<script>
+    function filterTools() {
+        let input = document.getElementById('toolSearch').value.toLowerCase();
+        let cards = document.getElementsByClassName('tool-card');
+        
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].querySelector('h3').innerText.toLowerCase();
+            let desc = cards[i].querySelector('p').innerText.toLowerCase();
+            if (title.includes(input) || desc.includes(input)) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</body>
+</html>

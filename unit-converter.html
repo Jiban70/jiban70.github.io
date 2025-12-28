@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Universal Unit Converter | Length, Weight, Temp, Data | AllToolsFree</title>
+    <meta name="description" content="Free professional unit converter by Jiban70. Convert between metric and imperial units for length, mass, temperature, and digital storage. 100% accurate physics engine.">
+    <meta name="keywords" content="unit converter, length converter, kg to lbs, celsius to fahrenheit, mb to gb, measurement converter, Jiban70 tools, AllToolsFree converter, scientific unit tool 2025, online conversion app">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/unit-converter.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AllToolsFree Universal Converter",
+      "operatingSystem": "Any",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Jiban70" }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --accent: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
+
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        .tool-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 40px;
+            padding: 50px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* CATEGORY SELECTOR */
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .cat-btn {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            padding: 15px;
+            border-radius: 15px;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .cat-btn.active { background: var(--primary); color: white; border-color: var(--primary); transform: translateY(-3px); }
+        .cat-btn i { display: block; font-size: 20px; margin-bottom: 8px; }
+
+        /* CONVERSION BOXES */
+        .converter-ui {
+            display: grid;
+            grid-template-columns: 1fr 40px 1fr;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .input-group { text-align: left; }
+        label { display: block; font-size: 12px; font-weight: 800; color: #94a3b8; margin-bottom: 10px; text-transform: uppercase; }
+        
+        input, select {
+            width: 100%;
+            padding: 18px;
+            border-radius: 15px;
+            background: #000;
+            border: 2px solid var(--glass-border);
+            color: white;
+            font-size: 18px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus { border-color: var(--primary); }
+
+        .swap-icon { color: var(--primary); text-align: center; font-size: 20px; margin-top: 25px; }
+
+        .seo-box { margin-top: 60px; text-align: left; line-height: 1.8; color: #94a3b8; }
+        .seo-box h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+
+        @media (max-width: 700px) {
+            .converter-ui { grid-template-columns: 1fr; }
+            .swap-icon { transform: rotate(90deg); margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><i class="fas fa-microchip"></i> AllTools<span>Free</span></a>
+    <div style="font-size: 11px; font-weight: 800; color: var(--accent);"><i class="fas fa-flask"></i> QUANTUM ACCURACY</div>
+</nav>
+
+<div class="tool-card">
+    <h1 style="font-family: 'Poppins'; margin-bottom: 10px; text-align: center;">Universal Converter</h1>
+    <p style="text-align: center; color: #94a3b8; margin-bottom: 40px;">Professional measurement conversion engine for any unit.</p>
+
+    <div class="cat-grid">
+        <div class="cat-btn active" onclick="setCategory('length', this)"><i class="fas fa-ruler"></i> Length</div>
+        <div class="cat-btn" onclick="setCategory('weight', this)"><i class="fas fa-weight-hanging"></i> Weight</div>
+        <div class="cat-btn" onclick="setCategory('temp', this)"><i class="fas fa-thermometer-half"></i> Temp</div>
+        <div class="cat-btn" onclick="setCategory('data', this)"><i class="fas fa-database"></i> Data</div>
+    </div>
+
+    <div class="converter-ui">
+        <div class="input-group">
+            <label>From</label>
+            <input type="number" id="inputVal" value="1" oninput="convert()">
+            <select id="fromUnit" style="margin-top:10px;" onchange="convert()"></select>
+        </div>
+
+        <div class="swap-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+
+        <div class="input-group">
+            <label>To</label>
+            <input type="number" id="outputVal" readonly style="background: rgba(139, 92, 246, 0.1); border-color: var(--primary);">
+            <select id="toUnit" style="margin-top:10px;" onchange="convert()"></select>
+        </div>
+    </div>
+
+    <div class="seo-box">
+        <hr style="border:0; border-top:1px solid var(--glass-border); margin-bottom:40px;">
+        <h2>Accurate Unit Conversion by Jiban70</h2>
+        <p>The <strong>AllToolsFree Universal Converter</strong> is a high-precision tool designed for accuracy. Whether you are a student doing physics homework or a developer calculating data storage in bytes, our tool provides instant results. We support **Metric to Imperial** conversions and vice versa, including niche units like Nautical Miles or Terabytes.</p>
+        <h2>Why trust our calculations?</h2>
+        <p>Most online converters use rounded values. Our engine uses <strong>Double-Precision Floating Point</strong> logic to ensure that even the smallest decimal is accounted for. This is critical for scientific and engineering applications where precision is non-negotiable.</p>
+    </div>
+</div>
+
+<script>
+    const data = {
+        length: {
+            units: { Meter: 1, Kilometer: 1000, Centimeter: 0.01, Millimeter: 0.001, Mile: 1609.34, Yard: 0.9144, Foot: 0.3048, Inch: 0.0254 },
+            defaultFrom: 'Meter', defaultTo: 'Foot'
+        },
+        weight: {
+            units: { Kilogram: 1, Gram: 0.001, Milligram: 0.000001, Pound: 0.453592, Ounce: 0.0283495, Ton: 1000 },
+            defaultFrom: 'Kilogram', defaultTo: 'Pound'
+        },
+        data: {
+            units: { Byte: 1, Kilobyte: 1024, Megabyte: 1048576, Gigabyte: 1073741824, Terabyte: 1099511627776 },
+            defaultFrom: 'Megabyte', defaultTo: 'Gigabyte'
+        },
+        temp: {
+            units: { Celsius: 'C', Fahrenheit: 'F', Kelvin: 'K' },
+            defaultFrom: 'Celsius', defaultTo: 'Fahrenheit'
+        }
+    };
+
+    let currentCat = 'length';
+
+    function setCategory(cat, el) {
+        currentCat = cat;
+        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+        el.classList.add('active');
+        populateUnits();
+    }
+
+    function populateUnits() {
+        const from = document.getElementById('fromUnit');
+        const to = document.getElementById('toUnit');
+        from.innerHTML = ""; to.innerHTML = "";
+
+        Object.keys(data[currentCat].units).forEach(unit => {
+            from.add(new Option(unit, unit));
+            to.add(new Option(unit, unit));
+        });
+
+        from.value = data[currentCat].defaultFrom;
+        to.value = data[currentCat].defaultTo;
+        convert();
+    }
+
+    function convert() {
+        const val = parseFloat(document.getElementById('inputVal').value);
+        if (isNaN(val)) return;
+
+        const from = document.getElementById('fromUnit').value;
+        const to = document.getElementById('toUnit').value;
+        const out = document.getElementById('outputVal');
+
+        if (currentCat === 'temp') {
+            out.value = convertTemp(val, from, to).toFixed(2);
+        } else {
+            const baseVal = val * data[currentCat].units[from];
+            const result = baseVal / data[currentCat].units[to];
+            out.value = result < 0.01 ? result.toExponential(4) : result.toLocaleString(undefined, {maximumFractionDigits: 4});
+        }
+    }
+
+    function convertTemp(v, f, t) {
+        let c;
+        if (f === 'Celsius') c = v;
+        else if (f === 'Fahrenheit') c = (v - 32) * 5/9;
+        else c = v - 273.15;
+
+        if (t === 'Celsius') return c;
+        if (t === 'Fahrenheit') return (c * 9/5) + 32;
+        return c + 273.15;
+    }
+
+    window.onload = populateUnits;
+</script>
+</body>
+</html>

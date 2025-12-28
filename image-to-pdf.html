@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Image to PDF Converter Online | JPG/PNG to PDF Free | AllToolsFree</title>
+    <meta name="description" content="Convert JPG, PNG, and WebP images to high-quality PDF for free with Jiban70's AllToolsFree. No file limits, 100% private browser conversion. Merge multiple photos into one PDF.">
+    <meta name="keywords" content="image to pdf, convert jpg to pdf, png to pdf converter, photos to pdf free, AllToolsFree image tools, Jiban70 converter, combine images into pdf, convert pictures to pdf online, secure image to pdf, best image to pdf 2025">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/image-to-pdf.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AllToolsFree Image to PDF Pro",
+      "operatingSystem": "Any",
+      "applicationCategory": "MultimediaApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Jiban70" }
+    }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --accent: #f43f5e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
+
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        .tool-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 50px;
+            box-shadow: 0 0 100px rgba(99, 102, 241, 0.1);
+            text-align: center;
+        }
+
+        .upload-area {
+            border: 3px dashed var(--primary);
+            border-radius: 25px;
+            padding: 50px 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            background: rgba(99, 102, 241, 0.05);
+            transition: 0.3s;
+        }
+        .upload-area:hover { background: rgba(99, 102, 241, 0.15); }
+
+        /* PREVIEW GRID */
+        #preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .preview-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--glass-border);
+        }
+        .preview-item img { width: 100%; height: 100%; object-fit: cover; }
+        .remove-btn {
+            position: absolute; top: 5px; right: 5px;
+            background: var(--accent); color: white; border: none;
+            width: 24px; height: 24px; border-radius: 50%; cursor: pointer;
+            font-size: 12px; display: flex; align-items: center; justify-content: center;
+        }
+
+        .controls {
+            background: rgba(0,0,0,0.2);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .btn-convert {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary), #4f46e5);
+            color: white; border: none; border-radius: 18px;
+            font-size: 18px; font-weight: 800; cursor: pointer;
+            transition: 0.3s; box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+        .btn-convert:hover { transform: translateY(-3px); }
+
+        .seo-section { margin-top: 60px; text-align: left; border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-section h2 { color: var(--primary); margin-bottom: 15px; font-family: 'Poppins'; }
+        .seo-section p { color: #94a3b8; line-height: 1.8; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><i class="fas fa-bolt"></i> AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--accent); font-weight: 800;"><i class="fas fa-file-pdf"></i> HIGH-FIDELITY PDF</div>
+</nav>
+
+<div class="tool-container">
+    <h1 style="font-family: 'Poppins'; font-size: 32px; margin-bottom: 10px;">Image to PDF</h1>
+    <p style="color: #94a3b8; margin-bottom: 40px;">Combine JPG, PNG, or WebP photos into a single PDF document.</p>
+
+    <div class="upload-area" onclick="document.getElementById('imgInput').click()">
+        <i class="fas fa-plus-circle" style="font-size: 50px; color: var(--primary); margin-bottom: 15px;"></i>
+        <h3>Add Images</h3>
+        <p style="color: #94a3b8;">Multiple selection supported</p>
+        <input type="file" id="imgInput" accept="image/*" multiple style="display:none">
+    </div>
+
+    <div id="preview-grid"></div>
+
+    <div class="controls" id="controlBox" style="display:none;">
+        <label style="display:block; margin-bottom:10px; font-weight:800; color: #fff;">Page Orientation</label>
+        <select id="orientation" style="width:100%; padding:12px; border-radius:10px; background:#000; color:#fff; border:1px solid var(--glass-border);">
+            <option value="p">Portrait (Standard)</option>
+            <option value="l">Landscape</option>
+        </select>
+    </div>
+
+    <button id="convertBtn" class="btn-convert" style="display:none;" onclick="convertToPDF()">Create PDF Now</button>
+
+    <div class="seo-section">
+        <h2>How to convert images to PDF without uploading?</h2>
+        <p>At <strong>AllToolsFree by Jiban70</strong>, we value your privacy. Our Image to PDF tool works entirely on your local machine. This means your private photos, IDs, or documents never travel to a server. Simply select your images, choose the orientation, and our <strong>Level 999 SEO</strong> engine will package them into a professional PDF file instantly.</p>
+        <h2>Best for students and professionals</h2>
+        <p>Whether you need to submit an assignment or send scanned documents to a bank, our tool maintains the original quality of your images while ensuring the file size remains optimized for email attachments.</p>
+    </div>
+</div>
+
+<script>
+    const { jsPDF } = window.jspdf;
+    const input = document.getElementById('imgInput');
+    const grid = document.getElementById('preview-grid');
+    const convertBtn = document.getElementById('convertBtn');
+    const controlBox = document.getElementById('controlBox');
+    let imageFiles = [];
+
+    input.onchange = (e) => {
+        const files = Array.from(e.target.files);
+        files.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                imageFiles.push(event.target.result);
+                renderGrid();
+            };
+            reader.readAsDataURL(file);
+        });
+    };
+
+    function renderGrid() {
+        grid.innerHTML = "";
+        imageFiles.forEach((src, index) => {
+            const div = document.createElement('div');
+            div.className = 'preview-item';
+            div.innerHTML = `
+                <img src="${src}">
+                <button class="remove-btn" onclick="removeImg(${index})"><i class="fas fa-times"></i></button>
+            `;
+            grid.appendChild(div);
+        });
+        
+        const show = imageFiles.length > 0;
+        convertBtn.style.display = show ? 'block' : 'none';
+        controlBox.style.display = show ? 'block' : 'none';
+    }
+
+    function removeImg(index) {
+        imageFiles.splice(index, 1);
+        renderGrid();
+    }
+
+    async function convertToPDF() {
+        const orientation = document.getElementById('orientation').value;
+        const pdf = new jsPDF(orientation, 'px', 'a4');
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+
+        for (let i = 0; i < imageFiles.length; i++) {
+            if (i > 0) pdf.addPage(orientation, 'px', 'a4');
+            pdf.addImage(imageFiles[i], 'JPEG', 0, 0, pageWidth, pageHeight);
+        }
+
+        pdf.save("images_by_alltoolsfree.pdf");
+    }
+</script>
+</body>
+</html>

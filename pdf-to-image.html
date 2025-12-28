@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to JPG Converter Online | Free & High Quality | AllToolsFree</title>
+    <meta name="description" content="Convert PDF pages to JPG or PNG images instantly with Jiban70's AllToolsFree. High resolution, private, and 100% browser-based conversion.">
+    <meta name="keywords" content="pdf to jpg, convert pdf to image, pdf to png, extract images from pdf, AllToolsFree pdf, Jiban70 tools, high quality pdf converter">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/pdf-to-image.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --primary: #6366f1; --bg-dark: #020617; --card-bg: #0f172a; --glass-border: rgba(255, 255, 255, 0.1); --text-main: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+        .tool-container { max-width: 800px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 40px; padding: 50px; text-align: center; box-shadow: 0 0 80px rgba(99, 102, 241, 0.1); }
+        .upload-area { border: 3px dashed var(--primary); border-radius: 25px; padding: 60px 20px; margin-bottom: 30px; cursor: pointer; background: rgba(99, 102, 241, 0.05); transition: 0.3s; }
+        .upload-area:hover { background: rgba(99, 102, 241, 0.1); }
+        #preview-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        canvas { width: 100%; border-radius: 10px; border: 1px solid var(--glass-border); }
+        .btn-convert { width: 100%; padding: 18px; background: var(--primary); color: white; border: none; border-radius: 15px; font-weight: 800; cursor: pointer; margin-top: 20px; display: none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><i class="fas fa-bolt"></i> AllTools<span>Free</span></a>
+</nav>
+
+<div class="tool-container">
+    <h1 style="font-family: 'Poppins'; margin-bottom: 10px;">PDF to Image</h1>
+    <p style="color: #94a3b8; margin-bottom: 40px;">Turn your PDF pages into high-quality JPG images.</p>
+
+    <div class="upload-area" onclick="document.getElementById('pdfInput').click()">
+        <i class="fas fa-file-image" style="font-size: 50px; color: var(--primary); margin-bottom: 20px;"></i>
+        <h3 id="statusText">Select PDF File</h3>
+        <input type="file" id="pdfInput" accept="application/pdf" style="display:none">
+    </div>
+
+    <div id="preview-container"></div>
+    <button id="downloadBtn" class="btn-convert" onclick="downloadAll()">Download All Images</button>
+
+    <div style="margin-top: 50px; text-align: left; color: #94a3b8; font-size: 14px; line-height: 1.6;">
+        <h2 style="color: #fff; margin-bottom: 10px;">Safe & Secure Conversion</h2>
+        <p>Unlike other converters, <strong>AllToolsFree by Jiban70</strong> processes your PDF directly in your browser using <strong>PDF.js</strong>. Your files are never uploaded to a cloud, ensuring 100% data privacy.</p>
+    </div>
+</div>
+
+<script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+    const input = document.getElementById('pdfInput');
+    const preview = document.getElementById('preview-container');
+    const downloadBtn = document.getElementById('downloadBtn');
+    let imgData = [];
+
+    input.onchange = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        preview.innerHTML = "";
+        imgData = [];
+        document.getElementById('statusText').innerText = "Processing PDF...";
+
+        const reader = new FileReader();
+        reader.onload = async function() {
+            const typedarray = new Uint8Array(this.result);
+            const pdf = await pdfjsLib.getDocument(typedarray).promise;
+            
+            for (let i = 1; i <= pdf.numPages; i++) {
+                const page = await pdf.getPage(i);
+                const viewport = page.getViewport({scale: 1.5});
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                await page.render({canvasContext: context, viewport: viewport}).promise;
+                preview.appendChild(canvas);
+                imgData.push(canvas.toDataURL('image/jpeg'));
+            }
+            downloadBtn.style.display = 'block';
+            document.getElementById('statusText').innerText = "PDF Loaded Successfully!";
+        };
+        reader.readAsArrayBuffer(file);
+    };
+
+    function downloadAll() {
+        imgData.forEach((data, index) => {
+            const link = document.createElement('a');
+            link.href = data;
+            link.download = `page-${index + 1}.jpg`;
+            link.click();
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Age Calculator Online | Exact Age in Days, Hours, Minutes | AllToolsFree</title>
+    <meta name="description" content="Free professional age calculator by Jiban70. Calculate your exact age in years, months, days, weeks, and hours. Perfect for job applications and birth date analysis. 100% accurate and private.">
+    <meta name="keywords" content="age calculator, calculate age online, exact age finder, birth date calculator, how old am i, chronological age calculator, Jiban70 tools, AllToolsFree age, age in days converter, birthday countdown, life duration calculator, best age tool 2025">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/age-calculator.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AllToolsFree Life Analytics Age Calculator",
+      "operatingSystem": "Any",
+      "applicationCategory": "EducationalApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Jiban70" }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --accent: #f43f5e;
+            --success: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
+
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        .logo span { color: var(--primary); }
+
+        .tool-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 50px;
+            box-shadow: 0 0 100px rgba(99, 102, 241, 0.1);
+        }
+
+        .input-section {
+            background: rgba(255,255,255,0.03);
+            padding: 30px;
+            border-radius: 25px;
+            margin-bottom: 40px;
+            border: 1px solid var(--glass-border);
+        }
+
+        label { display: block; margin-bottom: 15px; font-weight: 700; color: var(--primary); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        input[type="date"] {
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid var(--glass-border);
+            background: #000;
+            color: white;
+            font-size: 22px;
+            font-weight: 800;
+            outline: none;
+            transition: 0.3s;
+        }
+        input[type="date"]:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+
+        /* RESULTS GRID */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            display: none;
+        }
+
+        .result-card {
+            background: rgba(255,255,255,0.02);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: 0.3s;
+        }
+        .result-card:hover { transform: translateY(-5px); border-color: var(--success); background: rgba(16, 185, 129, 0.05); }
+        .result-card span { display: block; font-size: 12px; color: #94a3b8; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+        .result-card div { font-size: 24px; font-weight: 800; color: #fff; }
+
+        .big-age {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+        .big-age div { font-size: 48px !important; }
+
+        .seo-text { margin-top: 60px; text-align: left; border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-text h2 { color: var(--success); margin-bottom: 15px; font-family: 'Poppins'; }
+        .seo-text p { color: #94a3b8; line-height: 1.8; margin-bottom: 20px; font-size: 15px; }
+
+        @media (max-width: 600px) {
+            .tool-container { padding: 25px; }
+            .big-age div { font-size: 32px !important; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo"><i class="fas fa-bolt"></i> AllTools<span>Free</span></a>
+    <div style="font-size: 11px; font-weight: 800; color: var(--success);"><i class="fas fa-check-circle"></i> HIGH PRECISION ENGINE</div>
+</nav>
+
+<div class="tool-container">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-family: 'Poppins'; font-size: 36px;">Advanced Age Calculator</h1>
+        <p style="color: #94a3b8;">Know your exact time spent on Earth with high-precision metrics.</p>
+    </div>
+
+    <div class="input-section">
+        <label>Select Your Date of Birth</label>
+        <input type="date" id="dob" onchange="calculateAge()">
+    </div>
+
+    <div id="results" class="results-grid">
+        <div class="result-card big-age">
+            <span>Your Current Age</span>
+            <div id="exact-age">Calculating...</div>
+        </div>
+        <div class="result-card">
+            <span>Total Months</span>
+            <div id="total-months">0</div>
+        </div>
+        <div class="result-card">
+            <span>Total Weeks</span>
+            <div id="total-weeks">0</div>
+        </div>
+        <div class="result-card">
+            <span>Total Days</span>
+            <div id="total-days">0</div>
+        </div>
+        <div class="result-card">
+            <span>Total Hours</span>
+            <div id="total-hours">0</div>
+        </div>
+        <div class="result-card">
+            <span>Total Minutes</span>
+            <div id="total-minutes">0</div>
+        </div>
+        <div class="result-card" style="border-color: var(--accent);">
+            <span>Next Birthday In</span>
+            <div id="next-birthday" style="color: var(--accent);">0 Days</div>
+        </div>
+    </div>
+
+    <div class="seo-text">
+        <hr style="border:0; border-top:1px solid var(--glass-border); margin-bottom:40px;">
+        <h2>How is your age calculated?</h2>
+        <p>The <strong>AllToolsFree Age Calculator</strong> uses the chronological method to determine the time elapsed between your birth date and the current date. Unlike basic calculators, our algorithm by <strong>Jiban70</strong> accounts for leap years and the varying number of days in each month to give you a result that is 100% accurate for legal and official documentation.</p>
+        
+        <h2>Why use this tool?</h2>
+        <p>Many government forms, insurance applications, and school admissions require your exact age in years and months. Instead of calculating manually, our tool provides a full "Life Breakdown," showing you exactly how many weeks and days you have lived. It also features a "Next Birthday Countdown" so you never miss a celebration!</p>
+    </div>
+</div>
+
+<script>
+    function calculateAge() {
+        const dobValue = document.getElementById('dob').value;
+        if (!dobValue) return;
+
+        const dob = new Date(dobValue);
+        const now = new Date();
+        
+        if (dob > now) {
+            alert("Birth date cannot be in the future!");
+            return;
+        }
+
+        document.getElementById('results').style.display = 'grid';
+
+        // Years, Months, Days
+        let years = now.getFullYear() - dob.getFullYear();
+        let months = now.getMonth() - dob.getMonth();
+        let days = now.getDate() - dob.getDate();
+
+        if (days < 0) {
+            months--;
+            days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        }
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        // Full Metrics
+        const diff = now - dob;
+        const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const totalWeeks = Math.floor(totalDays / 7);
+        const totalMonths = (years * 12) + months;
+        const totalHours = totalDays * 24;
+        const totalMinutes = totalHours * 60;
+
+        // Next Birthday
+        let nextBirthday = new Date(now.getFullYear(), dob.getMonth(), dob.getDate());
+        if (now > nextBirthday) {
+            nextBirthday.setFullYear(now.getFullYear() + 1);
+        }
+        const diffToBirthday = nextBirthday - now;
+        const daysToBirthday = Math.ceil(diffToBirthday / (1000 * 60 * 60 * 24));
+
+        // Update UI
+        document.getElementById('exact-age').innerText = `${years} Years, ${months} Months, ${days} Days`;
+        document.getElementById('total-months').innerText = totalMonths.toLocaleString();
+        document.getElementById('total-weeks').innerText = totalWeeks.toLocaleString();
+        document.getElementById('total-days').innerText = totalDays.toLocaleString();
+        document.getElementById('total-hours').innerText = totalHours.toLocaleString();
+        document.getElementById('total-minutes').innerText = totalMinutes.toLocaleString();
+        document.getElementById('next-birthday').innerText = `${daysToBirthday} Days`;
+    }
+</script>
+</body>
+</html>

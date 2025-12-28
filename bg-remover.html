@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Background Remover & Transparent PNG Maker | AllToolsFree</title>
+    <meta name="description" content="Professional free background remover by Jiban70. Make images transparent, create PNGs for products, and edit photos instantly in your browser. No upload required, 100% private.">
+    <meta name="keywords" content="background remover, make image transparent, transparent png maker, remove bg online, free photo editor, Jiban70 tools, AllToolsFree editor, white background remover, product photo editor, best bg remover 2025">
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/bg-remover.html" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --accent: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; overflow-x: hidden; }
+
+        /* PRESTIGE NAVIGATION */
+        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
+        .logo { font-family: 'Poppins'; font-size: 26px; text-decoration: none; color: #fff; letter-spacing: -1px; }
+        .logo span { color: var(--primary); text-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
+
+        .editor-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
+        }
+
+        /* SIDEBAR SETTINGS */
+        .sidebar {
+            background: var(--card-bg);
+            border-radius: 30px;
+            padding: 30px;
+            border: 1px solid var(--glass-border);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .workspace {
+            background: rgba(0,0,0,0.3);
+            border: 2px dashed var(--glass-border);
+            border-radius: 30px;
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .upload-trigger {
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .upload-trigger:hover { color: var(--primary); transform: scale(1.05); }
+
+        canvas {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            cursor: crosshair;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* CONTROL ELEMENTS */
+        .control-group { margin-bottom: 25px; }
+        label { display: block; font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px; }
+        
+        input[type="range"] { width: 100%; accent-color: var(--primary); }
+        
+        .btn-main {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary), #4f46e5);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); }
+
+        .tool-hint {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+        }
+
+        /* SEO FOOTER - HEAVY TEXT FOR RANKING */
+        .seo-footer { max-width: 1200px; margin: 60px auto; line-height: 1.8; color: #94a3b8; }
+        .seo-footer h2 { color: #fff; margin-bottom: 20px; font-family: 'Poppins'; }
+        .seo-footer strong { color: var(--primary); }
+
+        @media (max-width: 900px) {
+            .editor-layout { grid-template-columns: 1fr; }
+            .sidebar { order: 2; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; font-weight: 800; color: var(--accent);"><i class="fas fa-shield-virus"></i> BROWSER-ISO PROCESSING</div>
+</nav>
+
+<div class="editor-layout">
+    <div class="sidebar">
+        <h3 style="margin-bottom: 20px; font-family: 'Poppins';">Editor Studio</h3>
+        
+        <div class="tool-hint">
+            <i class="fas fa-magic"></i> <strong>Pro Tip:</strong> Select "Color Key" and click the background on the image to remove it instantly.
+        </div>
+
+        <div class="control-group">
+            <label>Mode</label>
+            <select id="mode" style="width:100%; padding:12px; border-radius:10px; background:#000; color:#fff; border:1px solid var(--glass-border);">
+                <option value="erase">Manual Eraser</option>
+                <option value="key">Color Key (Instant)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Brush/Tolerance Size</label>
+            <input type="range" id="brushSize" min="5" max="100" value="30">
+        </div>
+
+        <div class="control-group">
+            <label>Magic Sensitivity</label>
+            <input type="range" id="sensitivity" min="0" max="100" value="15">
+        </div>
+
+        <button class="btn-main" onclick="downloadPNG()"><i class="fas fa-download"></i> Download Transparent PNG</button>
+        <button class="btn-main" style="background: rgba(255,255,255,0.05); color: #ef4444; margin-top: 10px;" onclick="resetImage()">Reset Image</button>
+    </div>
+
+    <div class="workspace" id="dropZone">
+        <div class="upload-trigger" id="uploadPrompt" onclick="document.getElementById('fileInput').click()">
+            <i class="fas fa-cloud-upload-alt" style="font-size: 70px; margin-bottom: 20px;"></i>
+            <h2>Drop Photo or Click to Upload</h2>
+            <p style="color: #94a3b8; margin-top: 10px;">Works with JPG, PNG, WEBP</p>
+        </div>
+        <canvas id="editorCanvas" style="display:none;"></canvas>
+        <input type="file" id="fileInput" accept="image/*" style="display:none">
+    </div>
+</div>
+
+<div class="seo-footer">
+    <hr style="border:0; border-top:1px solid var(--glass-border); margin-bottom:50px;">
+    <h2>Ultimate Background Remover by Jiban70</h2>
+    <p>Welcome to the most advanced <strong>client-side background remover</strong> on the internet. Unlike sites that charge you for high-resolution downloads, <strong>AllToolsFree</strong> gives you full-size transparent PNGs for absolutely zero cost. Our tool uses local HTML5 canvas processing, meaning your personal photos never leave your device.</p>
+    
+    <h2>How to remove background from an image?</h2>
+    <p>1. <strong>Upload:</strong> Choose any image from your computer or phone.<br>
+       2. <strong>Method:</strong> Use the "Color Key" mode to click and remove solid colors instantly, or use the "Manual Eraser" for precise control.<br>
+       3. <strong>Sensitivity:</strong> Adjust the magic sensitivity to remove similar shades of color around your subject.<br>
+       4. <strong>Save:</strong> Click download to get your high-quality transparent PNG file.</p>
+</div>
+
+<script>
+    const canvas = document.getElementById('editorCanvas');
+    const ctx = canvas.getContext('2d');
+    const fileInput = document.getElementById('fileInput');
+    const brushSize = document.getElementById('brushSize');
+    const sensitivity = document.getElementById('sensitivity');
+    const mode = document.getElementById('mode');
+    
+    let originalImage = null;
+    let isDrawing = false;
+
+    fileInput.onchange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const img = new Image();
+            img.onload = () => {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+                originalImage = img;
+                canvas.style.display = 'block';
+                document.getElementById('uploadPrompt').style.display = 'none';
+            };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // Manual Eraser
+    canvas.onmousedown = (e) => { isDrawing = true; handleAction(e); };
+    canvas.onmousemove = (e) => { if(isDrawing) handleAction(e); };
+    window.onmouseup = () => { isDrawing = false; };
+
+    function handleAction(e) {
+        if (mode.value === 'erase') {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const x = (e.clientX - rect.left) * scaleX;
+            const y = (e.clientY - rect.top) * scaleY;
+
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.beginPath();
+            ctx.arc(x, y, brushSize.value, 0, Math.PI * 2);
+            ctx.fill();
+        } else if (mode.value === 'key' && !isDrawing) {
+            removeColorAt(e);
+        }
+    }
+
+    function removeColorAt(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const x = Math.floor((e.clientX - rect.left) * scaleX);
+        const y = Math.floor((e.clientY - rect.top) * scaleY);
+
+        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const pixels = imgData.data;
+        const targetIdx = (y * canvas.width + x) * 4;
+        const r = pixels[targetIdx];
+        const g = pixels[targetIdx + 1];
+        const b = pixels[targetIdx + 2];
+        const sens = sensitivity.value;
+
+        for (let i = 0; i < pixels.length; i += 4) {
+            const dr = Math.abs(pixels[i] - r);
+            const dg = Math.abs(pixels[i+1] - g);
+            const db = Math.abs(pixels[i+2] - b);
+            
+            if (dr <= sens && dg <= sens && db <= sens) {
+                pixels[i+3] = 0; // Set Alpha to Transparent
+            }
+        }
+        ctx.putImageData(imgData, 0, 0);
+    }
+
+    function resetImage() {
+        if (originalImage) {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.drawImage(originalImage, 0, 0);
+        }
+    }
+
+    function downloadPNG() {
+        const link = document.createElement('a');
+        link.download = 'jiban70-no-bg.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }
+</script>
+</body>
+</html>
