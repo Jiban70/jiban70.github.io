@@ -1,36 +1,7 @@
-# ==========================================
-# AllToolsFree - Robots.txt for Jiban70
-# Optimized for 2026 Search Indexing
-# ==========================================
-
-# 1. Global Rules for All Bots
 User-agent: *
 Allow: /
 Allow: /index.html
-Allow: /bg-remover.html
-Allow: /profile-maker.html
-Allow: /youtube-metadata.html
-Allow: /resume-builder.html
-Allow: /invoice-maker.html
-Allow: /finance-calc.html
-Allow: /plagiarism-checker.html
-Allow: /unit-converter.html
+Allow: /sitemap.xml
 
-# 2. Prevent Indexing of System/Draft Files
-Disallow: /tmp/
-Disallow: /private/
-Disallow: /404.html
-Disallow: /drafts/
-
-# 3. Dedicated Rules for Media Crawlers
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Pinterestbot
-Allow: /
-
-# 4. Critical SEO Signposts
+# Tell Search Engines where your Map is
 Sitemap: https://jiban70.github.io/alltoolsfree/sitemap.xml
-Host: https://jiban70.github.io/alltoolsfree/
-
-# End of file
