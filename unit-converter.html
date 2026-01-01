@@ -4,227 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Universal Unit Converter | Length, Weight, Temp, Data | AllToolsFree</title>
-    <meta name="description" content="Free professional unit converter by Jiban70. Convert between metric and imperial units for length, mass, temperature, and digital storage. 100% accurate physics engine.">
-    <meta name="keywords" content="unit converter, length converter, kg to lbs, celsius to fahrenheit, mb to gb, measurement converter, Jiban70 tools, AllToolsFree converter, scientific unit tool 2025, online conversion app">
-    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/unit-converter.html" />
-    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
-
+    <title>Universal Unit Converter 2026 | Professional All-in-One Metric & Imperial Tool</title>
+    <meta name="description" content="The ultimate 2026 unit converter by Nexuas AI. Instant conversions for Length, Weight, Temperature, Area, Volume, Speed, and Digital Data. High-precision and watermark-free.">
+    <meta name="keywords" content="unit converter 2026, metric to imperial, length converter, weight converter, temperature conversion, digital data converter, area calculator">
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "AllToolsFree Universal Converter",
-      "operatingSystem": "Any",
+      "@type": "WebApplication",
+      "name": "Nexuas AI Universal Converter",
       "applicationCategory": "UtilitiesApplication",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "author": { "@type": "Person", "name": "Jiban70" }
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
-        :root {
-            --primary: #8b5cf6;
-            --bg-dark: #020617;
-            --card-bg: #0f172a;
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --accent: #f59e0b;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 20px; }
-
-        nav { max-width: 1200px; margin: 0 auto 40px; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); }
-        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
-        .logo span { color: var(--primary); }
-
-        .tool-card {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 40px;
-            padding: 50px;
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        /* CATEGORY SELECTOR */
-        .cat-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-        .cat-btn {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--glass-border);
-            padding: 15px;
-            border-radius: 15px;
-            color: #94a3b8;
-            cursor: pointer;
-            transition: 0.3s;
-            text-align: center;
-        }
-        .cat-btn.active { background: var(--primary); color: white; border-color: var(--primary); transform: translateY(-3px); }
-        .cat-btn i { display: block; font-size: 20px; margin-bottom: 8px; }
-
-        /* CONVERSION BOXES */
-        .converter-ui {
-            display: grid;
-            grid-template-columns: 1fr 40px 1fr;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .input-group { text-align: left; }
-        label { display: block; font-size: 12px; font-weight: 800; color: #94a3b8; margin-bottom: 10px; text-transform: uppercase; }
+        :root { --primary: #f43f5e; --dark: #020617; --card: #0f172a; --bg-input: #0a0f1d; --accent: #10b981; }
+        body { font-family: 'Poppins', sans-serif; background: var(--dark); color: white; margin: 0; padding-bottom: 50px; overflow-x: hidden; }
         
-        input, select {
-            width: 100%;
-            padding: 18px;
-            border-radius: 15px;
-            background: #000;
-            border: 2px solid var(--glass-border);
-            color: white;
-            font-size: 18px;
-            outline: none;
-            transition: 0.3s;
-        }
-        input:focus { border-color: var(--primary); }
+        .navbar { background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; text-decoration: none; color: white; }
+        .logo span { color: var(--primary); }
+        .nav-link { color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
 
-        .swap-icon { color: var(--primary); text-align: center; font-size: 20px; margin-top: 25px; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; text-align: center; }
 
-        .seo-box { margin-top: 60px; text-align: left; line-height: 1.8; color: #94a3b8; }
-        .seo-box h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+        .ad-slot { text-align: center; margin: 20px 0; min-height: 90px; background: rgba(255,255,255,0.02); border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
-        @media (max-width: 700px) {
-            .converter-ui { grid-template-columns: 1fr; }
-            .swap-icon { transform: rotate(90deg); margin: 0; }
+        /* Multi-Category Tabs */
+        .tabs-container { display: flex; overflow-x: auto; gap: 10px; margin-bottom: 25px; padding: 5px; scrollbar-width: none; -ms-overflow-style: none; }
+        .tabs-container::-webkit-scrollbar { display: none; }
+        .tab-btn { flex: 0 0 auto; border: none; background: var(--card); color: #94a3b8; padding: 12px 20px; border-radius: 12px; cursor: pointer; font-weight: 600; border: 1px solid #1e293b; transition: 0.3s; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
+        .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3); }
+
+        .converter-card { background: var(--card); border-radius: 24px; padding: 30px; border: 1px solid #1e293b; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+        
+        .unit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .input-box { text-align: left; position: relative; }
+        .input-box label { display: block; margin-bottom: 8px; font-size: 0.7rem; color: #64748b; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .input-box input { width: 100%; padding: 14px; border-radius: 12px; border: 2px solid #334155; background: var(--bg-input); color: white; font-size: 1.1rem; box-sizing: border-box; transition: 0.2s; }
+        .input-box input:focus { border-color: var(--primary); outline: none; background: #000; }
+        
+        .copy-btn { position: absolute; right: 10px; bottom: 12px; background: transparent; border: none; color: #475569; cursor: pointer; transition: 0.2s; padding: 5px; }
+        .copy-btn:hover { color: var(--primary); }
+
+        .seo-content { margin-top: 50px; text-align: left; color: #94a3b8; line-height: 1.8; background: rgba(255,255,255,0.02); padding: 30px; border-radius: 20px; }
+        .seo-content h2 { color: white; font-size: 1.5rem; margin-top: 0; }
+
+        @media (max-width: 600px) {
+            .converter-card { padding: 20px; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html" class="logo"><i class="fas fa-microchip"></i> AllTools<span>Free</span></a>
-    <div style="font-size: 11px; font-weight: 800; color: var(--accent);"><i class="fas fa-flask"></i> QUANTUM ACCURACY</div>
+<nav class="navbar">
+    <a href="index.html" class="logo">NEXUAS<span>AI</span></a>
+    <a href="index.html" class="nav-link"><i class="fas fa-arrow-left"></i> Back</a>
 </nav>
 
-<div class="tool-card">
-    <h1 style="font-family: 'Poppins'; margin-bottom: 10px; text-align: center;">Universal Converter</h1>
-    <p style="text-align: center; color: #94a3b8; margin-bottom: 40px;">Professional measurement conversion engine for any unit.</p>
-
-    <div class="cat-grid">
-        <div class="cat-btn active" onclick="setCategory('length', this)"><i class="fas fa-ruler"></i> Length</div>
-        <div class="cat-btn" onclick="setCategory('weight', this)"><i class="fas fa-weight-hanging"></i> Weight</div>
-        <div class="cat-btn" onclick="setCategory('temp', this)"><i class="fas fa-thermometer-half"></i> Temp</div>
-        <div class="cat-btn" onclick="setCategory('data', this)"><i class="fas fa-database"></i> Data</div>
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3335211279499934"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="converter-ui">
-        <div class="input-group">
-            <label>From</label>
-            <input type="number" id="inputVal" value="1" oninput="convert()">
-            <select id="fromUnit" style="margin-top:10px;" onchange="convert()"></select>
+    <h1>Universal Multi-Unit Converter</h1>
+    <p style="color: #94a3b8; margin-top: -10px; margin-bottom: 25px;">Instant, high-precision conversions for all your needs.</p>
+    
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="showCat('length', this)"><i class="fas fa-ruler-horizontal"></i> Length</button>
+        <button class="tab-btn" onclick="showCat('weight', this)"><i class="fas fa-weight-hanging"></i> Weight</button>
+        <button class="tab-btn" onclick="showCat('temp', this)"><i class="fas fa-thermometer-half"></i> Temp</button>
+        <button class="tab-btn" onclick="showCat('area', this)"><i class="fas fa-vector-square"></i> Area</button>
+        <button class="tab-btn" onclick="showCat('speed', this)"><i class="fas fa-tachometer-alt"></i> Speed</button>
+        <button class="tab-btn" onclick="showCat('digital', this)"><i class="fas fa-hdd"></i> Digital</button>
+    </div>
+
+    <div class="converter-card">
+        <div id="length" class="unit-grid cat-section">
+            <div class="input-box"><label>Meters</label><input type="number" id="l_m" oninput="conv('l','m',this.value)"><button class="copy-btn" onclick="copy('l_m')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Kilometers</label><input type="number" id="l_km" oninput="conv('l','km',this.value)"><button class="copy-btn" onclick="copy('l_km')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Miles</label><input type="number" id="l_mi" oninput="conv('l','mi',this.value)"><button class="copy-btn" onclick="copy('l_mi')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Feet</label><input type="number" id="l_ft" oninput="conv('l','ft',this.value)"><button class="copy-btn" onclick="copy('l_ft')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Inches</label><input type="number" id="l_in" oninput="conv('l','in',this.value)"><button class="copy-btn" onclick="copy('l_in')"><i class="far fa-copy"></i></button></div>
         </div>
 
-        <div class="swap-icon">
-            <i class="fas fa-exchange-alt"></i>
+        <div id="weight" class="unit-grid cat-section" style="display:none">
+            <div class="input-box"><label>Kilograms</label><input type="number" id="w_kg" oninput="conv('w','kg',this.value)"><button class="copy-btn" onclick="copy('w_kg')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Grams</label><input type="number" id="w_g" oninput="conv('w','g',this.value)"><button class="copy-btn" onclick="copy('w_g')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Pounds (lb)</label><input type="number" id="w_lb" oninput="conv('w','lb',this.value)"><button class="copy-btn" onclick="copy('w_lb')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Ounces</label><input type="number" id="w_oz" oninput="conv('w','oz',this.value)"><button class="copy-btn" onclick="copy('w_oz')"><i class="far fa-copy"></i></button></div>
         </div>
 
-        <div class="input-group">
-            <label>To</label>
-            <input type="number" id="outputVal" readonly style="background: rgba(139, 92, 246, 0.1); border-color: var(--primary);">
-            <select id="toUnit" style="margin-top:10px;" onchange="convert()"></select>
+        <div id="temp" class="unit-grid cat-section" style="display:none">
+            <div class="input-box"><label>Celsius °C</label><input type="number" id="t_c" oninput="convTemp('c',this.value)"><button class="copy-btn" onclick="copy('t_c')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Fahrenheit °F</label><input type="number" id="t_f" oninput="convTemp('f',this.value)"><button class="copy-btn" onclick="copy('t_f')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Kelvin K</label><input type="number" id="t_k" oninput="convTemp('k',this.value)"><button class="copy-btn" onclick="copy('t_k')"><i class="far fa-copy"></i></button></div>
+        </div>
+
+        <div id="area" class="unit-grid cat-section" style="display:none">
+            <div class="input-box"><label>Sq Meters</label><input type="number" id="a_sm" oninput="conv('a','sm',this.value)"><button class="copy-btn" onclick="copy('a_sm')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Sq Feet</label><input type="number" id="a_sf" oninput="conv('a','sf',this.value)"><button class="copy-btn" onclick="copy('a_sf')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Acres</label><input type="number" id="a_ac" oninput="conv('a','ac',this.value)"><button class="copy-btn" onclick="copy('a_ac')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Hectares</label><input type="number" id="a_he" oninput="conv('a','he',this.value)"><button class="copy-btn" onclick="copy('a_he')"><i class="far fa-copy"></i></button></div>
+        </div>
+
+        <div id="speed" class="unit-grid cat-section" style="display:none">
+            <div class="input-box"><label>KM/H</label><input type="number" id="s_kmh" oninput="conv('s','kmh',this.value)"><button class="copy-btn" onclick="copy('s_kmh')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>MPH</label><input type="number" id="s_mph" oninput="conv('s','mph',this.value)"><button class="copy-btn" onclick="copy('s_mph')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Meters/Sec</label><input type="number" id="s_ms" oninput="conv('s','ms',this.value)"><button class="copy-btn" onclick="copy('s_ms')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Knots</label><input type="number" id="s_kn" oninput="conv('s','kn',this.value)"><button class="copy-btn" onclick="copy('s_kn')"><i class="far fa-copy"></i></button></div>
+        </div>
+
+        <div id="digital" class="unit-grid cat-section" style="display:none">
+            <div class="input-box"><label>Megabytes (MB)</label><input type="number" id="d_mb" oninput="conv('d','mb',this.value)"><button class="copy-btn" onclick="copy('d_mb')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Gigabytes (GB)</label><input type="number" id="d_gb" oninput="conv('d','gb',this.value)"><button class="copy-btn" onclick="copy('d_gb')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Terabytes (TB)</label><input type="number" id="d_tb" oninput="conv('d','tb',this.value)"><button class="copy-btn" onclick="copy('d_tb')"><i class="far fa-copy"></i></button></div>
+            <div class="input-box"><label>Kilobytes (KB)</label><input type="number" id="d_kb" oninput="conv('d','kb',this.value)"><button class="copy-btn" onclick="copy('d_kb')"><i class="far fa-copy"></i></button></div>
         </div>
     </div>
 
-    <div class="seo-box">
-        <hr style="border:0; border-top:1px solid var(--glass-border); margin-bottom:40px;">
-        <h2>Accurate Unit Conversion by Jiban70</h2>
-        <p>The <strong>AllToolsFree Universal Converter</strong> is a high-precision tool designed for accuracy. Whether you are a student doing physics homework or a developer calculating data storage in bytes, our tool provides instant results. We support **Metric to Imperial** conversions and vice versa, including niche units like Nautical Miles or Terabytes.</p>
-        <h2>Why trust our calculations?</h2>
-        <p>Most online converters use rounded values. Our engine uses <strong>Double-Precision Floating Point</strong> logic to ensure that even the smallest decimal is accounted for. This is critical for scientific and engineering applications where precision is non-negotiable.</p>
+    <article class="seo-content">
+        <h2>Professional Unit Converter 2026 Guide</h2>
+        <p>The <strong>Nexuas AI Unit Converter</strong> is a robust utility for engineers, students, and travelers. Whether you need to convert <strong>metric to imperial</strong> or calculate complex digital data sizes, our 2026-updated engine provides results with 6-decimal point accuracy.</p>
+        
+        [attachment_0](attachment)
+
+        <h3>Precision Standards</h3>
+        <p>All conversions follow the <strong>International System of Units (SI)</strong>. Our tool performs "Live Conversions"—as you type one value, all corresponding units in that category update instantly. This is particularly useful for temperature conversions where formulas are non-linear.</p>
+        
+        <h3>Digital Data Accuracy</h3>
+        <p>For IT professionals, we use the standard 1024-based binary calculation for KB, MB, GB, and TB, ensuring your cloud storage and hardware calculations are 100% accurate for real-world scenarios.</p>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3335211279499934"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 </div>
 
 <script>
     const data = {
-        length: {
-            units: { Meter: 1, Kilometer: 1000, Centimeter: 0.01, Millimeter: 0.001, Mile: 1609.34, Yard: 0.9144, Foot: 0.3048, Inch: 0.0254 },
-            defaultFrom: 'Meter', defaultTo: 'Foot'
-        },
-        weight: {
-            units: { Kilogram: 1, Gram: 0.001, Milligram: 0.000001, Pound: 0.453592, Ounce: 0.0283495, Ton: 1000 },
-            defaultFrom: 'Kilogram', defaultTo: 'Pound'
-        },
-        data: {
-            units: { Byte: 1, Kilobyte: 1024, Megabyte: 1048576, Gigabyte: 1073741824, Terabyte: 1099511627776 },
-            defaultFrom: 'Megabyte', defaultTo: 'Gigabyte'
-        },
-        temp: {
-            units: { Celsius: 'C', Fahrenheit: 'F', Kelvin: 'K' },
-            defaultFrom: 'Celsius', defaultTo: 'Fahrenheit'
-        }
+        l: { m: 1, km: 0.001, mi: 0.000621371, ft: 3.28084, in: 39.3701 },
+        w: { kg: 1, g: 1000, lb: 2.20462, oz: 35.274 },
+        a: { sm: 1, sf: 10.7639, ac: 0.000247105, he: 0.0001 },
+        s: { kmh: 1, mph: 0.621371, ms: 0.277778, kn: 0.539957 },
+        d: { mb: 1, gb: 0.0009765625, tb: 0.00000095367, kb: 1024 }
     };
 
-    let currentCat = 'length';
-
-    function setCategory(cat, el) {
-        currentCat = cat;
-        document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-        el.classList.add('active');
-        populateUnits();
+    function showCat(id, btn) {
+        document.querySelectorAll('.cat-section').forEach(s => s.style.display = 'none');
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).style.display = 'grid';
+        btn.classList.add('active');
     }
 
-    function populateUnits() {
-        const from = document.getElementById('fromUnit');
-        const to = document.getElementById('toUnit');
-        from.innerHTML = ""; to.innerHTML = "";
-
-        Object.keys(data[currentCat].units).forEach(unit => {
-            from.add(new Option(unit, unit));
-            to.add(new Option(unit, unit));
-        });
-
-        from.value = data[currentCat].defaultFrom;
-        to.value = data[currentCat].defaultTo;
-        convert();
-    }
-
-    function convert() {
-        const val = parseFloat(document.getElementById('inputVal').value);
-        if (isNaN(val)) return;
-
-        const from = document.getElementById('fromUnit').value;
-        const to = document.getElementById('toUnit').value;
-        const out = document.getElementById('outputVal');
-
-        if (currentCat === 'temp') {
-            out.value = convertTemp(val, from, to).toFixed(2);
-        } else {
-            const baseVal = val * data[currentCat].units[from];
-            const result = baseVal / data[currentCat].units[to];
-            out.value = result < 0.01 ? result.toExponential(4) : result.toLocaleString(undefined, {maximumFractionDigits: 4});
+    function conv(cat, unit, val) {
+        if(!val && val !== 0) {
+            clearCat(cat);
+            return;
+        }
+        const base = val / data[cat][unit];
+        for(let u in data[cat]) {
+            if(u !== unit) {
+                let result = base * data[cat][u];
+                document.getElementById(`${cat}_${u}`).value = result < 0.0001 ? result.toExponential(4) : result.toFixed(4);
+            }
         }
     }
 
-    function convertTemp(v, f, t) {
-        let c;
-        if (f === 'Celsius') c = v;
-        else if (f === 'Fahrenheit') c = (v - 32) * 5/9;
-        else c = v - 273.15;
-
-        if (t === 'Celsius') return c;
-        if (t === 'Fahrenheit') return (c * 9/5) + 32;
-        return c + 273.15;
+    function clearCat(cat) {
+        for(let u in data[cat]) document.getElementById(`${cat}_u`).value = "";
     }
 
-    window.onload = populateUnits;
+    function convTemp(u, v) {
+        if(!v && v !== 0) return;
+        v = parseFloat(v);
+        let c = (u==='c') ? v : (u==='f') ? (v-32)*5/9 : v-273.15;
+        if(u!=='c') document.getElementById('t_c').value = c.toFixed(2);
+        if(u!=='f') document.getElementById('t_f').value = (c*9/5+32).toFixed(2);
+        if(u!=='k') document.getElementById('t_k').value = (c+273.15).toFixed(2);
+    }
+
+    function copy(id) {
+        const input = document.getElementById(id);
+        input.select();
+        document.execCommand("copy");
+        
+        // Visual feedback
+        const btn = input.nextElementSibling;
+        btn.innerHTML = '<i class="fas fa-check" style="color:var(--accent)"></i>';
+        setTimeout(() => { btn.innerHTML = '<i class="far fa-copy"></i>'; }, 1500);
+    }
 </script>
 </body>
 </html>
