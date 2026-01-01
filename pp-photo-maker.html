@@ -3,54 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passport Photo Maker | AllToolsFree™</title>
+    <title>Passport Photo Maker | Official Size Online | AllToolsFree</title>
+    <meta name="description" content="Create official passport and visa photos online for free. Support for US, UK, EU, India, and more. 100% private browser-side cropping.">
+    <meta name="keywords" content="passport photo maker, visa photo generator, 2x2 photo cropper, 35x45mm photo online, AllToolsFree photo tools">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/pp-photo-maker.html" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        :root { --p: #3b82f6; --b: #020617; --c: #0f172a; --t: #f8fafc; }
-        body { background: var(--b); color: var(--t); font-family: sans-serif; padding: 40px 20px; text-align: center; }
-        .container { max-width: 800px; margin: auto; background: var(--c); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
-        .editor-wrapper { max-height: 500px; margin-top: 20px; display: none; }
-        img { max-width: 100%; }
-        .controls { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-        .btn { background: var(--p); color: white; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; }
-        .btn-success { background: #10b981; }
-        #final-preview { margin-top: 20px; display: none; }
+        :root { 
+            --primary: #3b82f6; 
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1); 
+            --text-main: #f8fafc; 
+            --accent: #10b981; 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding: 0; }
+        
+        /* Navigation matched to Dashboard */
+        nav { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .tool-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 40px; padding: 40px; text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+
+        .editor-wrapper { 
+            margin: 30px 0; 
+            max-height: 500px; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            background: #000; 
+            display: none; 
+            border: 1px solid var(--glass-border);
+        }
+        img { max-width: 100%; display: block; }
+
+        .controls { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            gap: 15px; 
+            margin-top: 25px; 
+            display: none;
+        }
+
+        .btn { 
+            background: rgba(255,255,255,0.05); 
+            color: white; 
+            padding: 14px; 
+            border-radius: 12px; 
+            border: 1px solid var(--glass-border); 
+            cursor: pointer; 
+            font-weight: 700; 
+            transition: 0.3s;
+            font-size: 13px;
+        }
+        .btn:hover { background: var(--primary); border-color: var(--primary); }
+        .btn-success { background: var(--accent); border-color: var(--accent); grid-column: 1 / -1; margin-top: 10px; font-size: 16px; }
+        .btn-success:hover { background: #059669; transform: translateY(-2px); }
+
+        .upload-area { border: 3px dashed var(--primary); border-radius: 30px; padding: 60px 20px; cursor: pointer; background: rgba(59, 130, 246, 0.05); }
+
+        #final-preview { margin-top: 40px; display: none; padding-top: 40px; border-top: 1px solid var(--glass-border); }
+        .preview-img { border: 8px solid white; width: 200px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); margin-bottom: 20px; }
+
+        .ad-slot { margin: 30px 0; min-height: 100px; background: rgba(255,255,255,0.01); border: 1px dashed var(--glass-border); border-radius: 20px; display: flex; align-items: center; justify-content: center; }
+
+        .seo-section { margin-top: 60px; text-align: left; color: #94a3b8; line-height: 1.8; border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-section h2 { color: #fff; margin-bottom: 15px; border-left: 4px solid var(--primary); padding-left: 15px; }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--accent); font-weight: 800; border: 1px solid var(--accent); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-camera"></i> STUDIO-QUALITY EXPORT
+    </div>
+</nav>
+
 <div class="container">
-    <a href="index.html" style="color: var(--p); text-decoration: none;">← Back to Tools</a>
-    <h1>Passport Photo Maker</h1>
-    <p>Crop and resize images to official passport & visa standards.</p>
+    <div class="tool-card">
+        <h1 style="font-family: 'Poppins'; font-size: 32px; margin-bottom: 10px;">Passport Photo Maker</h1>
+        <p style="color: #94a3b8; margin-bottom: 30px;">Crop and resize your portrait to official government standards.</p>
 
-    <input type="file" id="upload" accept="image/*" style="margin-bottom: 20px;">
+        <div class="upload-area" id="uploadZone" onclick="document.getElementById('upload').click()">
+            <i class="fas fa-user-circle" style="font-size: 50px; color: var(--primary); margin-bottom: 20px;"></i>
+            <h3>Upload Your Photo</h3>
+            <p style="font-size: 12px; color: #64748b; margin-top: 5px;">Supports JPG, PNG (Max 10MB)</p>
+            <input type="file" id="upload" accept="image/*" style="display:none">
+        </div>
 
-    <div class="editor-wrapper" id="editorWrapper">
-        <img id="imageToCrop">
+        <div class="editor-wrapper" id="editorWrapper">
+            <img id="imageToCrop">
+        </div>
+
+        <div class="controls" id="controls">
+            <button class="btn" onclick="setRatio(1, 600, 600)">
+                <i class="fas fa-flag-usa"></i> US / India (2x2")
+            </button>
+            <button class="btn" onclick="setRatio(3.5/4.5, 350, 450)">
+                <i class="fas fa-euro-sign"></i> EU / UK (35x45mm)
+            </button>
+            <button class="btn" onclick="setRatio(3.3/4.8, 330, 480)">
+                <i class="fas fa-globe-asia"></i> China (33x48mm)
+            </button>
+            <button class="btn" onclick="setRatio(1, 510, 510)">
+                <i class="fas fa-id-card"></i> PAN Card (India)
+            </button>
+            <button class="btn btn-success" id="cropBtn">
+                <i class="fas fa-scissors"></i> Generate Official Photo
+            </button>
+        </div>
+
+        <div id="final-preview">
+            <h3 style="margin-bottom: 20px;">Your Official Passport Photo</h3>
+            <img id="resultImage" class="preview-img">
+            <br>
+            <a id="downloadLink" class="btn btn-success" style="display: inline-block; width: auto; padding: 15px 40px;" download="Official-Passport-Photo.jpg">
+                <i class="fas fa-download"></i> Download Print-Ready JPG
+            </a>
+            <p style="font-size: 12px; color: #64748b; margin-top: 15px;">Resolution optimized for standard A4/4x6" printing.</p>
+        </div>
+
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
     </div>
 
-    <div class="controls" id="controls" style="display: none;">
-        <button class="btn" onclick="setRatio(1)">1:1 (US/India)</button>
-        <button class="btn" onclick="setRatio(3.5/4.5)">3.5x4.5cm (EU/UK)</button>
-        <button class="btn btn-success" id="cropBtn">Generate Passport Photo</button>
-    </div>
+    <article class="seo-section">
+        <h2>Professional Passport Photos at Home</h2>
+        <p>In 2026, you no longer need to visit a studio for visa photos. The <strong>AllToolsFree Passport Photo Maker</strong> uses advanced cropping logic to help you align your face according to global regulatory standards. Whether you need a 2x2 inch photo for a US Visa or a 35x45mm photo for the Schengen area, our tool ensures the correct aspect ratio every time.</p>
+        
+        <h3>Privacy First Processing</h3>
+        <p>Your biometric data and personal photos are sensitive. Unlike other online converters, we do not upload your images to any cloud server. The <strong>Cropper.js</strong> engine runs entirely within your browser's local memory, meaning your photo stays on your computer and is wiped the moment you close the tab.</p>
 
-    <div id="final-preview">
-        <h3>Preview (Right-click to save)</h3>
-        <img id="resultImage" style="border: 5px solid white; width: 200px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-        <br><br>
-        <a id="downloadLink" class="btn" download="passport-photo.jpg">Download Official Photo</a>
-    </div>
+        <h3>Printing Guide:</h3>
+        <ul>
+            <li><strong>US/India:</strong> Select 1:1 ratio. Print at 2x2 inches on high-quality glossy paper.</li>
+            <li><strong>UK/EU:</strong> Select 3.5x4.5 ratio. Ensure your head height is between 29mm and 34mm.</li>
+            <li><strong>Quality Tip:</strong> Use a plain white or off-white background and ensure even lighting on your face.</li>
+        </ul>
+    </article>
 </div>
 
 <script>
     let cropper;
+    let targetW = 600;
+    let targetH = 600;
+
     const upload = document.getElementById('upload');
     const image = document.getElementById('imageToCrop');
     const editorWrapper = document.getElementById('editorWrapper');
     const controls = document.getElementById('controls');
+    const uploadZone = document.getElementById('uploadZone');
     const resultImage = document.getElementById('resultImage');
     const finalPreview = document.getElementById('final-preview');
     const downloadLink = document.getElementById('downloadLink');
@@ -62,34 +177,41 @@
             reader.onload = (event) => {
                 image.src = event.target.result;
                 editorWrapper.style.display = 'block';
-                controls.style.display = 'flex';
+                controls.style.display = 'grid';
+                uploadZone.style.display = 'none';
                 if (cropper) cropper.destroy();
                 cropper = new Cropper(image, {
                     aspectRatio: 1,
                     viewMode: 1,
+                    dragMode: 'move',
+                    background: false
                 });
             };
             reader.readAsDataURL(file);
         }
     });
 
-    function setRatio(ratio) {
+    function setRatio(ratio, w, h) {
         cropper.setAspectRatio(ratio);
+        targetW = w;
+        targetH = h;
     }
 
     document.getElementById('cropBtn').addEventListener('click', () => {
         const canvas = cropper.getCroppedCanvas({
-            width: 600, // Standard digital passport width
-            height: 600,
+            width: targetW,
+            height: targetH,
+            imageSmoothingQuality: 'high'
         });
         
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
         resultImage.src = dataUrl;
         downloadLink.href = dataUrl;
         
         finalPreview.style.display = 'block';
         editorWrapper.style.display = 'none';
-        window.scrollTo(0, document.body.scrollHeight);
+        controls.style.display = 'none';
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 </script>
 
