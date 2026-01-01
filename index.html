@@ -2,7 +2,6 @@
 <html lang="en-US" itemscope itemtype="https://schema.org/WebApplication">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllToolsFree™ | 71 Free Online Tools 2026 - PDF, Image, Finance & SEO</title>
@@ -27,28 +26,31 @@
         .tab-btn { padding:0.6rem 1.2rem; border-radius:50px; background:rgba(255,255,255,0.05); border:1px solid var(--b); color:var(--m); cursor:pointer; font-weight:600; transition:0.3s; font-size:0.85rem; }
         .tab-btn.active, .tab-btn:hover { background:var(--g); color:white; border-color:transparent; }
         .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.2rem; padding:0 5%; max-width:1400px; margin:0 auto 60px; }
-        .card { background:var(--c); border:1px solid var(--b); padding:1.5rem; border-radius:18px; text-decoration:none; color:inherit; transition:0.3s; display:flex; flex-direction:column; }
+        .card { background:var(--c); border:1px solid var(--b); padding:1.5rem; border-radius:18px; text-decoration:none; color:inherit; transition:0.3s; display:flex; flex-direction:column; height: 100%; }
         .card:hover { transform:translateY(-5px); border-color:var(--p); background:#1e293b; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
         .card i { font-size:1.8rem; color:var(--p); margin-bottom:1rem; }
         .card h3 { font-size:1.1rem; margin-bottom:0.5rem; color:white; }
         .card p { font-size:0.85rem; color:var(--m); flex-grow:1; }
         .card-tag { font-size:0.65rem; font-weight:800; text-transform:uppercase; color:var(--p); margin-top:1rem; letter-spacing:1px; }
         footer { padding:60px 5% 20px; background:#010409; border-top:1px solid var(--b); text-align:center; }
-        #no-results { display:none; grid-column:1/-1; padding:50px; color:var(--m); }
+        #no-results { display:none; grid-column:1/-1; padding:50px; color:var(--m); text-align:center; }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="index.html" class="logo"><i class="fas fa-bolt"></i> <span>AllToolsFree</span></a>
-    <div><a href="about.html" style="color:var(--m); text-decoration:none; font-size:0.9rem;">About</a></div>
+    <div style="display:flex; gap:10px;">
+        <a href="about.html" class="tab-btn">About</a>
+        <a href="contact.html" class="tab-btn">Contact</a>
+    </div>
 </nav>
 
 <section class="hero">
     <h1>71 Premium Tools. <span style="color:var(--p)">Free Forever.</span></h1>
     <div class="search-wrap">
         <i class="fas fa-search"></i>
-        <input type="text" id="toolSearch" class="search-input" placeholder="Search across 71 tools...">
+        <input type="text" id="toolSearch" class="search-input" placeholder="Search across 71 tools (e.g. PDF, BMI, ROI)...">
     </div>
 </section>
 
@@ -63,63 +65,88 @@
 </div>
 
 <div class="grid" id="toolGrid">
-    <a href="merge-pdf.html" class="card" data-cat="pdf">
-        <i class="fas fa-layer-group"></i><h3>Merge PDF</h3><p>Combine multiple PDF files into one doc.</p><div class="card-tag">PDF</div>
-    </a>
-    <a href="split-pdf.html" class="card" data-cat="pdf">
-        <i class="fas fa-scissors"></i><h3>Split PDF</h3><p>Extract pages from your PDF documents.</p><div class="card-tag">PDF</div>
-    </a>
-    <a href="image-to-pdf.html" class="card" data-cat="pdf">
-        <i class="fas fa-file-pdf"></i><h3>Image to PDF</h3><p>Convert JPG/PNG to PDF format.</p><div class="card-tag">PDF</div>
-    </a>
-    <a href="pdf-to-image.html" class="card" data-cat="pdf">
-        <i class="fas fa-images"></i><h3>PDF to Image</h3><p>Extract images from PDF pages.</p><div class="card-tag">PDF</div>
-    </a>
-    <a href="sign-pdf.html" class="card" data-cat="pdf">
-        <i class="fas fa-signature"></i><h3>Sign PDF</h3><p>Add digital signatures to PDF files.</p><div class="card-tag">PDF</div>
-    </a>
-    
-    <a href="image-compressor.html" class="card" data-cat="image"><i class="fas fa-compress-arrows-alt"></i><h3>Image Compressor</h3><p>Reduce file size without losing quality.</p><div class="card-tag">Image</div></a>
-    <a href="heic-to-jpg.html" class="card" data-cat="image"><i class="fas fa-camera"></i><h3>HEIC to JPG</h3><p>Convert iPhone photos to JPG.</p><div class="card-tag">Image</div></a>
-    <a href="png-to-jpg-converter.html" class="card" data-cat="image"><i class="fas fa-sync"></i><h3>PNG to JPG</h3><p>Quick PNG conversion.</p><div class="card-tag">Image</div></a>
+    <a href="merge-pdf.html" class="card" data-cat="pdf"><i class="fas fa-layer-group"></i><h3>Merge PDF</h3><p>Combine multiple PDF files.</p><div class="card-tag">PDF</div></a>
+    <a href="split-pdf.html" class="card" data-cat="pdf"><i class="fas fa-scissors"></i><h3>Split PDF</h3><p>Extract pages from PDF.</p><div class="card-tag">PDF</div></a>
+    <a href="image-to-pdf.html" class="card" data-cat="pdf"><i class="fas fa-file-pdf"></i><h3>Image to PDF</h3><p>Convert JPG/PNG to PDF.</p><div class="card-tag">PDF</div></a>
+    <a href="pdf-to-image.html" class="card" data-cat="pdf"><i class="fas fa-images"></i><h3>PDF to Image</h3><p>Extract photos from PDF.</p><div class="card-tag">PDF</div></a>
+    <a href="sign-pdf.html" class="card" data-cat="pdf"><i class="fas fa-signature"></i><h3>Sign PDF</h3><p>Add digital signatures.</p><div class="card-tag">PDF</div></a>
+
+    <a href="image-compressor.html" class="card" data-cat="image"><i class="fas fa-compress"></i><h3>Image Compressor</h3><p>Reduce file size easily.</p><div class="card-tag">Image</div></a>
+    <a href="heic-to-jpg.html" class="card" data-cat="image"><i class="fas fa-camera"></i><h3>HEIC to JPG</h3><p>iPhone photo converter.</p><div class="card-tag">Image</div></a>
+    <a href="png-to-jpg-converter.html" class="card" data-cat="image"><i class="fas fa-sync"></i><h3>PNG to JPG</h3><p>Fast image conversion.</p><div class="card-tag">Image</div></a>
     <a href="jpg-to-png-converter.html" class="card" data-cat="image"><i class="fas fa-sync"></i><h3>JPG to PNG</h3><p>Convert JPG to PNG.</p><div class="card-tag">Image</div></a>
     <a href="webp-to-jpg-converter.html" class="card" data-cat="image"><i class="fas fa-sync"></i><h3>WebP to JPG</h3><p>Convert WebP to JPG.</p><div class="card-tag">Image</div></a>
-    <a href="image-resizer-social-media.html" class="card" data-cat="image"><i class="fas fa-expand"></i><h3>Social Resizer</h3><p>Resize for FB/IG/TW.</p><div class="card-tag">Image</div></a>
-    <a href="photo-watermark-adder.html" class="card" data-cat="image"><i class="fas fa-copyright"></i><h3>Watermark Adder</h3><p>Add text to photos.</p><div class="card-tag">Image</div></a>
-    <a href="background-blur-tool.html" class="card" data-cat="image"><i class="fas fa-ghost"></i><h3>Background Blur</h3><p>Blur portrait backgrounds.</p><div class="card-tag">Image</div></a>
-    <a href="profile-picture-circle-cropper.html" class="card" data-cat="image"><i class="fas fa-circle-user"></i><h3>Circle Cropper</h3><p>Crop circles for avatars.</p><div class="card-tag">Image</div></a>
-    <a href="meme-maker.html" class="card" data-cat="image"><i class="fas fa-face-laugh"></i><h3>Meme Maker</h3><p>Viral meme generator.</p><div class="card-tag">Image</div></a>
-    <a href="pp-photo-maker.html" class="card" data-cat="image"><i class="fas fa-id-card"></i><h3>Passport Photo</h3><p>Passport size maker.</p><div class="card-tag">Image</div></a>
+    <a href="image-resizer-social-media.html" class="card" data-cat="image"><i class="fas fa-expand"></i><h3>Social Resizer</h3><p>Size for FB/IG/TW.</p><div class="card-tag">Image</div></a>
+    <a href="photo-watermark-adder.html" class="card" data-cat="image"><i class="fas fa-copyright"></i><h3>Watermark Adder</h3><p>Protect your photos.</p><div class="card-tag">Image</div></a>
+    <a href="background-blur-tool.html" class="card" data-cat="image"><i class="fas fa-ghost"></i><h3>Background Blur</h3><p>Portrait blur effect.</p><div class="card-tag">Image</div></a>
+    <a href="profile-picture-circle-cropper.html" class="card" data-cat="image"><i class="fas fa-circle-user"></i><h3>Circle Cropper</h3><p>Crop for social media.</p><div class="card-tag">Image</div></a>
+    <a href="meme-maker.html" class="card" data-cat="image"><i class="fas fa-face-laugh"></i><h3>Meme Maker</h3><p>Create viral memes.</p><div class="card-tag">Image</div></a>
+    <a href="pp-photo-maker.html" class="card" data-cat="image"><i class="fas fa-id-card"></i><h3>Passport Photo</h3><p>Official size maker.</p><div class="card-tag">Image</div></a>
+    <a href="instagram-story-maker.html" class="card" data-cat="image"><i class="fab fa-instagram"></i><h3>Story Maker</h3><p>Design Insta stories.</p><div class="card-tag">Image</div></a>
 
-    <a href="roi-calculator.html" class="card" data-cat="finance"><i class="fas fa-chart-line"></i><h3>ROI Calc</h3><p>Calculate returns.</p><div class="card-tag">Finance</div></a>
-    <a href="salary-calculator.html" class="card" data-cat="finance"><i class="fas fa-wallet"></i><h3>Salary Calc</h3><p>Take-home pay calc.</p><div class="card-tag">Finance</div></a>
+    <a href="roi-calculator.html" class="card" data-cat="finance"><i class="fas fa-chart-line"></i><h3>ROI Calculator</h3><p>Investment returns.</p><div class="card-tag">Finance</div></a>
+    <a href="investment-roi-calculator.html" class="card" data-cat="finance"><i class="fas fa-coins"></i><h3>Investment ROI</h3><p>Projected profits.</p><div class="card-tag">Finance</div></a>
+    <a href="salary-calculator.html" class="card" data-cat="finance"><i class="fas fa-wallet"></i><h3>Salary Calc</h3><p>Take-home pay.</p><div class="card-tag">Finance</div></a>
     <a href="gst-calculator.html" class="card" data-cat="finance"><i class="fas fa-calculator"></i><h3>GST Calc</h3><p>Add/Remove GST.</p><div class="card-tag">Finance</div></a>
-    <a href="vat-calculator.html" class="card" data-cat="finance"><i class="fas fa-receipt"></i><h3>VAT Calc</h3><p>Global VAT calc.</p><div class="card-tag">Finance</div></a>
-    <a href="compound-interest-calculator.html" class="card" data-cat="finance"><i class="fas fa-percent"></i><h3>Compound Interest</h3><p>Investment growth.</p><div class="card-tag">Finance</div></a>
-    <a href="break-even-calculator.html" class="card" data-cat="finance"><i class="fas fa-balance-scale"></i><h3>Break Even</h3><p>Profit point calc.</p><div class="card-tag">Finance</div></a>
-    <a href="fixed-deposit-calculator.html" class="card" data-cat="finance"><i class="fas fa-piggy-bank"></i><h3>FD Calc</h3><p>Deposit returns.</p><div class="card-tag">Finance</div></a>
+    <a href="vat-calculator.html" class="card" data-cat="finance"><i class="fas fa-receipt"></i><h3>VAT Calc</h3><p>Global VAT tax.</p><div class="card-tag">Finance</div></a>
+    <a href="compound-interest-calculator.html" class="card" data-cat="finance"><i class="fas fa-percent"></i><h3>Compound Interest</h3><p>Long term savings.</p><div class="card-tag">Finance</div></a>
+    <a href="break-even-calculator.html" class="card" data-cat="finance"><i class="fas fa-balance-scale"></i><h3>Break Even</h3><p>Profit threshold.</p><div class="card-tag">Finance</div></a>
+    <a href="fixed-deposit-calculator.html" class="card" data-cat="finance"><i class="fas fa-piggy-bank"></i><h3>FD Calc</h3><p>Bank FD returns.</p><div class="card-tag">Finance</div></a>
     <a href="mutual-fund-calculator.html" class="card" data-cat="finance"><i class="fas fa-vault"></i><h3>Mutual Fund</h3><p>SIP returns.</p><div class="card-tag">Finance</div></a>
-    <a href="discount-calculator.html" class="card" data-cat="finance"><i class="fas fa-tags"></i><h3>Discount Calc</h3><p>Sale price calc.</p><div class="card-tag">Finance</div></a>
-    <a href="invoice-maker.html" class="card" data-cat="finance"><i class="fas fa-file-invoice"></i><h3>Invoice Maker</h3><p>Professional invoices.</p><div class="card-tag">Finance</div></a>
+    <a href="discount-calculator.html" class="card" data-cat="finance"><i class="fas fa-tags"></i><h3>Discount Calc</h3><p>Sale discount math.</p><div class="card-tag">Finance</div></a>
+    <a href="invoice-maker.html" class="card" data-cat="finance"><i class="fas fa-file-invoice"></i><h3>Invoice Maker</h3><p>Pro billing maker.</p><div class="card-tag">Finance</div></a>
+    <a href="finance-calc.html" class="card" data-cat="finance"><i class="fas fa-calculator"></i><h3>Finance Calc</h3><p>General toolkit.</p><div class="card-tag">Finance</div></a>
+    <a href="hourly-wage-converter.html" class="card" data-cat="finance"><i class="fas fa-clock"></i><h3>Hourly Wage</h3><p>Annual to hourly.</p><div class="card-tag">Finance</div></a>
+    <a href="sale-price-calculator.html" class="card" data-cat="finance"><i class="fas fa-cart-shopping"></i><h3>Sale Price</h3><p>Final price math.</p><div class="card-tag">Finance</div></a>
+    <a href="sales-tax-calculator.html" class="card" data-cat="finance"><i class="fas fa-file-invoice-dollar"></i><h3>Sales Tax</h3><p>State tax calc.</p><div class="card-tag">Finance</div></a>
+    <a href="tip-calculator.html" class="card" data-cat="finance"><i class="fas fa-utensils"></i><h3>Tip Calc</h3><p>Split bill math.</p><div class="card-tag">Finance</div></a>
+    <a href="percent-calculator.html" class="card" data-cat="finance"><i class="fas fa-percent"></i><h3>Percentage</h3><p>Basic percent math.</p><div class="card-tag">Finance</div></a>
+    <a href="days-between-dates-calculator.html" class="card" data-cat="finance"><i class="fas fa-calendar-alt"></i><h3>Days Between</h3><p>Date range calc.</p><div class="card-tag">Utility</div></a>
+    <a href="countdown-timer-generator.html" class="card" data-cat="finance"><i class="fas fa-hourglass-half"></i><h3>Countdown Timer</h3><p>Create timers.</p><div class="card-tag">Utility</div></a>
 
-    <a href="plagiarism-checker.html" class="card" data-cat="seo"><i class="fas fa-copy"></i><h3>Plagiarism</h3><p>Content uniqueness.</p><div class="card-tag">SEO</div></a>
-    <a href="qr-generator.html" class="card" data-cat="seo"><i class="fas fa-qrcode"></i><h3>QR Generator</h3><p>Custom QR codes.</p><div class="card-tag">SEO</div></a>
+    <a href="plagiarism-checker.html" class="card" data-cat="seo"><i class="fas fa-copy"></i><h3>Plagiarism</h3><p>Uniqueness checker.</p><div class="card-tag">SEO</div></a>
+    <a href="qr-generator.html" class="card" data-cat="seo"><i class="fas fa-qrcode"></i><h3>QR Generator</h3><p>Create QR codes.</p><div class="card-tag">SEO</div></a>
     <a href="password-generator.html" class="card" data-cat="seo"><i class="fas fa-key"></i><h3>Password Gen</h3><p>Secure passwords.</p><div class="card-tag">SEO</div></a>
-    <a href="word-counter.html" class="card" data-cat="seo"><i class="fas fa-font"></i><h3>Word Counter</h3><p>Count text.</p><div class="card-tag">SEO</div></a>
-    <a href="json-formatter.html" class="card" data-cat="seo"><i class="fas fa-code"></i><h3>JSON Formatter</h3><p>Clean JSON code.</p><div class="card-tag">SEO</div></a>
-    <a href="resume-builder.html" class="card" data-cat="seo"><i class="fas fa-file-user"></i><h3>Resume Builder</h3><p>Pro CV maker.</p><div class="card-tag">SEO</div></a>
+    <a href="word-counter.html" class="card" data-cat="seo"><i class="fas fa-font"></i><h3>Word Counter</h3><p>Text analysis.</p><div class="card-tag">SEO</div></a>
+    <a href="keyword-density-checker.html" class="card" data-cat="seo"><i class="fas fa-magnifying-glass-chart"></i><h3>Keyword Density</h3><p>SEO analysis.</p><div class="card-tag">SEO</div></a>
+    <a href="youtube-thumbnail-downloader.html" class="card" data-cat="seo"><i class="fab fa-youtube"></i><h3>YT Thumbnail</h3><p>Get video art.</p><div class="card-tag">SEO</div></a>
+    <a href="youtube-metadata.html" class="card" data-cat="seo"><i class="fab fa-youtube"></i><h3>YT Metadata</h3><p>Extract tags/desc.</p><div class="card-tag">SEO</div></a>
+    <a href="resume-builder.html" class="card" data-cat="seo"><i class="fas fa-file-user"></i><h3>Resume Builder</h3><p>Professional CV.</p><div class="card-tag">SEO</div></a>
+    <a href="lorem-ipsum-generator.html" class="card" data-cat="seo"><i class="fas fa-paragraph"></i><h3>Lorem Ipsum</h3><p>Placeholder text.</p><div class="card-tag">SEO</div></a>
+    <a href="json-formatter.html" class="card" data-cat="seo"><i class="fas fa-code"></i><h3>JSON Formatter</h3><p>Code beautifier.</p><div class="card-tag">SEO</div></a>
+    <a href="whatsapp-direct-link-generator.html" class="card" data-cat="seo"><i class="fab fa-whatsapp"></i><h3>WhatsApp Link</h3><p>Direct chat links.</p><div class="card-tag">SEO</div></a>
+    <a href="readability-score-calculator.html" class="card" data-cat="seo"><i class="fas fa-book-reader"></i><h3>Readability</h3><p>Check text level.</p><div class="card-tag">SEO</div></a>
+    <a href="character-counter.html" class="card" data-cat="seo"><i class="fas fa-text-width"></i><h3>Character Count</h3><p>Letter count.</p><div class="card-tag">SEO</div></a>
+    <a href="case-converter.html" class="card" data-cat="seo"><i class="fas fa-text-height"></i><h3>Case Converter</h3><p>Change text case.</p><div class="card-tag">SEO</div></a>
+    <a href="binary-to-text.html" class="card" data-cat="seo"><i class="fas fa-binary"></i><h3>Binary to Text</h3><p>Decode binary.</p><div class="card-tag">SEO</div></a>
+    <a href="password-strength-checker.html" class="card" data-cat="seo"><i class="fas fa-shield-alt"></i><h3>Pass Strength</h3><p>Security test.</p><div class="card-tag">SEO</div></a>
+    <a href="clickbait-title-generator.html" class="card" data-cat="seo"><i class="fas fa-fire"></i><h3>Title Generator</h3><p>Viral headlines.</p><div class="card-tag">SEO</div></a>
+    <a href="email-signature-generator.html" class="card" data-cat="seo"><i class="fas fa-envelope-open-text"></i><h3>Email Signature</h3><p>Pro signature.</p><div class="card-tag">SEO</div></a>
+    <a href="social-media-preview-tool.html" class="card" data-cat="seo"><i class="fas fa-share-alt"></i><h3>Social Preview</h3><p>Link appearance.</p><div class="card-tag">SEO</div></a>
+    <a href="tiktok-username-generator.html" class="card" data-cat="seo"><i class="fab fa-tiktok"></i><h3>TikTok Name</h3><p>Viral handle ideas.</p><div class="card-tag">Social</div></a>
+    <a href="instagram-font-generator.html" class="card" data-cat="seo"><i class="fab fa-instagram"></i><h3>Insta Fonts</h3><p>Fancy bio fonts.</p><div class="card-tag">Social</div></a>
+    <a href="unit-converter.html" class="card" data-cat="seo"><i class="fas fa-ruler-combined"></i><h3>Unit Converter</h3><p>Length/Mass/Temp.</p><div class="card-tag">Utility</div></a>
+    <a href="profile-maker.html" class="card" data-cat="seo"><i class="fas fa-id-badge"></i><h3>Profile Maker</h3><p>Online bio maker.</p><div class="card-tag">Social</div></a>
 
-    <a href="bmi-health-risk-calculator.html" class="card" data-cat="health"><i class="fas fa-heartbeat"></i><h3>BMI Calc</h3><p>Health tracker.</p><div class="card-tag">Health</div></a>
-    <a href="age calculator.html" class="card" data-cat="health"><i class="fas fa-calendar-check"></i><h3>Age Calc</h3><p>Exact age finder.</p><div class="card-tag">Health</div></a>
+    <a href="bmi-health-risk-calculator.html" class="card" data-cat="health"><i class="fas fa-heartbeat"></i><h3>BMI Calc</h3><p>Health risk check.</p><div class="card-tag">Health</div></a>
+    <a href="bmr-calculator.html" class="card" data-cat="health"><i class="fas fa-fire"></i><h3>BMR Calc</h3><p>Calorie tracker.</p><div class="card-tag">Health</div></a>
+    <a href="age%20calculator.html" class="card" data-cat="health"><i class="fas fa-calendar-check"></i><h3>Age Calc</h3><p>Find exact age.</p><div class="card-tag">Health</div></a>
+    <a href="pregnancy-due-date-calculator.html" class="card" data-cat="health"><i class="fas fa-baby"></i><h3>Pregnancy Calc</h3><p>Due date finder.</p><div class="card-tag">Health</div></a>
 
     <a href="privacy-policy-generator.html" class="card" data-cat="legal"><i class="fas fa-user-shield"></i><h3>Privacy Gen</h3><p>Legal policies.</p><div class="card-tag">Legal</div></a>
     <a href="terms-and-conditions-generator.html" class="card" data-cat="legal"><i class="fas fa-file-contract"></i><h3>Terms Gen</h3><p>T&C generator.</p><div class="card-tag">Legal</div></a>
+    <a href="disclaimer-generator.html" class="card" data-cat="legal"><i class="fas fa-exclamation-triangle"></i><h3>Disclaimer Gen</h3><p>Disclaimer maker.</p><div class="card-tag">Legal</div></a>
+    <a href="privacy.html" class="card" data-cat="legal"><i class="fas fa-shield"></i><h3>Site Privacy</h3><p>Our policy.</p><div class="card-tag">Legal</div></a>
 
+    <a href="google507eed84ff305819.html" class="card" data-cat="all" style="display:none;"><h3>Verification</h3><p>Verification File</p></a>
+    <a href="about.html" class="card" data-cat="all"><i class="fas fa-info-circle"></i><h3>About Us</h3><p>Learn about us.</p><div class="card-tag">Meta</div></a>
+    <a href="contact.html" class="card" data-cat="all"><i class="fas fa-phone"></i><h3>Contact</h3><p>Get in touch.</p><div class="card-tag">Meta</div></a>
+    
     <div id="no-results"><h3>No tools found matching your search.</h3></div>
 </div>
 
 <footer>
-    <p>&copy; 2026 AllToolsFree™ | Contact: nexuas.ai@gmail.com</p>
+    <p>&copy; 2026 AllToolsFree™ | Engineered for Privacy | nexuas.ai@gmail.com</p>
 </footer>
 
 <script>
@@ -134,7 +161,7 @@
             if(card.innerText.toLowerCase().includes(v)) { card.style.display = 'flex'; count++; }
             else { card.style.display = 'none'; }
         });
-        n.style.display = count === 0 ? 'block' : 'none';
+        n.style.display = (count === 0 && v !== "") ? 'block' : 'none';
     });
 
     window.filterCat = function(cat) {
@@ -149,5 +176,6 @@
 </script>
 
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
 </body>
 </html>
