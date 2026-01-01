@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GST Calculator India | CGST, SGST & IGST Tool | AllToolsFree</title>
+    <meta name="description" content="Free 2026 GST Calculator for India. Calculate GST inclusive and exclusive prices with full breakdowns for CGST, SGST, and IGST across all tax slabs.">
+    <meta name="keywords" content="GST calculator India, GST inclusive exclusive, CGST SGST IGST finder, tax slab calculator, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/gst-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #10b981; 
+            --primary-hover: #059669;
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { font-size: 2.2rem; font-family: 'Poppins'; letter-spacing: -1px; }
+        header p { color: var(--text-dim); }
+
+        .calculator-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; }
+        .card { background: var(--card-bg); border-radius: 30px; padding: 35px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        
+        /* Toggle Styling */
+        .toggle-group { display: flex; background: #020617; padding: 6px; border-radius: 18px; margin-bottom: 30px; border: 1px solid var(--glass-border); }
+        .toggle-btn { flex: 1; padding: 12px; border: none; background: transparent; cursor: pointer; border-radius: 14px; font-weight: 700; color: var(--text-dim); transition: 0.3s; }
+        .toggle-btn.active { background: var(--primary); color: white; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }
+
+        label { display: block; margin-bottom: 10px; font-size: 11px; font-weight: 800; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        input { 
+            width: 100%; padding: 18px; background: #020617; border: 2px solid var(--glass-border); 
+            border-radius: 15px; color: #fff; font-family: 'JetBrains Mono', monospace; 
+            font-size: 1.3rem; outline: none; transition: 0.3s; margin-bottom: 25px;
+        }
+        input:focus { border-color: var(--primary); }
+
+        .slabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 10px; }
+        .slab-btn { padding: 14px; border: 2px solid var(--glass-border); background: #020617; color: white; border-radius: 14px; cursor: pointer; font-weight: 800; transition: 0.2s; }
+        .slab-btn.active { border-color: var(--primary); background: rgba(16, 185, 129, 0.1); color: var(--primary); }
+
+        /* Result Panel */
+        .result-panel { background: #020617; border-radius: 30px; padding: 40px; border: 1px solid var(--glass-border); height: fit-content; position: sticky; top: 110px; }
+        .res-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 0.95rem; color: var(--text-dim); }
+        .res-row span:last-child { color: #fff; font-family: 'JetBrains Mono'; font-weight: 600; }
+        
+        .total-box { margin-top: 25px; padding-top: 25px; border-top: 1px dashed var(--glass-border); text-align: center; }
+        .total-label { font-size: 0.7rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 5px; }
+        .total-val { font-size: 2.8rem; font-weight: 800; color: #fff; font-family: 'Poppins'; }
+
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 900px) { .calculator-grid { grid-template-columns: 1fr; } .total-val { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-file-invoice"></i> COMPLIANCE CORE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>GST Calculator India</h1>
+        <p>Instant tax breakdowns for Inclusive and Exclusive prices across all Indian tax slabs.</p>
+    </header>
+
+    <div class="calculator-grid">
+        <div class="card">
+            <div class="toggle-group">
+                <button class="toggle-btn active" id="btnExcl" onclick="setMode('exclusive')">GST Exclusive</button>
+                <button class="toggle-btn" id="btnIncl" onclick="setMode('inclusive')">GST Inclusive</button>
+            </div>
+            
+            <label><i class="fas fa-rupee-sign"></i> Amount (₹)</label>
+            <input type="number" id="amount" placeholder="0.00" oninput="calculate()" autofocus>
+            
+            <label><i class="fas fa-percent"></i> GST Tax Slab</label>
+            <div class="slabs">
+                <button class="slab-btn" onclick="setSlab(5)">5%</button>
+                <button class="slab-btn" onclick="setSlab(12)">12%</button>
+                <button class="slab-btn active" onclick="setSlab(18)">18%</button>
+                <button class="slab-btn" onclick="setSlab(28)">28%</button>
+            </div>
+            <p style="font-size: 11px; color: var(--text-dim); margin-top: 10px;">Commonly used for services (18%) and luxury goods (28%).</p>
+        </div>
+
+        <div class="result-panel">
+            <div class="res-row">
+                <span>Base Amount</span>
+                <span id="resBase">₹ 0.00</span>
+            </div>
+            <div class="res-row">
+                <span>CGST (Central)</span>
+                <span id="resCgst">₹ 0.00</span>
+            </div>
+            <div class="res-row">
+                <span>SGST (State)</span>
+                <span id="resSgst">₹ 0.00</span>
+            </div>
+            <div class="res-row" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 10px;">
+                <span>IGST (Integrated)</span>
+                <span id="resIgst">₹ 0.00</span>
+            </div>
+            <div class="res-row" style="margin-top: 10px;">
+                <span>Total Tax Amount</span>
+                <span id="resGst" style="color: var(--primary);">₹ 0.00</span>
+            </div>
+
+            <div class="total-box">
+                <span class="total-label">Final Transaction Value</span>
+                <div class="total-val" id="resTotal">₹ 0.00</div>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>Understanding GST Calculations in India</h2>
+        <p>The Goods and Services Tax (GST) is a multi-stage, destination-based tax levied on every value addition. Whether you are a business owner generating an invoice or a consumer checking a receipt, understanding <strong>Inclusive vs. Exclusive</strong> pricing is essential.</p>
+        
+        [Image showing the breakdown of a GST invoice with Base Price, CGST, and SGST highlighted]
+
+        <h3>Inclusive vs. Exclusive: What's the difference?</h3>
+        <ul>
+            <li><strong>GST Exclusive:</strong> The tax is added on top of the base product price. If a product is ₹1,000 and GST is 18%, the buyer pays ₹1,180.</li>
+            <li><strong>GST Inclusive:</strong> The tax is already included in the displayed price. If the total is ₹1,180, the calculator works backward to find that the base price was ₹1,000 and the tax was ₹180.</li>
+        </ul>
+
+        <h3>The CGST, SGST, and IGST Split</h3>
+        <p>In the Indian tax structure, GST is divided based on where the transaction happens:</p>
+        <ul>
+            <li><strong>Intra-state (Within same state):</strong> Tax is split equally between <strong>CGST</strong> (Central GST) and <strong>SGST</strong> (State GST).</li>
+            <li><strong>Inter-state (Between two states):</strong> The entire amount is collected as <strong>IGST</strong> (Integrated GST).</li>
+        </ul>
+
+        [Image showing tax distribution flow for Intra-state vs. Inter-state commerce in India]
+
+        <h3>Standard GST Tax Slabs</h3>
+        <p>As of 2026, the four primary tax slabs remain 5%, 12%, 18%, and 28%. Basic necessities usually fall under the lower slabs, while luxury items and demerit goods (like tobacco) attract the 28% slab plus additional cess.</p>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    let mode = 'exclusive';
+    let currentSlab = 18;
+
+    function setMode(m) {
+        mode = m;
+        document.getElementById('btnExcl').classList.toggle('active', m === 'exclusive');
+        document.getElementById('btnIncl').classList.toggle('active', m === 'inclusive');
+        calculate();
+    }
+
+    function setSlab(s) {
+        currentSlab = s;
+        document.querySelectorAll('.slab-btn').forEach(btn => {
+            btn.classList.toggle('active', parseInt(btn.innerText) === s);
+        });
+        calculate();
+    }
+
+    function calculate() {
+        let amount = parseFloat(document.getElementById('amount').value) || 0;
+        let gstAmt, baseAmt, totalAmt;
+
+        if (mode === 'exclusive') {
+            gstAmt = (amount * currentSlab) / 100;
+            baseAmt = amount;
+            totalAmt = amount + gstAmt;
+        } else {
+            baseAmt = amount / (1 + (currentSlab / 100));
+            gstAmt = amount - baseAmt;
+            totalAmt = amount;
+        }
+
+        const halfGst = gstAmt / 2;
+
+        const f = (n) => `₹ ${n.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        
+        document.getElementById('resBase').innerText = f(baseAmt);
+        document.getElementById('resCgst').innerText = f(halfGst);
+        document.getElementById('resSgst').innerText = f(halfGst);
+        document.getElementById('resIgst').innerText = f(gstAmt);
+        document.getElementById('resGst').innerText = f(gstAmt);
+        document.getElementById('resTotal').innerText = f(totalAmt);
+    }
+
+    // Initialize
+    calculate();
+</script>
+</body>
+</html>

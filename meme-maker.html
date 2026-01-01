@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Online Meme Maker | Free Meme Generator No Watermark | AllToolsFree</title>
+    <meta name="description" content="Fast, free online meme generator. Create viral memes instantly for Instagram, Reddit, and TikTok. 100% private, no watermarks, and high-definition downloads.">
+    <meta name="keywords" content="meme maker online, free meme generator, create memes without watermark, custom meme creator, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/meme-maker.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/face-laugh-squint.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #00ff88; 
+            --primary-hover: #00e67a;
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-dim: #94a3b8;
+            --accent: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-size: 2.2rem; font-family: 'Poppins'; letter-spacing: -1px; }
+        header p { color: var(--text-dim); }
+
+        .editor-grid { display: grid; grid-template-columns: 1fr 380px; gap: 25px; align-items: start; }
+
+        /* Canvas Area */
+        .canvas-area { background: #000; border-radius: 24px; padding: 20px; border: 1px solid var(--glass-border); display: flex; flex-direction: column; align-items: center; min-height: 400px; justify-content: center; position: relative; }
+        canvas { max-width: 100%; height: auto !important; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); display: none; }
+
+        .upload-placeholder { cursor: pointer; text-align: center; transition: 0.3s; padding: 60px 40px; border: 2px dashed #334155; border-radius: 20px; width: 100%; }
+        .upload-placeholder:hover { border-color: var(--primary); background: rgba(0, 255, 136, 0.05); }
+        .upload-placeholder i { font-size: 3.5rem; color: var(--primary); margin-bottom: 15px; }
+
+        /* Sidebar */
+        .sidebar { background: var(--card-bg); border-radius: 24px; padding: 25px; border: 1px solid var(--glass-border); }
+        .sidebar h3 { font-size: 1rem; color: var(--primary); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; font-size: 0.75rem; font-weight: 800; color: var(--text-dim); margin-bottom: 8px; text-transform: uppercase; }
+        .input-box { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid #334155; background: #020617; color: white; font-size: 1rem; outline: none; transition: 0.3s; }
+        .input-box:focus { border-color: var(--primary); box-shadow: 0 0 15px rgba(0, 255, 136, 0.1); }
+
+        .btn-download { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #020617; border: none; padding: 18px; border-radius: 15px; width: 100%; font-weight: 800; font-size: 1.1rem; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 255, 136, 0.3); }
+
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 950px) { .editor-grid { grid-template-columns: 1fr; } .canvas-area { order: 1; } .sidebar { order: 2; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-fire"></i> VIRAL CORE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Viral Meme Maker</h1>
+        <p>Create professional, watermark-free memes instantly for social media.</p>
+    </header>
+
+    <div class="editor-grid">
+        <div class="canvas-area">
+            <div id="uploadBox" class="upload-placeholder" onclick="document.getElementById('fileInput').click()">
+                <i class="fas fa-image"></i>
+                <h3>Choose Base Image</h3>
+                <p>Upload JPG, PNG, or WebP to start</p>
+                <input type="file" id="fileInput" accept="image/*" style="display:none">
+            </div>
+            <canvas id="memeCanvas"></canvas>
+        </div>
+
+        <div class="sidebar">
+            <h3><i class="fas fa-sliders-h"></i> Editor Controls</h3>
+            
+            <div class="input-group">
+                <label>Top Caption</label>
+                <input type="text" id="topText" class="input-box" placeholder="Top text here..." oninput="drawMeme()">
+            </div>
+
+            <div class="input-group">
+                <label>Bottom Caption</label>
+                <input type="text" id="bottomText" class="input-box" placeholder="Bottom text here..." oninput="drawMeme()">
+            </div>
+
+            <div class="input-group">
+                <label>Font Size</label>
+                <input type="range" id="textSize" min="10" max="100" value="50" style="width:100%; accent-color: var(--primary);" oninput="drawMeme()">
+            </div>
+
+            <button class="btn-download" onclick="downloadMeme()">
+                <i class="fas fa-cloud-download-alt"></i> DOWNLOAD HD MEME
+            </button>
+            <p style="font-size: 0.7rem; color: var(--text-dim); margin-top: 15px; text-align: center;">100% Client-side. No data is sent to servers.</p>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>Professional Meme Generation for 2026</h2>
+        <p>The **AllToolsFree Meme Maker** is a high-speed, lightweight utility designed for modern content creators. Whether you are aiming for a viral hit on Reddit or a relatable post for Instagram, our tool provides the classic "Impact" font style used in the world's most famous memes.</p>
+
+        
+
+        <h3>Why Choose Our Watermark-Free Generator?</h3>
+        <p>Most online meme creators force a watermark onto your content or require a subscription for high-definition downloads. We believe in providing free tools for the community. Our generator uses <strong>browser-based canvas rendering</strong>, meaning your high-resolution images never leave your computer, ensuring absolute privacy and speed.</p>
+        
+        
+
+        <h3>Mastering the "Impact" Meme Style</h3>
+        <p>The secret to a great meme is readability. Our engine automatically applies a thick black stroke around your white text. This ensures your message is visible regardless of the background colors or textures. In 2026, where attention spans are measured in milliseconds, clarity is key to going viral.</p>
+
+        <h3>Features:</h3>
+        <ul>
+            <li><strong>Responsive Scaling:</strong> Our engine adjusts font size relative to image resolution for perfect proportions.</li>
+            <li><strong>Privacy First:</strong> No server-side processing. Your private photos remain private.</li>
+            <li><strong>Instant Previews:</strong> See changes in real-time as you type your punchlines.</li>
+        </ul>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('memeCanvas');
+    const ctx = canvas.getContext('2d');
+    const fileInput = document.getElementById('fileInput');
+    const uploadBox = document.getElementById('uploadBox');
+
+    let baseImg = null;
+
+    fileInput.onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (f) => {
+            baseImg = new Image();
+            baseImg.onload = () => {
+                canvas.style.display = 'block';
+                uploadBox.style.display = 'none';
+                drawMeme();
+            };
+            baseImg.src = f.target.result;
+        };
+        reader.readAsDataURL(file);
+    };
+
+    function drawMeme() {
+        if (!baseImg) return;
+        
+        const maxW = 1200;
+        let scale = 1;
+        if(baseImg.width > maxW) scale = maxW / baseImg.width;
+        
+        canvas.width = baseImg.width * scale;
+        canvas.height = baseImg.height * scale;
+        
+        ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
+
+        const topText = document.getElementById('topText').value.toUpperCase();
+        const bottomText = document.getElementById('bottomText').value.toUpperCase();
+        const fontSizeSetting = parseInt(document.getElementById('textSize').value);
+        
+        const responsiveFontSize = (fontSizeSetting / 600) * canvas.width;
+
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = responsiveFontSize / 6;
+        ctx.textAlign = 'center';
+        ctx.font = `900 ${responsiveFontSize}px Impact, sans-serif, Arial`;
+        ctx.lineJoin = 'round';
+
+        if (topText) {
+            ctx.textBaseline = 'top';
+            ctx.strokeText(topText, canvas.width / 2, 20);
+            ctx.fillText(topText, canvas.width / 2, 20);
+        }
+
+        if (bottomText) {
+            ctx.textBaseline = 'bottom';
+            ctx.strokeText(bottomText, canvas.width / 2, canvas.height - 20);
+            ctx.fillText(bottomText, canvas.width / 2, canvas.height - 20);
+        }
+    }
+
+    function downloadMeme() {
+        if (!baseImg) return alert("Please upload an image first!");
+        const link = document.createElement('a');
+        link.download = "meme_alltoolsfree.jpg";
+        link.href = canvas.toDataURL("image/jpeg", 0.95);
+        link.click();
+    }
+</script>
+
+</body>
+</html>

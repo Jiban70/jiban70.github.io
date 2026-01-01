@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pregnancy Due Date Calculator | Trimester & Milestone Tracker | AllToolsFree</title>
+    <meta name="description" content="Calculate your baby's due date and track pregnancy trimesters. Accurate results based on LMP and cycle length. Private browser-side pregnancy tracking tool.">
+    <meta name="keywords" content="pregnancy calculator, due date finder, trimester tracker, baby due date, conception date calculator, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/pregnancy-due-date-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/baby.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #f472b6; 
+            --primary-hover: #db2777;
+            --bg-soft: #fffafb; 
+            --card-bg: #ffffff; 
+            --glass-border: #fbcfe8;
+            --text-dark: #500724;
+            --text-dim: #9d174d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-soft); color: var(--text-dark); min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--glass-border); background: #fff; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--text-dark); text-decoration: none; font-family: 'Quicksand'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { font-size: 2.2rem; font-family: 'Quicksand'; letter-spacing: -1px; color: var(--text-dark); }
+        header p { color: var(--text-dim); opacity: 0.8; }
+
+        /* Calculator Layout */
+        .hero-card { background: var(--card-bg); border-radius: 32px; padding: 40px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(244, 114, 182, 0.1); display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+        .input-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 0.75rem; font-weight: 800; color: var(--text-dim); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        input { width: 100%; padding: 15px; border: 2px solid #fff1f2; border-radius: 14px; font-size: 1rem; color: var(--text-dark); outline: none; transition: 0.3s; background: #fffcfd; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 15px rgba(244, 114, 182, 0.1); }
+
+        .result-panel { background: linear-gradient(135deg, #f472b6, #fb923c); color: white; border-radius: 24px; padding: 30px; text-align: center; }
+        .due-date { font-size: 2.2rem; font-weight: 800; font-family: 'Quicksand'; margin: 10px 0; }
+        
+        .progress-track { background: rgba(255,255,255,0.2); height: 10px; border-radius: 10px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { height: 100%; background: #fff; width: 0%; transition: 1s ease-out; }
+
+        /* Timeline Sidebar */
+        .milestone-list { display: flex; flex-direction: column; gap: 12px; }
+        .milestone-item { background: #fff5f7; padding: 15px 20px; border-radius: 16px; border: 1px solid #fce7f3; display: flex; justify-content: space-between; align-items: center; }
+        .ms-label { font-size: 0.7rem; font-weight: 800; color: var(--primary); text-transform: uppercase; }
+        .ms-date { font-weight: 700; font-family: 'Quicksand'; font-size: 1rem; }
+
+        /* SEO Section */
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 2px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: var(--text-dark); margin-bottom: 15px; font-family: 'Quicksand'; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 850px) { .hero-card { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-heart"></i> FAMILY CARE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Pregnancy Due Date Calculator</h1>
+        <p>A private and accurate way to plan your journey and meet your baby.</p>
+    </header>
+
+    <div class="hero-card">
+        <div class="calc-side">
+            <div class="input-group">
+                <label><i class="fas fa-calendar-day"></i> Last Period Start Date (LMP)</label>
+                <input type="date" id="lmpInput" onchange="runCalculation()">
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-redo"></i> Average Cycle Length (Days)</label>
+                <input type="number" id="cycleInput" value="28" min="20" max="45" oninput="runCalculation()">
+            </div>
+            <div class="result-panel">
+                <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Estimated Due Date</span>
+                <div class="due-date" id="dueDisplay">Select Date</div>
+                <div id="statusDisplay" style="font-weight: 600; font-size: 0.9rem;">Enter your LMP to begin tracking</div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-side">
+            <h3 style="margin-bottom: 20px; font-family: 'Quicksand'; color: var(--text-dark);"><i class="fas fa-star"></i> Key Milestones</h3>
+            <div class="milestone-list">
+                <div class="milestone-item">
+                    <span class="ms-label">Conception Window</span>
+                    <span class="ms-date" id="msConception">---</span>
+                </div>
+                <div class="milestone-item">
+                    <span class="ms-label">2nd Trimester Begins</span>
+                    <span class="ms-date" id="msTri2">---</span>
+                </div>
+                <div class="milestone-item">
+                    <span class="ms-label">3rd Trimester Begins</span>
+                    <span class="ms-date" id="msTri3">---</span>
+                </div>
+                <div class="milestone-item">
+                    <span class="ms-label">Full Term Date</span>
+                    <span class="ms-date" id="msTerm">---</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>How Your Due Date is Calculated</h2>
+        <p>The standard pregnancy lasts approximately 40 weeks (280 days) from the first day of your last menstrual period (LMP). Our calculator uses Naegele's Rule but improves upon it by adjusting for your specific <strong>cycle length</strong>. If your cycle is longer or shorter than the average 28 days, your ovulation date shifts, and our engine accounts for that variation to give you the most accurate prediction possible.</p>
+
+        
+
+        <h3>Understanding the Trimesters</h3>
+        <p>Pregnancy is traditionally divided into three stages, each with its own developmental milestones:</p>
+        <ul>
+            <li><strong>First Trimester (Weeks 1-12):</strong> A period of rapid development where all major organs begin to form. This is often when morning sickness is most prevalent.</li>
+            <li><strong>Second Trimester (Weeks 13-26):</strong> Often called the "honeymoon phase." Energy levels usually increase, and you will likely feel the baby's first movements.</li>
+            <li><strong>Third Trimester (Weeks 27-40):</strong> The final stretch where the baby grows significantly in size and weight, preparing for birth.</li>
+        </ul>
+
+        
+
+        <h3>What Does "Full Term" Mean?</h3>
+        <p>While 40 weeks is the "target," a baby is considered <strong>full term</strong> at 39 weeks. Being born between 39 weeks and 40 weeks and 6 days is ideal for healthy brain and lung development. Our tracker marks your 37-week milestone as "Early Term," which is the start of the window where delivery is considered safe.</p>
+
+        <h3>Is the Due Date Guaranteed?</h3>
+        <p>It is important to remember that a due date is an <strong>estimate</strong>. Only about 4-5% of babies are born exactly on their due date. Most babies arrive within a two-week window before or after the predicted date. Factors such as ultrasound measurements and maternal health may lead your doctor to adjust this date later in your pregnancy.</p>
+
+        <div style="background: white; padding: 25px; border-radius: 20px; border: 1px solid var(--glass-border); margin-top: 30px; text-align: center;">
+            <p style="margin: 0; font-weight: 700; color: var(--primary);">Privacy Guarantee: Your health data is never stored or uploaded. All calculations happen instantly within your browser for 100% confidentiality.</p>
+        </div>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    function runCalculation() {
+        const lmpVal = document.getElementById('lmpInput').value;
+        const cycleLen = parseInt(document.getElementById('cycleInput').value) || 28;
+        
+        if (!lmpVal) return;
+
+        const lmp = new Date(lmpVal);
+        const cycleAdj = cycleLen - 28;
+        
+        // Due Date: LMP + 280 days + cycle adjustment
+        const due = new Date(lmp);
+        due.setDate(lmp.getDate() + 280 + cycleAdj);
+
+        // Milestones
+        const conception = new Date(lmp);
+        conception.setDate(lmp.getDate() + 14 + cycleAdj);
+
+        const tri2 = new Date(lmp);
+        tri2.setDate(lmp.getDate() + 91 + cycleAdj); // End of week 13
+
+        const tri3 = new Date(lmp);
+        tri3.setDate(lmp.getDate() + 189 + cycleAdj); // End of week 27
+
+        const term = new Date(lmp);
+        term.setDate(lmp.getDate() + 273 + cycleAdj); // Start of week 39
+
+        // Progress Tracking
+        const today = new Date();
+        const diffTime = today - lmp;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const weeks = Math.floor(diffDays / 7);
+        const days = diffDays % 7;
+        
+        let progressPercent = (diffDays / 280) * 100;
+        progressPercent = Math.max(0, Math.min(100, progressPercent));
+
+        // Format and Display
+        const dateOpts = { month: 'short', day: 'numeric', year: 'numeric' };
+        document.getElementById('dueDisplay').innerText = due.toLocaleDateString('en-US', dateOpts);
+        document.getElementById('msConception').innerText = conception.toLocaleDateString('en-US', dateOpts);
+        document.getElementById('msTri2').innerText = tri2.toLocaleDateString('en-US', dateOpts);
+        document.getElementById('msTri3').innerText = tri3.toLocaleDateString('en-US', dateOpts);
+        document.getElementById('msTerm').innerText = term.toLocaleDateString('en-US', dateOpts);
+        
+        document.getElementById('progressBar').style.width = progressPercent + '%';
+        
+        if (diffDays < 0) {
+            document.getElementById('statusDisplay').innerText = "Future start date selected";
+        } else if (progressPercent >= 100) {
+            document.getElementById('statusDisplay').innerText = "Welcome to the world, little one!";
+        } else {
+            document.getElementById('statusDisplay').innerText = `${weeks} Weeks, ${days} Days Pregnant`;
+        }
+    }
+
+    // Set a default demo date (8 weeks ago)
+    window.onload = () => {
+        const demoDate = new Date();
+        demoDate.setDate(demoDate.getDate() - 56);
+        document.getElementById('lmpInput').value = demoDate.toISOString().split('T')[0];
+        runCalculation();
+    };
+</script>
+
+</body>
+</html>

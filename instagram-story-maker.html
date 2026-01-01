@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Instagram Story Maker | Create Fast Story Graphics | AllToolsFree</title>
+    <meta name="description" content="Create stunning Instagram Stories in seconds. Custom text, backgrounds, and layouts. 100% free, no watermark, high-resolution 1080x1920 downloads.">
+    <meta name="keywords" content="instagram story maker, create ig story online, free story editor, social media graphics, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/instagram-story-maker.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/camera-retro.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Dancing+Script:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #e1306c; /* Instagram Pink */
+            --primary-glow: rgba(225, 48, 108, 0.3);
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --border: #1e293b;
+            --text-main: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; }
+
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 35px; }
+        header h1 { font-size: 2.2rem; letter-spacing: -1px; }
+
+        .editor-grid { display: grid; grid-template-columns: 350px 1fr; gap: 40px; align-items: start; }
+
+        /* Canvas Preview */
+        .preview-pane { display: flex; flex-direction: column; align-items: center; }
+        #storyCanvasContainer {
+            width: 320px; /* Scaled down for preview */
+            height: 568px; /* 9:16 ratio */
+            background: linear-gradient(45deg, #f09433, #e31683, #bc1888);
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #1e293b;
+        }
+
+        #canvasText {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            padding: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            cursor: default;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        /* Controls */
+        .controls-card { background: var(--card-bg); border-radius: 24px; padding: 25px; border: 1px solid var(--border); }
+        .control-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.75rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; }
+        
+        input, textarea, select { width: 100%; padding: 12px; border-radius: 10px; border: 2px solid var(--border); background: var(--bg-dark); color: white; font-size: 0.9rem; outline: none; }
+        
+        .bg-presets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; }
+        .preset { height: 40px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: 0.2s; }
+        .preset:hover { transform: scale(1.05); }
+
+        .btn-download { width: 100%; margin-top: 20px; padding: 15px; border-radius: 12px; border: none; background: var(--primary); color: white; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-download:hover { background: #d62976; transform: translateY(-2px); }
+
+        .ad-slot { margin: 30px 0; min-height: 90px; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; }
+
+        @media (max-width: 900px) { .editor-grid { grid-template-columns: 1fr; } .preview-pane { order: -1; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fab fa-instagram"></i> STORY_STUDIO_2026
+    </div>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Instagram Story Maker</h1>
+        <p>Design beautiful, high-impact stories without needing Photoshop.</p>
+    </header>
+
+    <div class="editor-grid">
+        <div class="controls-card">
+            <div class="control-group">
+                <label>Story Text</label>
+                <textarea id="textInput" rows="3" oninput="updatePreview()">New Collection Launching Tonight! 🚀</textarea>
+            </div>
+
+            <div class="control-group">
+                <label>Font Style</label>
+                <select id="fontFamily" onchange="updatePreview()">
+                    <option value="'Plus Jakarta Sans'">Modern Bold</option>
+                    <option value="'Bebas Neue'">Impact (All Caps)</option>
+                    <option value="'Dancing Script'">Elegant Cursive</option>
+                    <option value="serif">Classic Serif</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Background Theme</label>
+                <div class="bg-presets">
+                    <div class="preset" style="background: linear-gradient(45deg, #f09433, #e31683, #bc1888);" onclick="setBg(this.style.background)"></div>
+                    <div class="preset" style="background: #000000;" onclick="setBg(this.style.background)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="setBg(this.style.background)"></div>
+                    <div class="preset" style="background: linear-gradient(to right, #00b09b, #96c93d);" onclick="setBg(this.style.background)"></div>
+                </div>
+                <input type="color" id="customColor" style="margin-top:10px; height: 40px;" oninput="setBg(this.value)">
+            </div>
+
+            <button class="btn-download" onclick="downloadStory()">
+                <i class="fas fa-download"></i> Download HD Story
+            </button>
+        </div>
+
+        <div class="preview-pane">
+            <div id="storyCanvasContainer">
+                <div id="canvasText">New Collection Launching Tonight! 🚀</div>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 15px;">Live Preview (1080x1920 scaled)</p>
+        </div>
+    </div>
+
+    <article style="margin-top: 60px; color: #94a3b8; line-height: 1.8; border-top: 1px solid var(--border); padding-top: 40px;">
+        <h2>The Perfect Instagram Story Size</h2>
+        <p>Instagram Stories require a specific aspect ratio of <strong>9:16</strong>. Our tool ensures your graphics are exported at <strong>1080 x 1920 pixels</strong>, which is the gold standard for high-definition mobile viewing. This prevents Instagram from stretching or pixelating your content.</p>
+        
+        <h3>3 Tips for Better IG Stories</h3>
+        <ul>
+            <li><strong>Rule of Thirds:</strong> Keep your main text in the center. Avoid placing text too high (where your profile info is) or too low (where the 'Send Message' bar sits).</li>
+            <li><strong>High Contrast:</strong> Use dark backgrounds with white text for maximum readability while users are fast-scrolling.</li>
+            <li><strong>Call to Action:</strong> Use the Story Maker to create "New Post" or "Link in Bio" alerts that grab attention instantly.</li>
+        </ul>
+    </article>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+    function updatePreview() {
+        const text = document.getElementById('textInput').value;
+        const font = document.getElementById('fontFamily').value;
+        const display = document.getElementById('canvasText');
+        
+        display.innerText = text;
+        display.style.fontFamily = font;
+    }
+
+    function setBg(bg) {
+        document.getElementById('storyCanvasContainer').style.background = bg;
+    }
+
+    function downloadStory() {
+        const container = document.getElementById('storyCanvasContainer');
+        
+        // Temporarily scale up for high-res export
+        const originalWidth = container.style.width;
+        const originalHeight = container.style.height;
+        container.style.width = "1080px";
+        container.style.height = "1920px";
+        document.getElementById('canvasText').style.fontSize = "80px";
+
+        html2canvas(container, {
+            scale: 1,
+            width: 1080,
+            height: 1920
+        }).then(canvas => {
+            // Restore preview size
+            container.style.width = originalWidth;
+            container.style.height = originalHeight;
+            document.getElementById('canvasText').style.fontSize = "2rem";
+
+            const link = document.createElement('a');
+            link.download = 'instagram-story-alltoolsfree.png';
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        });
+    }
+
+    // Initial call
+    updatePreview();
+</script>
+
+</body>
+</html>

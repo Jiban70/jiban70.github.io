@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Percentage Calculator | Precision Percent Increase & Change | AllToolsFree</title>
+    <meta name="description" content="Free high-precision percentage calculator for 2026. Calculate percent increase, decrease, differences, and reverse percentages instantly. Fast and mobile-friendly.">
+    <meta name="keywords" content="percentage calculator, percent increase tool, calculate percentage online, percent change formula, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/percentage-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/percent.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #06b6d4; 
+            --primary-hover: #0891b2;
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-dim: #94a3b8;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { font-size: 2.2rem; font-family: 'Poppins'; letter-spacing: -1px; }
+        header p { color: var(--text-dim); }
+
+        /* Calculation Cards */
+        .calc-section { background: var(--card-bg); border-radius: 24px; padding: 25px; margin-bottom: 20px; border: 1px solid var(--glass-border); transition: 0.3s; }
+        .calc-section:focus-within { border-color: var(--primary); box-shadow: 0 0 20px rgba(6, 182, 212, 0.1); }
+        .calc-title { font-size: 0.85rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; }
+        
+        .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        input { background: #020617; border: 2px solid #1e293b; border-radius: 12px; padding: 12px; color: white; font-size: 1.1rem; width: 140px; font-weight: 600; font-family: 'JetBrains Mono'; outline: none; transition: 0.2s; }
+        input:focus { border-color: var(--primary); }
+        
+        .res-text { font-weight: 800; color: var(--primary); font-size: 1.4rem; min-width: 60px; font-family: 'JetBrains Mono'; }
+        .label { color: var(--text-dim); font-weight: 600; font-size: 0.9rem; }
+
+        /* SEO & Educational Content */
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+        .formula-box { background: #020617; padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid var(--glass-border); text-align: center; color: var(--primary); }
+
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 650px) { 
+            input { width: 100%; } 
+            .row { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .res-text { margin-top: 5px; font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-microchip"></i> MATH CORE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Percentage Engine</h1>
+        <p>Instant, high-precision calculations for finance, math, and daily tasks.</p>
+    </header>
+    
+    <div class="calc-section">
+        <div class="calc-title"><i class="fas fa-percentage"></i> General Percentage</div>
+        <div class="row">
+            <span class="label">What is</span>
+            <input type="number" id="m1_p" placeholder="%" oninput="calcM1()">
+            <span class="label">% of</span>
+            <input type="number" id="m1_v" placeholder="Value" oninput="calcM1()">
+            <span class="label">=</span>
+            <span class="res-text" id="m1_res">0</span>
+        </div>
+    </div>
+
+    <div class="calc-section">
+        <div class="calc-title"><i class="fas fa-chart-pie"></i> Ratio Analysis</div>
+        <div class="row">
+            <input type="number" id="m2_v1" placeholder="Part" oninput="calcM2()">
+            <span class="label">is what % of</span>
+            <input type="number" id="m2_v2" placeholder="Total" oninput="calcM2()">
+            <span class="label">=</span>
+            <span class="res-text" id="m2_res">0%</span>
+        </div>
+    </div>
+
+    <div class="calc-section">
+        <div class="calc-title"><i class="fas fa-arrow-trend-up"></i> Growth & Change</div>
+        <div class="row">
+            <span class="label">From</span>
+            <input type="number" id="m3_v1" placeholder="Initial" oninput="calcM3()">
+            <span class="label">to</span>
+            <input type="number" id="m3_v2" placeholder="Final" oninput="calcM3()">
+            <span class="label">=</span>
+            <span class="res-text" id="m3_res">0%</span>
+        </div>
+    </div>
+
+    <div class="calc-section">
+        <div class="calc-title"><i class="fas fa-rotate-left"></i> Reverse Calculation</div>
+        <div class="row">
+            <input type="number" id="m4_v1" placeholder="Value" oninput="calcM4()">
+            <span class="label">is</span>
+            <input type="number" id="m4_p" placeholder="%" oninput="calcM4()">
+            <span class="label">% of what?</span>
+            <span class="label">=</span>
+            <span class="res-text" id="m4_res">0</span>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>Professional Percentage Math in 2026</h2>
+        <p>Percentages are the universal language of comparison. Whether you are calculating <strong>Year-over-Year (YoY) growth</strong> for a business report or determining the final price of an item after a discount, accuracy is paramount. Our Percentage Engine provides instant results using 64-bit precision logic.</p>
+
+        
+
+        <h3>The Growth & Decay Formula</h3>
+        <p>Calculating the difference between two values as a percentage is essential for tracking progress or loss. The mathematical relationship is expressed as:</p>
+        
+        <div class="formula-box">
+            $$ \text{Percentage Change} = \left( \frac{\text{New} - \text{Old}}{|\text{Old}|} \right) \times 100 $$
+        </div>
+
+        
+
+        <h3>Practical Daily Uses</h3>
+        <ul>
+            <li><strong>Personal Finance:</strong> Calculate credit card interest, loan EMIs, or investment returns.</li>
+            <li><strong>Shopping:</strong> Quickly find the savings on "30% Off" sales or calculate sales tax (VAT/GST).</li>
+            <li><strong>Data Analysis:</strong> Determine the percentage of a specific segment within a larger population (Part to Whole ratio).</li>
+        </ul>
+        
+        <p><strong>Did you know?</strong> A 10% increase followed by a 10% decrease does not return you to your original number. If you start with 100, add 10%, you get 110. Subtracting 10% from 110 leaves you with 99. This is known as the "base effect," and our calculator ensures these nuances are never missed.</p>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    function format(num) {
+        return Number.isInteger(num) ? num : parseFloat(num.toFixed(4));
+    }
+
+    function calcM1() {
+        const p = parseFloat(document.getElementById('m1_p').value);
+        const v = parseFloat(document.getElementById('m1_v').value);
+        if(!isNaN(p) && !isNaN(v)) {
+            document.getElementById('m1_res').innerText = format((p / 100) * v);
+        }
+    }
+
+    function calcM2() {
+        const v1 = parseFloat(document.getElementById('m2_v1').value);
+        const v2 = parseFloat(document.getElementById('m2_v2').value);
+        if(!isNaN(v1) && !isNaN(v2) && v2 !== 0) {
+            document.getElementById('m2_res').innerText = format((v1 / v2) * 100) + "%";
+        }
+    }
+
+    function calcM3() {
+        const v1 = parseFloat(document.getElementById('m3_v1').value);
+        const v2 = parseFloat(document.getElementById('m3_v2').value);
+        if(!isNaN(v1) && !isNaN(v2) && v1 !== 0) {
+            const diff = ((v2 - v1) / Math.abs(v1)) * 100;
+            const el = document.getElementById('m3_res');
+            el.innerText = (diff > 0 ? "+" : "") + format(diff) + "%";
+            el.style.color = diff >= 0 ? "var(--accent-green)" : "var(--accent-red)";
+        }
+    }
+
+    function calcM4() {
+        const v1 = parseFloat(document.getElementById('m4_v1').value);
+        const p = parseFloat(document.getElementById('m4_p').value);
+        if(!isNaN(v1) && !isNaN(p) && p !== 0) {
+            document.getElementById('m4_res').innerText = format((v1 / p) * 100);
+        }
+    }
+</script>
+
+</body>
+</html>

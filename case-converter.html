@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Case Converter | Change Text Case Online | AllToolsFree</title>
+    <meta name="description" content="Convert text between UPPERCASE, lowercase, Title Case, and Sentence case instantly. A free, professional text formatter for writers and developers.">
+    <meta name="keywords" content="case converter, sentence case tool, title case generator, uppercase to lowercase, AllToolsFree, text formatter, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/case-converter.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #8b5cf6; 
+            --primary-hover: #7c3aed;
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 35px; }
+        header h1 { font-size: 2.2rem; font-family: 'Poppins'; letter-spacing: -1px; }
+        header p { color: var(--text-dim); }
+
+        .editor-card { background: var(--card-bg); border-radius: 30px; padding: 30px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        
+        textarea { 
+            width: 100%; height: 300px; padding: 25px; background: #020617; 
+            border: 2px solid var(--glass-border); border-radius: 20px; color: #fff; 
+            font-size: 1.1rem; outline: none; transition: 0.3s; resize: vertical; margin-bottom: 25px;
+        }
+        textarea:focus { border-color: var(--primary); }
+
+        .btn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+        
+        .btn { 
+            padding: 14px; border: 1px solid var(--glass-border); border-radius: 12px; 
+            background: rgba(255,255,255,0.05); color: #fff; cursor: pointer; 
+            font-weight: 700; transition: 0.2s; font-size: 0.9rem;
+        }
+        .btn:hover { background: rgba(255,255,255,0.1); border-color: var(--primary); }
+        
+        .btn-primary { background: var(--primary); border: none; }
+        .btn-primary:hover { background: var(--primary-hover); color: #fff; }
+
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 600px) { .btn-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-font"></i> TEXT CORE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Smart Case Converter</h1>
+        <p>Transform your text style instantly for emails, documents, or code.</p>
+    </header>
+
+    <div class="editor-card">
+        <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
+        
+        <div class="btn-grid">
+            <button class="btn" onclick="convert('sentence')">Sentence case</button>
+            <button class="btn" onclick="convert('lower')">lowercase</button>
+            <button class="btn" onclick="convert('upper')">UPPERCASE</button>
+            <button class="btn" onclick="convert('title')">Title Case</button>
+            <button class="btn btn-primary" id="copyBtn" onclick="copyText()"><i class="fas fa-copy"></i> Copy</button>
+            <button class="btn" onclick="clearText()"><i class="fas fa-trash-alt"></i> Clear</button>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>What is a Case Converter?</h2>
+        <p>A <strong>Case Converter</strong> is a handy tool that allows you to change the capitalization of text with a single click. Whether you accidentally typed a paragraph with Caps Lock on or need to format a title for an article, our tool handles the heavy lifting for you.</p>
+
+        
+
+        <h3>Supported Text Transformations:</h3>
+        <ul>
+            <li><strong>Sentence Case:</strong> Capitalizes only the first letter of each sentence.</li>
+            <li><strong>Title Case:</strong> Capitalizes every word except for small prepositions (of, the, and).</li>
+            <li><strong>UPPERCASE:</strong> Converts every single character to a capital letter.</li>
+            <li><strong>lowercase:</strong> Converts every character to small letters—great for creating URLs.</li>
+        </ul>
+
+        [Image showing Title Case capitalization rules]
+
+        <h3>Why Formatting Matters</h3>
+        <p>Consistent casing improves the professionalism of your writing. For developers, lowercase conversion is essential for naming files and CSS classes, while writers rely on Title Case for engaging headlines. Our <strong>AllToolsFree</strong> converter ensures your text is always perfectly formatted.</p>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    const input = document.getElementById('textInput');
+
+    function convert(type) {
+        let val = input.value;
+        if (!val.trim()) return;
+
+        switch(type) {
+            case 'upper':
+                input.value = val.toUpperCase();
+                break;
+            case 'lower':
+                input.value = val.toLowerCase();
+                break;
+            case 'sentence':
+                input.value = val.toLowerCase().replace(/(^\s*|[.!?]\s+)([a-z])/g, (m) => m.toUpperCase());
+                break;
+            case 'title':
+                const smallWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'in', 'of', 'with', 'as'];
+                input.value = val.toLowerCase().split(' ').map((word, index, array) => {
+                    if (index > 0 && index < array.length - 1 && smallWords.includes(word)) return word;
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }).join(' ');
+                break;
+        }
+    }
+
+    async function copyText() {
+        if (!input.value) return;
+        try {
+            await navigator.clipboard.writeText(input.value);
+            const btn = document.getElementById('copyBtn');
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => { btn.innerHTML = originalHtml; }, 2000);
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+    }
+
+    function clearText() {
+        if(input.value.length > 0) {
+            if(confirm("Are you sure you want to clear the text?")) input.value = '';
+        }
+    }
+</script>
+</body>
+</html>

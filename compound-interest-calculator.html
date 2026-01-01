@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Compound Interest Calculator | Investment Growth Tool | AllToolsFree</title>
+    <meta name="description" content="Free compound interest calculator to forecast wealth growth. Visualize the power of compounding with monthly contributions and custom frequencies.">
+    <meta name="keywords" content="compound interest calculator, wealth growth tool, investment calculator, savings forecast, AllToolsFree, finance tool, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/compound-interest-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #10b981; 
+            --primary-hover: #059669;
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-dim: #94a3b8;
+            --accent-blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { font-size: 2.2rem; font-family: 'Poppins'; letter-spacing: -1px; }
+        header p { color: var(--text-dim); }
+
+        .calc-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        
+        .card { background: var(--card-bg); border-radius: 30px; padding: 35px; border: 1px solid var(--glass-border); }
+        
+        label { display: block; margin-bottom: 10px; font-size: 11px; font-weight: 800; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        .input-row { margin-bottom: 22px; }
+        
+        input, select { 
+            width: 100%; padding: 16px; background: #020617; border: 2px solid var(--glass-border); 
+            border-radius: 15px; color: #fff; font-family: 'JetBrains Mono', monospace; 
+            font-size: 1.1rem; outline: none; transition: 0.3s; 
+        }
+        input:focus { border-color: var(--primary); }
+
+        .results { 
+            background: var(--card-bg); border-radius: 30px; padding: 40px; 
+            border: 1px solid var(--glass-border); display: flex; flex-direction: column; justify-content: center;
+        }
+        
+        .res-item { display: flex; justify-content: space-between; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--glass-border); }
+        .res-label { color: var(--text-dim); font-size: 0.95rem; }
+        .res-val { font-weight: 700; font-family: 'JetBrains Mono'; color: #fff; }
+        
+        .big-total { margin: 30px 0; text-align: center; border: 2px solid var(--primary); padding: 25px; border-radius: 24px; background: rgba(16, 185, 129, 0.05); }
+        .big-total label { color: var(--primary); margin-bottom: 5px; }
+        .big-total div { font-size: 2.8rem; font-weight: 800; color: #fff; letter-spacing: -1px; font-family: 'JetBrains Mono'; }
+
+        .rule-of-72 { background: rgba(59, 130, 246, 0.1); border: 1px solid var(--accent-blue); padding: 20px; border-radius: 15px; font-size: 0.9rem; color: #fff; text-align: center; }
+
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+        .seo-content h3 { color: var(--primary); margin-top: 25px; margin-bottom: 10px; }
+
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 850px) { .calc-wrapper { grid-template-columns: 1fr; } .big-total div { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-chart-line"></i> WEALTH ENGINE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Compound Interest Calculator</h1>
+        <p>Visualize the "eighth wonder of the world" and forecast your long-term wealth growth.</p>
+    </header>
+
+    <div class="calc-wrapper">
+        <div class="card">
+            <div class="input-row">
+                <label><i class="fas fa-wallet"></i> Initial Principal ($)</label>
+                <input type="number" id="principal" value="10000" oninput="calculate()">
+            </div>
+
+            <div class="input-row">
+                <label><i class="fas fa-plus-circle"></i> Monthly Contribution ($)</label>
+                <input type="number" id="monthly" value="500" oninput="calculate()">
+            </div>
+
+            <div class="input-row">
+                <label><i class="fas fa-percentage"></i> Interest Rate (%)</label>
+                <input type="number" id="rate" value="8" step="0.1" oninput="calculate()">
+            </div>
+
+            <div class="input-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div>
+                    <label><i class="fas fa-calendar-alt"></i> Time (Years)</label>
+                    <input type="number" id="years" value="10" oninput="calculate()">
+                </div>
+                <div>
+                    <label><i class="fas fa-sync"></i> Compounding</label>
+                    <select id="frequency" onchange="calculate()">
+                        <option value="12" selected>Monthly</option>
+                        <option value="1">Annually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="365">Daily</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="res-item">
+                <span class="res-label">Starting Balance:</span>
+                <span id="resPrincipal" class="res-val">$0.00</span>
+            </div>
+            <div class="res-item">
+                <span class="res-label">Total Contributions:</span>
+                <span id="resContrib" class="res-val">$0.00</span>
+            </div>
+            <div class="res-item">
+                <span class="res-label">Interest Earned:</span>
+                <span id="resInterest" class="res-val" style="color:var(--primary)">$0.00</span>
+            </div>
+            
+            <div class="big-total">
+                <label>TOTAL MATURITY VALUE</label>
+                <div id="resTotal">$0.00</div>
+            </div>
+
+            <div class="rule-of-72" id="ruleBox">
+                <strong>Rule of 72:</strong> At this rate, your money will double every 9 years.
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>What is Compound Interest?</h2>
+        <p>Compound interest is the interest calculated on the initial principal and also on the accumulated interest of previous periods. Think of it as "interest on interest." Over long periods, this creates exponential growth that can turn modest savings into a significant nest egg.</p>
+
+        
+
+        <h3>The Compound Interest Formula</h3>
+        <p>Our calculator uses the standard formula for future value with periodic contributions:</p>
+        <div style="background: #020617; padding: 20px; border-radius: 15px; font-family: 'JetBrains Mono'; color: var(--primary); text-align: center; margin: 15px 0;">
+            A = P(1 + r/n)^(nt) + PMT × {[(1 + r/n)^(nt) - 1] / (r/n)}
+        </div>
+
+        <h3>Why Compounding Frequency Matters</h3>
+        <p>The more frequently interest is compounded (daily vs. annually), the faster your wealth grows. Daily compounding is technically the most efficient for the investor, as your earned interest begins generating its own return almost immediately.</p>
+        
+        
+
+        <h3>The Rule of 72</h3>
+        <p>The **Rule of 72** is a quick financial shortcut to estimate how many years it will take for an investment to double at a fixed annual interest rate. By dividing 72 by your annual rate of return, you can quickly see the impact of time on your wealth.</p>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        const p = parseFloat(document.getElementById('principal').value) || 0;
+        const pmt = parseFloat(document.getElementById('monthly').value) || 0;
+        const r = (parseFloat(document.getElementById('rate').value) || 0) / 100;
+        const t = parseFloat(document.getElementById('years').value) || 0;
+        const n = parseFloat(document.getElementById('frequency').value) || 12;
+
+        const nt = n * t;
+        const rn = r / n;
+        
+        // Principal growth
+        const compoundPrincipal = p * Math.pow((1 + rn), nt);
+        
+        // Contribution growth (Annuity)
+        let compoundPMT = 0;
+        if (r > 0) {
+            // Note: PMT is monthly, we adjust the formula to handle monthly contributions
+            // while compounding happens at frequency 'n'
+            const monthlyRate = r / 12;
+            const totalMonths = t * 12;
+            compoundPMT = pmt * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate);
+        } else {
+            compoundPMT = pmt * t * 12;
+        }
+
+        const totalValue = compoundPrincipal + compoundPMT;
+        const totalContrib = pmt * t * 12;
+        const totalInterest = totalValue - (p + totalContrib);
+
+        const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+
+        document.getElementById('resPrincipal').innerText = formatter.format(p);
+        document.getElementById('resContrib').innerText = formatter.format(totalContrib);
+        document.getElementById('resInterest').innerText = formatter.format(totalInterest);
+        document.getElementById('resTotal').innerText = formatter.format(totalValue);
+
+        const rateVal = parseFloat(document.getElementById('rate').value);
+        if (rateVal > 0) {
+            const rule72 = (72 / rateVal).toFixed(1);
+            document.getElementById('ruleBox').innerHTML = `<i class="fas fa-bolt" style="color:var(--primary)"></i> <strong>Rule of 72:</strong> Your money will double in approx. <strong>${rule72} years</strong>.`;
+        }
+    }
+
+    calculate();
+</script>
+</body>
+</html>

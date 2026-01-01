@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Keyword Density Checker | Real-Time SEO Content Analyzer | AllToolsFree</title>
+    <meta name="description" content="Check keyword density and optimize your content for SEO instantly. Avoid keyword stuffing and improve your search rankings with our professional 2026 analyzer.">
+    <meta name="keywords" content="keyword density checker, seo analyzer, content optimizer, keyword stuffing tool, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/keyword-density-checker.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/magnifying-glass-chart.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #f59e0b; 
+            --primary-hover: #d97706;
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-dim: #94a3b8;
+            --danger: #ef4444;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: #f8fafc; min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Poppins'; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { font-size: 2.2rem; font-family: 'Poppins'; letter-spacing: -1px; }
+        header p { color: var(--text-dim); }
+
+        .main-grid { display: grid; grid-template-columns: 1fr 350px; gap: 25px; }
+        
+        /* Editor Area */
+        .editor-wrapper { display: flex; flex-direction: column; gap: 15px; }
+        textarea { 
+            width: 100%; height: 500px; background: var(--card-bg); border: 2px solid var(--glass-border); 
+            border-radius: 20px; padding: 25px; color: #fff; font-size: 1rem; line-height: 1.6;
+            resize: vertical; outline: none; transition: 0.3s;
+        }
+        textarea:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(245, 158, 11, 0.1); }
+
+        /* Analysis Panel */
+        .panel { background: var(--card-bg); border-radius: 24px; padding: 25px; border: 1px solid var(--glass-border); height: sticky; position: sticky; top: 100px; }
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; }
+        .word-count { font-weight: 800; color: var(--primary); font-family: 'JetBrains Mono'; }
+
+        .kw-list { max-height: 450px; overflow-y: auto; padding-right: 5px; }
+        .kw-list::-webkit-scrollbar { width: 5px; }
+        .kw-list::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
+
+        .kw-item { 
+            display: flex; justify-content: space-between; padding: 12px 15px; background: #020617; 
+            border-radius: 12px; margin-bottom: 8px; border: 1px solid var(--glass-border); transition: 0.2s;
+        }
+        .kw-item.danger { border-color: var(--danger); background: rgba(239, 68, 68, 0.05); }
+        .kw-name { font-weight: 600; font-size: 0.9rem; }
+        .kw-val { font-family: 'JetBrains Mono'; font-size: 0.8rem; font-weight: 800; color: var(--primary); }
+
+        .btn-clear { 
+            background: #1e293b; color: #fff; border: 1px solid var(--glass-border); 
+            padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 0.8rem;
+            align-self: flex-start; transition: 0.3s;
+        }
+        .btn-clear:hover { background: var(--danger); border-color: var(--danger); }
+
+        .seo-content { margin-top: 60px; color: var(--text-dim); border-top: 1px solid var(--glass-border); padding-top: 40px; }
+        .seo-content h2 { color: #fff; margin-bottom: 15px; font-family: 'Poppins'; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 950px) { .main-grid { grid-template-columns: 1fr; } .panel { position: static; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-search"></i> SEO CORE
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Keyword Density Checker</h1>
+        <p>Optimize your content frequency for the 2026 search algorithm landscape.</p>
+    </header>
+
+    <div class="main-grid">
+        <div class="editor-wrapper">
+            <textarea id="textInput" placeholder="Paste your article or blog post here for a real-time SEO analysis..." oninput="analyze()"></textarea>
+            <button class="btn-clear" onclick="clearText()"><i class="fas fa-trash-alt"></i> Clear Content</button>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--text-dim);">Density Analysis</span>
+                <span class="word-count" id="totalWords">0 Words</span>
+            </div>
+            <div class="kw-list" id="results">
+                <div style="text-align: center; color: var(--text-dim); margin-top: 50px;">
+                    <i class="fas fa-chart-bar fa-3x" style="opacity: 0.2; margin-bottom: 15px;"></i><br>
+                    Waiting for input...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <h2>Why Keyword Density Matters in 2026</h2>
+        <p>In the modern era of semantic search, search engines focus on "user intent." However, <strong>Keyword Density</strong> remains a fundamental metric for determining the primary subject of your content. Maintaining a healthy ratio ensures your page is indexed correctly without being flagged for keyword stuffing.</p>
+
+        
+
+        <h3>Ideal Ratios for Search Success</h3>
+        <p>While there is no "perfect" percentage, SEO experts in 2026 generally recommend these density ranges for maximum visibility:</p>
+        <ul>
+            <li><strong>Primary Keyword:</strong> 1.5% - 2.5%</li>
+            <li><strong>Secondary Keywords:</strong> 0.5% - 1.2%</li>
+            <li><strong>LSI Phrases:</strong> 0.2% - 0.5%</li>
+        </ul>
+
+        
+
+        <h3>The Danger of Keyword Stuffing</h3>
+        <p>Over-optimizing your content (usually anything over 3% density) can lead to an "over-optimization penalty." This tool automatically highlights keywords that exceed the 2.8% safety threshold in <span style="color:var(--danger)">red</span>, allowing you to edit them before publishing.</p>
+
+        <h3>Key Features of AllToolsFree Analyzer</h3>
+        <ul>
+            <li><strong>Stop-word Filtering:</strong> Our tool automatically ignores common words like "the," "and," and "is" to focus on real keywords.</li>
+            <li><strong>Real-time Stats:</strong> See your word count and frequency change as you type.</li>
+            <li><strong>100% Secure:</strong> Your content never leaves your browser. We process everything locally for your privacy.</li>
+        </ul>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    const stopWords = ["the","and","a","to","of","in","is","it","you","that","he","was","for","on","are","with","as","i","his","they","be","at","one","have","this","from","or","had","by","hot","word","but","some","what","there","we","can","out","other","were","all","there","when","up","use","your","how","said","an","each","she","which","do","their","time","if","will","way","about","many","then","them","write","would","like","so","these","her","long","make","thing","see","him","two","has","look","more","day","could","go","come","did","number","sound","no","most","people","my","over","know","water","than","call","first","who","may","down","side","been","now","find"];
+
+    function analyze() {
+        const text = document.getElementById('textInput').value.toLowerCase();
+        const resultArea = document.getElementById('results');
+        
+        if (!text.trim()) {
+            resultArea.innerHTML = '<div style="text-align: center; color: var(--text-dim); margin-top: 50px;"><i class="fas fa-chart-bar fa-3x" style="opacity: 0.2; margin-bottom: 15px;"></i><br>Waiting for input...</div>';
+            document.getElementById('totalWords').innerText = '0 Words';
+            return;
+        }
+
+        const words = text.replace(/[^\w\s]/g, ' ').split(/\s+/).filter(w => w.length > 2);
+        const totalCount = words.length;
+        document.getElementById('totalWords').innerText = `${totalCount} Words`;
+
+        const freqMap = {};
+        words.forEach(w => {
+            if (!stopWords.includes(w)) {
+                freqMap[w] = (freqMap[w] || 0) + 1;
+            }
+        });
+
+        const sorted = Object.entries(freqMap)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 20);
+
+        let html = '';
+        sorted.forEach(([word, count]) => {
+            const density = ((count / totalCount) * 100).toFixed(1);
+            const isDanger = density > 2.8;
+            html += `
+                <div class="kw-item ${isDanger ? 'danger' : ''}">
+                    <span class="kw-name">${word}</span>
+                    <span class="kw-val">${count} (${density}%)</span>
+                </div>
+            `;
+        });
+
+        resultArea.innerHTML = html;
+    }
+
+    function clearText() {
+        document.getElementById('textInput').value = '';
+        analyze();
+    }
+</script>
+</body>
+</html>

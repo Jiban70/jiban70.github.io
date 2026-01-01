@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ROI Calculator | Calculate Return on Investment Online | AllToolsFree</title>
+    <meta name="description" content="Free 2026 ROI calculator. Calculate investment gain, total return percentage, and annualized ROI easily. Professional financial tool for investors and businesses.">
+    <meta name="keywords" content="ROI calculator, return on investment, profit calculator, investment gain, financial tools, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/roi-calculator.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/chart-line.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #10b981; /* Investment Green */
+            --primary-glow: rgba(16, 185, 129, 0.2);
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --border: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; line-height: 1.6; }
+
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 35px; }
+        header h1 { font-size: 2.2rem; letter-spacing: -1px; color: #fff; }
+        header p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+        .calc-card { background: var(--card-bg); border-radius: 28px; padding: 35px; border: 1px solid var(--border); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        
+        .input-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 10px; font-size: 0.75rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        
+        .input-wrapper { position: relative; }
+        .input-wrapper span { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600; }
+        input { width: 100%; padding: 15px 15px 15px 35px; border-radius: 14px; border: 2px solid var(--border); background: var(--bg-dark); color: white; font-size: 1rem; outline: none; transition: 0.3s; font-family: 'JetBrains Mono', monospace; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 15px var(--primary-glow); }
+
+        .result-panel { background: #162031; border-radius: 24px; padding: 30px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
+        .res-item { text-align: center; padding: 20px; border-bottom: 1px solid var(--border); }
+        .res-item:last-child { border: none; }
+        .res-label { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 5px; text-transform: uppercase; font-weight: 700; }
+        .res-value { font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono'; color: var(--primary); }
+        .profit-text { color: #34d399; font-size: 1.2rem; }
+
+        .seo-section { margin-top: 60px; color: var(--text-muted); }
+        .seo-section h2 { color: #fff; margin-bottom: 15px; border-left: 5px solid var(--primary); padding-left: 15px; }
+
+        .ad-slot { margin: 30px 0; min-height: 90px; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; }
+
+        @media (max-width: 850px) { .calc-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-chart-pie"></i> FINANCE_V2
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>ROI Calculator</h1>
+        <p>Analyze the profitability of your investments in seconds.</p>
+    </header>
+
+    <div class="calc-grid">
+        <div class="calc-card">
+            <div class="input-group">
+                <label>Amount Invested</label>
+                <div class="input-wrapper">
+                    <span>$</span>
+                    <input type="number" id="investAmount" value="1000" oninput="calculateROI()">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Amount Returned</label>
+                <div class="input-wrapper">
+                    <span>$</span>
+                    <input type="number" id="returnAmount" value="1500" oninput="calculateROI()">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Investment Period (Days)</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-calendar" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--text-muted);"></i>
+                    <input type="number" id="periodDays" value="365" style="padding-left:40px;" oninput="calculateROI()">
+                </div>
+            </div>
+        </div>
+
+        <div class="result-panel">
+            <div class="res-item">
+                <div class="res-label">Total ROI</div>
+                <div class="res-value" id="roiTotal">50.00%</div>
+            </div>
+            <div class="res-item">
+                <div class="res-label">Net Profit</div>
+                <div class="res-value profit-text" id="netProfit">$500.00</div>
+            </div>
+            <div class="res-item">
+                <div class="res-label">Annualized ROI</div>
+                <div class="res-value" id="roiAnnual" style="font-size: 1.4rem; color: #60a5fa;">50.00%</div>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-section">
+        <h2>How to Calculate ROI?</h2>
+        <p>Return on Investment (ROI) is a popular profitability ratio used to evaluate the efficiency of an investment. The formula for ROI is simple:</p>
+        
+        <div style="background: var(--card-bg); padding: 20px; border-radius: 15px; margin: 20px 0; font-family: 'JetBrains Mono'; color: var(--primary);">
+            ROI = [(Current Value - Cost of Investment) / Cost of Investment] × 100
+        </div>
+
+        <h3>Understanding the Results</h3>
+        <p>A positive ROI means the investment has earned a profit, while a negative ROI indicates a loss. When comparing different investments over different timeframes, it's best to look at the <strong>Annualized ROI</strong>, which standardizes the return over a one-year period.</p>
+
+        <h3>Why Use Our ROI Tool?</h3>
+        <ul>
+            <li><strong>Accuracy:</strong> Includes time-period calculations for better financial planning.</li>
+            <li><strong>Instant:</strong> See your net profit and percentages update as you type.</li>
+            <li><strong>Free:</strong> No subscription or sign-up required for professional financial analysis.</li>
+        </ul>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    function calculateROI() {
+        const cost = parseFloat(document.getElementById('investAmount').value) || 0;
+        const revenue = parseFloat(document.getElementById('returnAmount').value) || 0;
+        const days = parseFloat(document.getElementById('periodDays').value) || 0;
+
+        if (cost === 0) return;
+
+        const profit = revenue - cost;
+        const roi = (profit / cost) * 100;
+
+        // Annualized ROI Formula: [(1 + ROI/100)^(365/days) - 1] * 100
+        let annualized = 0;
+        if (days > 0) {
+            annualized = (Math.pow((revenue / cost), (365 / days)) - 1) * 100;
+        }
+
+        const f = (n) => n.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+        document.getElementById('netProfit').innerText = (profit >= 0 ? '$' : '-$') + f(Math.abs(profit));
+        document.getElementById('roiTotal').innerText = f(roi) + '%';
+        document.getElementById('roiAnnual').innerText = f(annualized) + '%';
+        
+        // Color coding for losses
+        document.getElementById('roiTotal').style.color = roi >= 0 ? 'var(--primary)' : '#ef4444';
+        document.getElementById('netProfit').style.color = profit >= 0 ? '#34d399' : '#ef4444';
+    }
+
+    // Initial run
+    calculateROI();
+</script>
+
+</body>
+</html>

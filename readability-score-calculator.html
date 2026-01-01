@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Readability Score Calculator | Flesch-Kincaid SEO Tool | AllToolsFree</title>
+    <meta name="description" content="Free real-time readability checker. Calculate Flesch Reading Ease and Kincaid Grade Level instantly. Optimize your SEO content for clarity and user comprehension.">
+    <meta name="keywords" content="readability checker, flesch kincaid calculator, reading grade level, content optimizer, seo writing tool, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/readability-score-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/pen-nib.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #ec4899; 
+            --primary-hover: #be185d;
+            --bg-light: #f8fafc; 
+            --card-bg: #ffffff; 
+            --glass-border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--glass-border); background: #fff; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-size: 2.2rem; letter-spacing: -1px; }
+        header p { color: var(--text-muted); font-weight: 500; }
+
+        /* Editor Layout */
+        .workspace { display: grid; grid-template-columns: 1fr 320px; gap: 25px; }
+
+        .editor-card { background: var(--card-bg); border-radius: 24px; padding: 25px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        textarea { 
+            width: 100%; 
+            height: 480px; 
+            border: 2px solid #f1f5f9; 
+            border-radius: 18px; 
+            padding: 20px; 
+            font-size: 1rem; 
+            line-height: 1.7; 
+            outline: none; 
+            transition: 0.3s; 
+            background: #fafafa; 
+            resize: none;
+        }
+        textarea:focus { border-color: var(--primary); background: #fff; box-shadow: 0 0 15px rgba(236, 72, 153, 0.05); }
+
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .stat-box { background: #fff; padding: 25px; border-radius: 22px; border: 1px solid var(--glass-border); text-align: center; }
+        .stat-value { font-size: 2.2rem; font-weight: 800; color: var(--primary); font-family: 'JetBrains Mono', monospace; display: block; }
+        .stat-label { font-size: 0.7rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-top: 8px; }
+        .bg-good { background: #dcfce7; color: #15803d; }
+        .bg-warn { background: #fef9c3; color: #a16207; }
+        .bg-crit { background: #fee2e2; color: #b91c1c; }
+
+        .btn-action { width: 100%; padding: 12px; border-radius: 12px; background: #f1f5f9; border: none; font-weight: 700; color: var(--text-muted); cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .btn-action:hover { background: #e2e8f0; color: var(--text-main); }
+
+        /* SEO Section */
+        .content-info { margin-top: 60px; color: var(--text-muted); border-top: 2px solid var(--glass-border); padding-top: 40px; }
+        .content-info h2 { color: var(--text-main); margin-bottom: 20px; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 900px) { .workspace { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-bolt"></i> CLARITY ENGINE 2.0
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Readability Score Calculator</h1>
+        <p>Analyze the complexity of your writing for better SEO and user engagement.</p>
+    </header>
+
+    <div class="workspace">
+        <div class="editor-card">
+            <textarea id="textData" placeholder="Paste your text here (at least 20 words) to start the real-time analysis..." oninput="analyzeText()"></textarea>
+            <button class="btn-action" onclick="clearAll()">Clear Workspace</button>
+        </div>
+
+        <div class="sidebar">
+            <div class="stat-box">
+                <span class="stat-label">Reading Ease</span>
+                <span class="stat-value" id="resEase">0</span>
+                <div id="easeBadge" class="badge">Awaiting Text</div>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Grade Level</span>
+                <span class="stat-value" id="resGrade">0</span>
+                <div id="gradeBadge" class="badge">N/A</div>
+            </div>
+            <div class="stat-box" style="padding: 15px;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 8px 0;">
+                    <span class="stat-label">Word Count</span>
+                    <span id="cntWords" style="font-weight: 800;">0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+                    <span class="stat-label">Sentences</span>
+                    <span id="cntSents" style="font-weight: 800;">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="content-info">
+        <h2>Why Readability Matters for SEO in 2026</h2>
+        <p>Search engines have evolved to prioritize <strong>User Experience (UX)</strong>. In 2026, content that is difficult to read is often penalized in search rankings because it leads to higher bounce rates. By using a Flesch-Kincaid analyzer, you ensure your message is accessible to your target audience, whether they are casual browsers or technical experts.</p>
+
+        
+
+        <h3>What is the Flesch Reading Ease Score?</h3>
+        <p>This score rates text on a 100-point scale. The higher the number, the easier the text is to read.
+        <ul>
+            <li><strong>90-100:</strong> Very Easy (Understandable by an 11-year-old).</li>
+            <li><strong>60-70:</strong> Standard (Understandable by 13-to-15-year-olds).</li>
+            <li><strong>0-30:</strong> Very Difficult (Best understood by university graduates).</li>
+        </ul>
+        </p>
+
+        <h3>The Flesch-Kincaid Grade Level</h3>
+        <p>This score translates the reading ease into a U.S. school grade level. For example, a score of 8.0 means an eighth-grader can understand the content. For most web content and SEO blogs, aiming for a <strong>Grade 7 to 9</strong> is considered the "Sweet Spot" for maximum reach.</p>
+
+        <div style="background: white; padding: 25px; border-radius: 18px; border: 1px solid var(--glass-border); margin-top: 30px;">
+            <p><strong>Pro Tip:</strong> To improve your score, try shortening your sentences and using words with fewer syllables. This "Clarity First" approach is proven to increase conversion rates on landing pages.</p>
+        </div>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    function analyzeText() {
+        const text = document.getElementById('textData').value;
+        const wordsArr = text.trim().split(/\s+/).filter(w => w.length > 0);
+        
+        if (wordsArr.length < 5) {
+            resetUI();
+            return;
+        }
+
+        // Sentence detection (looks for terminal punctuation)
+        const sentences = text.split(/[.!?]+\s/).filter(s => s.trim().length > 0).length || 1;
+        const words = wordsArr.length;
+        const syllables = countSyllablesInText(text);
+
+        // Flesch Reading Ease: 206.835 - 1.015(words/sentences) - 84.6(syllables/words)
+        let ease = 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words));
+        
+        // Flesch-Kincaid Grade: 0.39(words/sentences) + 11.8(syllables/words) - 15.59
+        let grade = (0.39 * (words / sentences)) + (11.8 * (syllables / words)) - 15.59;
+
+        ease = Math.max(0, Math.min(100, ease));
+        grade = Math.max(0, grade);
+
+        document.getElementById('resEase').innerText = Math.round(ease);
+        document.getElementById('resGrade').innerText = grade.toFixed(1);
+        document.getElementById('cntWords').innerText = words;
+        document.getElementById('cntSents').innerText = sentences;
+
+        updateBadges(ease, grade);
+    }
+
+    function countSyllablesInText(text) {
+        const words = text.toLowerCase().match(/\b\w+\b/g);
+        let count = 0;
+        if (!words) return 0;
+        words.forEach(w => {
+            count += getSyllables(w);
+        });
+        return count;
+    }
+
+    function getSyllables(word) {
+        word = word.toLowerCase();
+        if(word.length <= 3) return 1;
+        word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$ Elizabeth/, '');
+        word = word.replace(/^y/, '');
+        const syl = word.match(/[aeiouy]{1,2}/g);
+        return syl ? syl.length : 1;
+    }
+
+    function updateBadges(ease, grade) {
+        const eB = document.getElementById('easeBadge');
+        const gB = document.getElementById('gradeBadge');
+
+        if (ease >= 70) { eB.className = 'badge bg-good'; eB.innerText = 'High Clarity'; }
+        else if (ease >= 50) { eB.className = 'badge bg-warn'; eB.innerText = 'Moderate'; }
+        else { eB.className = 'badge bg-crit'; eB.innerText = 'Difficult'; }
+
+        if (grade <= 9) { gB.className = 'badge bg-good'; gB.innerText = 'SEO Optimal'; }
+        else if (grade <= 12) { gB.className = 'badge bg-warn'; gB.innerText = 'Technical'; }
+        else { gB.className = 'badge bg-crit'; gB.innerText = 'Academic'; }
+    }
+
+    function resetUI() {
+        document.getElementById('resEase').innerText = '0';
+        document.getElementById('resGrade').innerText = '0';
+        document.getElementById('cntWords').innerText = '0';
+        document.getElementById('cntSents').innerText = '0';
+        document.getElementById('easeBadge').className = 'badge';
+        document.getElementById('easeBadge').innerText = 'Awaiting Text';
+        document.getElementById('gradeBadge').className = 'badge';
+        document.getElementById('gradeBadge').innerText = 'N/A';
+    }
+
+    function clearAll() {
+        document.getElementById('textData').value = '';
+        resetUI();
+    }
+</script>
+
+</body>
+</html>

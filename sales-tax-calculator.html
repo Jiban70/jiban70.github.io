@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sales Tax Calculator | Calculate GST, VAT & Sales Tax | AllToolsFree</title>
+    <meta name="description" content="Free professional sales tax calculator for 2026. Calculate total price with tax or reverse-calculate the pre-tax price. Supports VAT, GST, and custom tax rates.">
+    <meta name="keywords" content="sales tax calculator, VAT calculator, GST calculator, tax inclusive calculator, reverse tax tool, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/sales-tax-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/file-invoice-dollar.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #10b981; 
+            --primary-hover: #059669;
+            --bg-light: #f8fafc; 
+            --card-bg: #ffffff; 
+            --glass-border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --dark-card: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--glass-border); background: #fff; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-size: 2.2rem; letter-spacing: -1.5px; }
+        header p { color: var(--text-muted); font-weight: 500; }
+
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        
+        .card { background: var(--card-bg); border-radius: 24px; padding: 30px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+
+        /* Mode Switcher */
+        .mode-tabs { display: flex; gap: 8px; margin-bottom: 25px; background: #f1f5f9; padding: 6px; border-radius: 14px; }
+        .tab { flex: 1; border: none; padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 700; font-size: 0.8rem; transition: 0.3s; color: var(--text-muted); background: transparent; }
+        .tab.active { background: white; color: var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+        .input-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 0.7rem; font-weight: 800; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        input, select { width: 100%; padding: 14px; border: 2px solid #f1f5f9; border-radius: 12px; font-size: 1.1rem; outline: none; transition: 0.3s; background: #fafafa; font-family: 'JetBrains Mono', monospace; }
+        input:focus { border-color: var(--primary); background: #fff; }
+
+        /* Results Display */
+        .display-pane { background: var(--dark-card); color: #fff; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; justify-content: center; border: 1px solid #334155; }
+
+        .res-label { color: #94a3b8; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .res-main { font-size: 3rem; font-weight: 800; color: var(--primary); font-family: 'JetBrains Mono', monospace; margin-bottom: 30px; }
+        
+        .res-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #334155; font-size: 0.95rem; }
+        .res-row span { color: #94a3b8; }
+        .res-row b { color: #fff; font-family: 'JetBrains Mono', monospace; }
+
+        /* SEO & Content */
+        .seo-section { margin-top: 60px; color: var(--text-muted); border-top: 2px solid var(--glass-border); padding-top: 40px; }
+        .seo-section h2 { color: var(--text-main); margin-bottom: 15px; }
+        .seo-section h3 { color: var(--primary); margin-top: 25px; margin-bottom: 10px; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 850px) { .main-grid { grid-template-columns: 1fr; } .res-main { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-file-invoice-dollar"></i> TAX-CORE 2026
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Sales Tax Calculator</h1>
+        <p>Instantly calculate sales tax, VAT, or GST for inclusive and exclusive pricing.</p>
+    </header>
+
+    <div class="main-grid">
+        <div class="card">
+            <div class="mode-tabs">
+                <button class="tab active" id="tabAdd" onclick="switchMode('add')">Add Tax</button>
+                <button class="tab" id="tabRemove" onclick="switchMode('remove')">Remove Tax</button>
+            </div>
+
+            <div class="input-group">
+                <label id="priceLabel">Net Price (Excl. Tax)</label>
+                <input type="number" id="basePrice" value="100" oninput="runTaxCalc()">
+            </div>
+
+            <div class="input-group">
+                <label>Tax Rate (%)</label>
+                <input type="number" id="taxRate" value="15" oninput="runTaxCalc()">
+            </div>
+
+            <div class="input-group">
+                <label>Currency Symbol</label>
+                <select id="currency" onchange="runTaxCalc()">
+                    <option value="$">USD ($)</option>
+                    <option value="₹">INR (₹)</option>
+                    <option value="£">GBP (£)</option>
+                    <option value="€">EUR (€)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="display-pane">
+            <div class="res-label" id="resTitle">Total Price (Incl. Tax)</div>
+            <div class="res-main" id="finalTotal">$115.00</div>
+            
+            <div class="res-row">
+                <span id="taxLabel">Sales Tax Amount:</span>
+                <b id="taxAmount">$15.00</b>
+            </div>
+            <div class="res-row">
+                <span id="subLabel">Original Price:</span>
+                <b id="subTotal">$100.00</b>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-section">
+        <h2>Professional Sales Tax Calculations</h2>
+        <p>Whether you're a business owner calculating VAT for an invoice or a shopper trying to find the pre-tax price of an item, our <strong>Sales Tax Calculator</strong> provides accurate results instantly. It handles both "Add Tax" (Exclusive) and "Remove Tax" (Inclusive) scenarios.</p>
+
+        <h3>Tax Exclusive vs. Tax Inclusive</h3>
+        <p><strong>Tax Exclusive:</strong> The tax is added on top of the base price. 
+        <br><em>Formula: Total = Price + (Price × Tax Rate)</em></p>
+        
+        <p><strong>Tax Inclusive:</strong> The tax is already included in the displayed price. This is common with VAT and GST in many countries. 
+        <br><em>Formula: Pre-Tax Price = Total / (1 + Tax Rate)</em></p>
+
+        <h3>Common Global Tax Rates (2026 Estimates)</h3>
+        <ul>
+            <li><strong>UK/EU VAT:</strong> Often 20%</li>
+            <li><strong>India GST:</strong> Varies (5%, 12%, 18%, 28%)</li>
+            <li><strong>USA Sales Tax:</strong> Varies by State (typically 0% to 10%)</li>
+        </ul>
+
+        <div style="background: white; padding: 25px; border-radius: 18px; border: 1px solid var(--glass-border); margin-top: 30px;">
+            <p><strong>Pro Tip:</strong> When using the "Remove Tax" mode, the calculator uses the mathematical reverse of the tax rate. A 20% inclusive tax is <em>not</em> the same as subtracting 20% from the total—it requires dividing by 1.20 to find the true original cost.</p>
+        </div>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    let currentMode = 'add';
+
+    function switchMode(m) {
+        currentMode = m;
+        document.getElementById('tabAdd').classList.toggle('active', m === 'add');
+        document.getElementById('tabRemove').classList.toggle('active', m === 'remove');
+        
+        if (m === 'add') {
+            document.getElementById('priceLabel').innerText = "Net Price (Excl. Tax)";
+            document.getElementById('resTitle').innerText = "Total Price (Incl. Tax)";
+            document.getElementById('subLabel').innerText = "Original Price:";
+        } else {
+            document.getElementById('priceLabel').innerText = "Gross Price (Incl. Tax)";
+            document.getElementById('resTitle').innerText = "Net Price (Excl. Tax)";
+            document.getElementById('subLabel').innerText = "Total Paid:";
+        }
+        
+        runTaxCalc();
+    }
+
+    function runTaxCalc() {
+        const sym = document.getElementById('currency').value;
+        const val = parseFloat(document.getElementById('basePrice').value) || 0;
+        const rate = parseFloat(document.getElementById('taxRate').value) || 0;
+        const locale = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
+
+        let taxAmt, total;
+
+        if (currentMode === 'add') {
+            // Price is exclusive, add tax
+            taxAmt = val * (rate / 100);
+            total = val + taxAmt;
+            
+            document.getElementById('finalTotal').innerText = sym + total.toLocaleString(undefined, locale);
+            document.getElementById('taxAmount').innerText = sym + taxAmt.toLocaleString(undefined, locale);
+            document.getElementById('subTotal').innerText = sym + val.toLocaleString(undefined, locale);
+        } else {
+            // Price is inclusive, remove tax
+            total = val / (1 + (rate / 100));
+            taxAmt = val - total;
+            
+            document.getElementById('finalTotal').innerText = sym + total.toLocaleString(undefined, locale);
+            document.getElementById('taxAmount').innerText = sym + taxAmt.toLocaleString(undefined, locale);
+            document.getElementById('subTotal').innerText = sym + val.toLocaleString(undefined, locale);
+        }
+    }
+
+    runTaxCalc();
+</script>
+</body>
+</html>

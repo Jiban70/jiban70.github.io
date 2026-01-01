@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sale Price Calculator | Markup & Discount Engine | AllToolsFree</title>
+    <meta name="description" content="Free professional pricing tool. Calculate sale prices using markup/margin or reverse-calculate original MSRP from discounted prices. Ideal for retail and e-commerce.">
+    <meta name="keywords" content="sale price calculator, markup calculator, margin calculator, reverse discount tool, MSRP calculator, pricing strategy, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/sale-price-calculator.html" />
+    
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tags.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #8b5cf6; 
+            --primary-hover: #7c3aed;
+            --bg-light: #f8fafc; 
+            --card-bg: #ffffff; 
+            --glass-border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --dark-card: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-main); min-height: 100vh; line-height: 1.6; }
+
+        /* Premium Nav */
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--glass-border); background: #fff; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-size: 2.2rem; letter-spacing: -1.5px; }
+        header p { color: var(--text-muted); font-weight: 500; }
+
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        
+        .card { background: var(--card-bg); border-radius: 24px; padding: 30px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+
+        /* Mode Switcher */
+        .mode-tabs { display: flex; gap: 8px; margin-bottom: 25px; background: #f1f5f9; padding: 6px; border-radius: 14px; }
+        .tab { flex: 1; border: none; padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 700; font-size: 0.8rem; transition: 0.3s; color: var(--text-muted); background: transparent; }
+        .tab.active { background: white; color: var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+        .input-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 0.7rem; font-weight: 800; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        input, select { width: 100%; padding: 14px; border: 2px solid #f1f5f9; border-radius: 12px; font-size: 1.1rem; outline: none; transition: 0.3s; background: #fafafa; font-family: 'JetBrains Mono', monospace; }
+        input:focus { border-color: var(--primary); background: #fff; }
+
+        /* Results Display */
+        .display-pane { background: var(--dark-card); color: #fff; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+        .display-pane::before { content: ''; position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--primary); opacity: 0.1; border-radius: 50%; }
+
+        .res-label { color: #94a3b8; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .res-main { font-size: 3rem; font-weight: 800; color: #fff; font-family: 'JetBrains Mono', monospace; margin-bottom: 30px; }
+        
+        .res-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #334155; font-size: 0.95rem; }
+        .res-row span { color: #94a3b8; }
+        .res-row b { color: var(--primary); font-family: 'JetBrains Mono', monospace; }
+
+        /* SEO & Content */
+        .seo-section { margin-top: 60px; color: var(--text-muted); border-top: 2px solid var(--glass-border); padding-top: 40px; }
+        .seo-section h2 { color: var(--text-main); margin-bottom: 15px; }
+        .seo-section h3 { color: var(--primary); margin-top: 25px; margin-bottom: 10px; }
+        
+        .ad-slot { margin: 25px 0; min-height: 90px; border: 1px dashed var(--glass-border); display: flex; align-items: center; justify-content: center; border-radius: 15px; }
+
+        @media (max-width: 850px) { .main-grid { grid-template-columns: 1fr; } .res-main { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-chart-pie"></i> BIZ-CALC PRO
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Sale Price Calculator</h1>
+        <p>Advanced pricing engine for retail markups, profit margins, and reverse discounts.</p>
+    </header>
+
+    <div class="main-grid">
+        <div class="card">
+            <div class="mode-tabs">
+                <button class="tab active" id="tabMark" onclick="switchMode('mark')">Markup Mode</button>
+                <button class="tab" id="tabRev" onclick="switchMode('rev')">Reverse Mode</button>
+            </div>
+
+            <div id="markInputs">
+                <div class="input-group">
+                    <label><i class="fas fa-hand-holding-usd"></i> Item Cost Price</label>
+                    <input type="number" id="cost" value="100" oninput="runCalc()">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-percentage"></i> Markup Percentage (%)</label>
+                    <input type="number" id="markup" value="25" oninput="runCalc()">
+                </div>
+            </div>
+
+            <div id="revInputs" style="display:none">
+                <div class="input-group">
+                    <label><i class="fas fa-tag"></i> Current Sale Price</label>
+                    <input type="number" id="sale" value="75" oninput="runCalc()">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-cut"></i> Percentage Discount (%)</label>
+                    <input type="number" id="disc" value="25" oninput="runCalc()">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Currency Format</label>
+                <select id="cur" onchange="runCalc()">
+                    <option value="$">USD ($)</option>
+                    <option value="₹">INR (₹)</option>
+                    <option value="£">GBP (£)</option>
+                    <option value="€">EUR (€)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="display-pane">
+            <div id="markRes">
+                <div class="res-label">Target Sale Price</div>
+                <div class="res-main" id="valPrice">$0.00</div>
+                <div class="res-row"><span>Gross Profit:</span> <b id="valProfit">$0.00</b></div>
+                <div class="res-row"><span>Profit Margin:</span> <b id="valMargin">0%</b></div>
+            </div>
+
+            <div id="revRes" style="display:none">
+                <div class="res-label">Original MSRP Price</div>
+                <div class="res-main" id="valOrig">$0.00</div>
+                <div class="res-row"><span>Amount Saved:</span> <b id="valSaved">$0.00</b></div>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-section">
+        <h2>Professional Pricing Strategies</h2>
+        <p>In competitive retail, understanding the math behind your price tag is vital for profitability. Our <strong>Sale Price Calculator</strong> provides two essential modes for business owners and savvy shoppers.</p>
+
+        <h3>1. Markup Mode (For Business Owners)</h3>
+        <p>Markup is the amount added to the cost price of goods to cover overheads and profit. Our engine calculates the final selling price based on your cost and desired markup percentage. It also provides your <strong>Profit Margin</strong>—a key metric often confused with markup. <em>Margin</em> represents profit as a percentage of the selling price, whereas <em>Markup</em> is a percentage of the cost.</p>
+
+        [Image: Illustration comparing Markup vs Margin]
+
+        <h3>2. Reverse Mode (For Savvy Shoppers & Liquidation)</h3>
+        <p>Have you ever seen a sale for 25% off but wanted to know what the price was originally? Reverse calculation is perfect for verifying discounts or determining the original MSRP. Our formula ensures that if an item is $75 after a 25% discount, it correctly identifies the original $100 price point.</p>
+
+        <h3>Pricing Formulas Used:</h3>
+        <ul>
+            <li><strong>Sale Price:</strong> Cost + (Cost × Markup %)</li>
+            <li><strong>Profit Margin:</strong> ((Sale Price - Cost) / Sale Price) × 100</li>
+            <li><strong>Original Price (Reverse):</strong> Sale Price / (1 - Discount %)</li>
+        </ul>
+
+        <div style="background: white; padding: 25px; border-radius: 18px; border: 1px solid var(--glass-border); margin-top: 30px;">
+            <p><strong>Business Tip:</strong> To maintain a 20% profit margin, you actually need to apply a 25% markup to your cost. Always check your margin after setting markups to ensure your business remains sustainable.</p>
+        </div>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    let activeMode = 'mark';
+
+    function switchMode(m) {
+        activeMode = m;
+        document.getElementById('tabMark').classList.toggle('active', m === 'mark');
+        document.getElementById('tabRev').classList.toggle('active', m === 'rev');
+        
+        document.getElementById('markInputs').style.display = m === 'mark' ? 'block' : 'none';
+        document.getElementById('revInputs').style.display = m === 'rev' ? 'block' : 'none';
+        document.getElementById('markRes').style.display = m === 'mark' ? 'block' : 'none';
+        document.getElementById('revRes').style.display = m === 'rev' ? 'block' : 'none';
+        
+        runCalc();
+    }
+
+    function runCalc() {
+        const sym = document.getElementById('cur').value;
+        const locale = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
+
+        if (activeMode === 'mark') {
+            const costVal = parseFloat(document.getElementById('cost').value) || 0;
+            const markVal = parseFloat(document.getElementById('markup').value) || 0;
+            
+            const prof = costVal * (markVal / 100);
+            const final = costVal + prof;
+            const marg = (final > 0) ? (prof / final) * 100 : 0;
+
+            document.getElementById('valPrice').innerText = sym + final.toLocaleString(undefined, locale);
+            document.getElementById('valProfit').innerText = sym + prof.toLocaleString(undefined, locale);
+            document.getElementById('valMargin').innerText = marg.toFixed(1) + '%';
+        } else {
+            const saleVal = parseFloat(document.getElementById('sale').value) || 0;
+            const discVal = parseFloat(document.getElementById('disc').value) || 0;
+            
+            if (discVal >= 100) {
+                document.getElementById('valOrig').innerText = "---";
+                return;
+            }
+
+            const orig = saleVal / (1 - (discVal / 100));
+            const saved = orig - saleVal;
+
+            document.getElementById('valOrig').innerText = sym + orig.toLocaleString(undefined, locale);
+            document.getElementById('valSaved').innerText = sym + saved.toLocaleString(undefined, locale);
+        }
+    }
+
+    runCalc();
+</script>
+</body>
+</html>

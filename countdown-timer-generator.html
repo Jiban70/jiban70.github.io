@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Countdown Timer Generator | Create Free Embeddable Timers | AllToolsFree</title>
+    <meta name="description" content="Generate custom countdown timers for your website. Free embeddable timers for sales, product launches, and events. No registration required.">
+    <meta name="keywords" content="countdown timer generator, website countdown, embeddable timer, sales countdown, event timer, AllToolsFree, Jiban70">
+    
+    <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/countdown-timer-generator.html" />
+    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/clock.svg">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary: #f43f5e; /* Vibrant Rose */
+            --primary-glow: rgba(244, 63, 94, 0.3);
+            --bg-dark: #020617; 
+            --card-bg: #0f172a; 
+            --border: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; line-height: 1.6; }
+
+        nav { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo span { color: var(--primary); }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        
+        header { text-align: center; margin-bottom: 35px; }
+        header h1 { font-size: 2.2rem; letter-spacing: -1px; }
+
+        .main-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; }
+
+        .config-card { background: var(--card-bg); border-radius: 28px; padding: 30px; border: 1px solid var(--border); height: fit-content; }
+        
+        .input-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 10px; font-size: 0.75rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        
+        input, select { width: 100%; padding: 14px; border-radius: 12px; border: 2px solid var(--border); background: var(--bg-dark); color: white; font-size: 1rem; outline: none; transition: 0.3s; }
+        input:focus { border-color: var(--primary); box-shadow: 0 0 15px var(--primary-glow); }
+
+        /* Timer Preview */
+        .preview-pane { background: #020617; border-radius: 28px; padding: 40px; border: 2px dashed var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; position: sticky; top: 100px; }
+        
+        .timer-display { display: flex; gap: 15px; margin: 30px 0; }
+        .timer-block { background: var(--card-bg); padding: 20px; border-radius: 16px; border: 1px solid var(--primary); min-width: 90px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .time-num { font-size: 2.5rem; font-weight: 800; color: var(--primary); font-family: 'JetBrains Mono'; display: block; line-height: 1; }
+        .time-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-top: 5px; }
+
+        .embed-area { width: 100%; margin-top: 25px; }
+        .code-box { background: #1e293b; color: #34d399; padding: 15px; border-radius: 12px; font-family: 'JetBrains Mono'; font-size: 0.8rem; white-space: pre-wrap; word-break: break-all; border: 1px solid var(--border); margin-bottom: 15px; }
+
+        .btn { width: 100%; padding: 15px; border-radius: 12px; border: none; font-weight: 800; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-copy { background: var(--primary); color: white; }
+        .btn-copy:hover { transform: translateY(-2px); background: #e11d48; }
+
+        .ad-slot { margin: 30px 0; min-height: 90px; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+        @media (max-width: 900px) { .main-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">AllTools<span>Free</span></a>
+    <div style="font-size: 11px; color: var(--primary); font-weight: 800; border: 1px solid var(--primary); padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-hourglass-half"></i> EVENT_ENGINE_2026
+    </div>
+</nav>
+
+<div class="container">
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header>
+        <h1>Countdown Timer Generator</h1>
+        <p>Create and customize a timer for your next big event.</p>
+    </header>
+
+    <div class="main-grid">
+        <div class="config-card">
+            <div class="input-group">
+                <label>Event Title</label>
+                <input type="text" id="eventTitle" value="Product Launch" oninput="updateTimer()">
+            </div>
+
+            <div class="input-group">
+                <label>Target Date & Time</label>
+                <input type="datetime-local" id="targetDate" oninput="updateTimer()">
+            </div>
+
+            <div class="input-group">
+                <label>Theme Color</label>
+                <input type="color" id="themeColor" value="#f43f5e" oninput="updateStyles()">
+            </div>
+
+            <div class="input-group">
+                <label>Label Style</label>
+                <select id="labelStyle" onchange="updateTimer()">
+                    <option value="full">Full Words (Days, Hours...)</option>
+                    <option value="short">Shortened (D, H, M, S)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="preview-pane" id="previewPane">
+            <h2 id="displayTitle" style="text-align:center; font-weight: 800;">Product Launch</h2>
+            
+            <div class="timer-display">
+                <div class="timer-block">
+                    <span class="time-num" id="days">00</span>
+                    <span class="time-label" id="l-days">Days</span>
+                </div>
+                <div class="timer-block">
+                    <span class="time-num" id="hours">00</span>
+                    <span class="time-label" id="l-hours">Hours</span>
+                </div>
+                <div class="timer-block">
+                    <span class="time-num" id="mins">00</span>
+                    <span class="time-label" id="l-mins">Minutes</span>
+                </div>
+                <div class="timer-block">
+                    <span class="time-num" id="secs">00</span>
+                    <span class="time-label" id="l-secs">Seconds</span>
+                </div>
+            </div>
+
+            <div class="embed-area">
+                <label>HTML Embed Code</label>
+                <div class="code-box" id="embedCode"></div>
+                <button class="btn btn-copy" onclick="copyCode()">
+                    <i class="fas fa-code"></i> Copy Embed Code
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <article style="margin-top: 60px; color: var(--text-muted); line-height: 1.8;">
+        <h2>How to Use the Countdown Generator?</h2>
+        <p>A countdown timer is a powerful psychological tool that creates a sense of urgency. Whether you're running a limited-time sale or counting down to a New Year's party, our tool generates the code you need in seconds.</p>
+
+        
+
+        <h3>Why use urgency in marketing?</h3>
+        <p>According to consumer psychology, urgency triggers the "Fear of Missing Out" (FOMO). By placing a <strong>visual timer</strong> on your page, you encourage users to make decisions faster rather than delaying them. Our generator allows you to pick colors that match your brand perfectly.</p>
+        
+        
+
+        <h3>Features:</h3>
+        <ul>
+            <li><strong>Live Preview:</strong> See exactly how your timer looks while you edit.</li>
+            <li><strong>Responsive:</strong> The generated code works perfectly on mobile and desktop.</li>
+            <li><strong>SEO Friendly:</strong> Clean HTML code that doesn't slow down your page.</li>
+        </ul>
+    </article>
+
+    <div class="ad-slot">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3335211279499934" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script>
+    // Set default target date to 7 days from now
+    const now = new Date();
+    now.setDate(now.getDate() + 7);
+    document.getElementById('targetDate').value = now.toISOString().slice(0, 16);
+
+    function updateStyles() {
+        const color = document.getElementById('themeColor').value;
+        document.documentElement.style.setProperty('--primary', color);
+        const blocks = document.querySelectorAll('.timer-block');
+        blocks.forEach(b => b.style.borderColor = color);
+        updateTimer();
+    }
+
+    function updateTimer() {
+        const title = document.getElementById('eventTitle').value;
+        const target = new Date(document.getElementById('targetDate').value).getTime();
+        const style = document.getElementById('labelStyle').value;
+        
+        document.getElementById('displayTitle').innerText = title;
+
+        const countdown = setInterval(() => {
+            const currentTime = new Date().getTime();
+            const distance = target - currentTime;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                return;
+            }
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = d.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+            document.getElementById('mins').innerText = m.toString().padStart(2, '0');
+            document.getElementById('secs').innerText = s.toString().padStart(2, '0');
+
+            // Update Labels
+            document.getElementById('l-days').innerText = style === 'short' ? 'D' : 'Days';
+            document.getElementById('l-hours').innerText = style === 'short' ? 'H' : 'Hours';
+            document.getElementById('l-mins').innerText = style === 'short' ? 'M' : 'Minutes';
+            document.getElementById('l-secs').innerText = style === 'short' ? 'S' : 'Seconds';
+
+            // Update Code
+            const color = document.getElementById('themeColor').value;
+            const code = `<div id="atf-timer" style="display:flex; gap:10px; font-family:sans-serif; color:${color};">
+  <script>
+    const target = ${target};
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = target - now;
+      if(diff < 0) return;
+      const d = Math.floor(diff / 86400000);
+      document.getElementById('atf-val').innerHTML = d + " Days Remaining";
+    }, 1000);
+  <\/script>
+  <div id="atf-val">Loading Timer...</div>
+</div>`;
+            document.getElementById('embedCode').innerText = code;
+
+        }, 1000);
+    }
+
+    function copyCode() {
+        const code = document.getElementById('embedCode').innerText;
+        navigator.clipboard.writeText(code);
+        alert("Embed code copied!");
+    }
+
+    updateTimer();
+</script>
+
+</body>
+</html>
