@@ -4,4 +4,4 @@ Allow: /index.html
 Allow: /sitemap.xml
 
 # Tell Search Engines where your Map is
-Sitemap: https://jiban70.github.io/alltoolsfree/sitemap.xml
+Sitemap: https://jiban70.github.io/sitemap.xml
