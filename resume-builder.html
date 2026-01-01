@@ -4,101 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Free Professional Resume Builder | Create CV Online | AllToolsFree</title>
-    <meta name="description" content="Build a professional resume for free with Jiban70's AllToolsFree. Live preview, modern templates, and instant PDF download. No registration required.">
-    <meta name="keywords" content="resume builder, free cv maker, online resume creator, professional cv template, Jiban70 career tools, AllToolsFree resume, download resume pdf, job application tools 2025">
+    <title>Free Professional Resume Builder | ATS-Optimized CV Maker | AllToolsFree</title>
+    <meta name="description" content="Build a professional, ATS-friendly resume for free. Modern templates, live preview, and instant PDF download without registration. Secure and private.">
+    <meta name="keywords" content="resume builder 2026, free cv maker, online resume creator, ATS friendly resume, Jiban70 tools, AllToolsFree resume">
     <link rel="canonical" href="https://Jiban70.github.io/alltoolsfree/resume-builder.html" />
-    <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/bolt.svg">
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3335211279499934" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Poppins:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #2563eb;
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
+            --primary: #3b82f6;
+            --bg-dark: #020617;
+            --card-bg: #0f172a;
             --text-main: #f8fafc;
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--bg-dark); color: var(--text-main); }
+        body { background-color: var(--bg-dark); color: var(--text-main); overflow: hidden; }
 
-        nav { max-width: 1400px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Poppins'; font-size: 24px; text-decoration: none; color: #fff; }
+        /* Navigation matched to Brand */
+        nav { height: 70px; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass-border); background: var(--bg-dark); }
+        .logo { font-family: 'Poppins'; font-size: 22px; text-decoration: none; color: #fff; }
         .logo span { color: var(--primary); }
 
         .builder-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: calc(100vh - 80px);
-            gap: 0;
+            grid-template-columns: 450px 1fr;
+            height: calc(100vh - 70px);
         }
 
         /* LEFT SIDE: INPUT FORM */
         .form-side {
-            padding: 40px;
+            padding: 30px;
             overflow-y: auto;
-            background: #020617;
+            background: var(--card-bg);
             border-right: 1px solid var(--glass-border);
         }
 
-        .input-section { margin-bottom: 30px; }
-        h3 { margin-bottom: 20px; color: var(--primary); text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+        .input-section { margin-bottom: 35px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 20px; border: 1px solid var(--glass-border); }
+        h3 { margin-bottom: 15px; color: var(--primary); text-transform: uppercase; font-size: 12px; letter-spacing: 1.5px; display: flex; align-items: center; gap: 10px; }
 
         .field { margin-bottom: 15px; }
-        label { display: block; font-size: 12px; color: #94a3b8; margin-bottom: 5px; }
+        label { display: block; font-size: 11px; color: #94a3b8; margin-bottom: 6px; font-weight: 600; }
         input, textarea {
-            width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--glass-border);
-            background: #1e293b; color: white; outline: none; transition: 0.3s;
+            width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--glass-border);
+            background: #020617; color: white; outline: none; transition: 0.3s; font-size: 14px;
         }
-        input:focus { border-color: var(--primary); }
+        input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 15px rgba(59, 130, 246, 0.1); }
 
         /* RIGHT SIDE: PREVIEW */
         .preview-side {
             padding: 40px;
-            background: #334155;
+            background: #1e293b;
             display: flex;
             justify-content: center;
             overflow-y: auto;
+            position: relative;
         }
 
-        /* THE ACTUAL RESUME PAPER */
+        /* THE ACTUAL RESUME PAPER (A4 Ratio) */
         #resume-paper {
             width: 210mm;
             min-height: 297mm;
             background: white;
-            color: #333;
-            padding: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            transform: scale(0.85);
+            color: #1a1a1a;
+            padding: 60px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            transform: scale(0.75);
             transform-origin: top center;
         }
 
-        .res-header { border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 25px; }
-        .res-name { font-size: 32px; font-weight: 800; text-transform: uppercase; color: #1e293b; }
-        .res-contact { font-size: 12px; color: #64748b; margin-top: 5px; }
+        .res-header { border-bottom: 2px solid #1a1a1a; padding-bottom: 20px; margin-bottom: 30px; }
+        .res-name { font-size: 36px; font-weight: 800; text-transform: uppercase; color: #000; letter-spacing: -1px; line-height: 1; }
+        .res-contact { font-size: 12px; color: #444; margin-top: 10px; font-weight: 500; }
 
-        .res-section-title { font-size: 16px; font-weight: 800; color: #2563eb; margin-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
-        .res-body { font-size: 13px; line-height: 1.6; margin-bottom: 20px; font-family: 'Inter', sans-serif; white-space: pre-line; }
+        .res-section-title { font-size: 14px; font-weight: 800; color: #000; margin-bottom: 12px; border-bottom: 1px solid #ddd; padding-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+        .res-body { font-size: 13px; line-height: 1.6; margin-bottom: 25px; font-family: 'Inter', sans-serif; white-space: pre-line; color: #333; }
 
         .btn-print {
             position: fixed; bottom: 30px; right: 30px;
-            padding: 15px 30px; background: var(--primary); color: white;
+            padding: 18px 35px; background: var(--primary); color: white;
             border: none; border-radius: 50px; font-weight: 800; cursor: pointer;
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4); transition: 0.3s;
+            display: flex; align-items: center; gap: 10px; z-index: 100;
         }
+        .btn-print:hover { transform: translateY(-3px); filter: brightness(1.1); }
 
         @media print {
-            body * { visibility: hidden; }
-            #resume-paper, #resume-paper * { visibility: visible; }
-            #resume-paper { position: absolute; left: 0; top: 0; transform: scale(1); box-shadow: none; width: 100%; }
+            @page { size: A4; margin: 0; }
+            body { background: white; }
+            nav, .form-side, .btn-print { display: none !important; }
+            .preview-side { padding: 0; background: white; display: block; overflow: visible; }
+            #resume-paper { 
+                transform: scale(1); 
+                box-shadow: none; 
+                width: 210mm; 
+                height: 297mm; 
+                padding: 20mm;
+                position: static;
+            }
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1100px) {
             .builder-grid { grid-template-columns: 1fr; }
-            .preview-side { display: none; } /* Hide preview on mobile for better UX */
+            .preview-side { display: none; }
+            body { overflow: auto; }
         }
     </style>
 </head>
@@ -106,82 +120,94 @@
 
 <nav>
     <a href="index.html" class="logo">AllTools<span>Free</span></a>
-    <div style="font-size: 11px; font-weight: 800; color: #22c55e;"><i class="fas fa-file-export"></i> ATS-OPTIMIZED EXPORT</div>
+    <div style="font-size: 11px; font-weight: 800; color: #10b981; border: 1px solid #10b981; padding: 5px 12px; border-radius: 20px;">
+        <i class="fas fa-shield-alt"></i> PRIVATE BROWSER-SIDE BUILDER
+    </div>
 </nav>
 
 <div class="builder-grid">
     <div class="form-side">
         <div class="input-section">
-            <h3><i class="fas fa-user"></i> Personal Information</h3>
-            <div class="field"><label>Full Name</label><input type="text" id="in-name" placeholder="John Doe" oninput="updateResume()"></div>
-            <div class="field"><label>Email & Phone</label><input type="text" id="in-contact" placeholder="john@email.com | +1 234 567" oninput="updateResume()"></div>
-            <div class="field"><label>Location</label><input type="text" id="in-loc" placeholder="New York, USA" oninput="updateResume()"></div>
+            <h3><i class="fas fa-user-tie"></i> Contact Identity</h3>
+            <div class="field"><label>Full Name</label><input type="text" id="in-name" placeholder="Johnathan Doe" oninput="updateResume()"></div>
+            <div class="field"><label>Email & Phone</label><input type="text" id="in-contact" placeholder="hello@johndoe.com | +1 555 0123" oninput="updateResume()"></div>
+            <div class="field"><label>Location / LinkedIn</label><input type="text" id="in-loc" placeholder="San Francisco, CA | linkedin.com/in/johndoe" oninput="updateResume()"></div>
         </div>
 
         <div class="input-section">
-            <h3><i class="fas fa-briefcase"></i> Professional Summary</h3>
-            <div class="field"><textarea id="in-sum" rows="4" placeholder="Briefly describe your career goals..." oninput="updateResume()"></textarea></div>
+            <h3><i class="fas fa-feather-pointed"></i> Executive Summary</h3>
+            <div class="field"><textarea id="in-sum" rows="4" placeholder="Dedicated professional with 5+ years experience in..." oninput="updateResume()"></textarea></div>
         </div>
 
         <div class="input-section">
-            <h3><i class="fas fa-history"></i> Experience</h3>
-            <div class="field"><textarea id="in-exp" rows="6" placeholder="Job Title | Company | Dates&#10;- Key achievement 1&#10;- Key achievement 2" oninput="updateResume()"></textarea></div>
+            <h3><i class="fas fa-briefcase"></i> Work History</h3>
+            <div class="field"><textarea id="in-exp" rows="8" placeholder="SENIOR DEVELOPER | GOOGLE | 2022 - PRESENT&#10;• Led a team of 10 to rebuild core infrastructure&#10;• Reduced latency by 40% across all services" oninput="updateResume()"></textarea></div>
         </div>
 
         <div class="input-section">
             <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-            <div class="field"><textarea id="in-edu" rows="3" placeholder="Degree Name | University | Graduation Date" oninput="updateResume()"></textarea></div>
+            <div class="field"><textarea id="in-edu" rows="3" placeholder="B.S. COMPUTER SCIENCE | STANFORD UNIVERSITY | 2018" oninput="updateResume()"></textarea></div>
         </div>
 
         <div class="input-section">
-            <h3><i class="fas fa-tools"></i> Skills</h3>
-            <div class="field"><input type="text" id="in-skills" placeholder="JavaScript, Project Management, SEO" oninput="updateResume()"></div>
+            <h3><i class="fas fa-star"></i> Skills & Expertise</h3>
+            <div class="field"><input type="text" id="in-skills" placeholder="React, Node.js, AWS, System Design, Team Leadership" oninput="updateResume()"></div>
         </div>
+
+        <p style="font-size: 11px; color: #64748b; text-align: center;">Your data never leaves your browser. <br>Safe for sensitive employment details.</p>
     </div>
 
     <div class="preview-side">
         <div id="resume-paper">
             <div class="res-header">
-                <div class="res-name" id="out-name">Your Name</div>
+                <div class="res-name" id="out-name">YOUR NAME</div>
                 <div class="res-contact">
-                    <span id="out-contact">Email | Phone</span> • <span id="out-loc">Location</span>
+                    <span id="out-contact">EMAIL & PHONE</span> &nbsp;&nbsp;•&nbsp;&nbsp; <span id="out-loc">LOCATION / LINKEDIN</span>
                 </div>
             </div>
 
-            <div class="res-section-title">PROFESSIONAL SUMMARY</div>
-            <div class="res-body" id="out-sum">Enter your summary details to see them appear here in real-time.</div>
+            <div class="res-section-title">Professional Profile</div>
+            <div class="res-body" id="out-sum">Enter your professional summary in the editor to see your CV come to life. Our templates are designed to pass through ATS scanners effortlessly.</div>
 
-            <div class="res-section-title">WORK EXPERIENCE</div>
-            <div class="res-body" id="out-exp">List your professional history.</div>
+            <div class="res-section-title">Experience</div>
+            <div class="res-body" id="out-exp">Your work history will be formatted here. Use bullet points (•) for better readability and impact.</div>
 
-            <div class="res-section-title">EDUCATION</div>
-            <div class="res-body" id="out-edu">Add your academic background.</div>
+            <div class="res-section-title">Academic Background</div>
+            <div class="res-body" id="out-edu">Your degrees and certifications.</div>
 
-            <div class="res-section-title">SKILLS & EXPERTISE</div>
-            <div class="res-body" id="out-skills">Your top skills.</div>
+            <div class="res-section-title">Core Competencies</div>
+            <div class="res-body" id="out-skills">Key skills and technologies.</div>
         </div>
     </div>
 </div>
 
-<button class="btn-print" onclick="window.print()"><i class="fas fa-file-pdf"></i> Download PDF</button>
+<button class="btn-print" onclick="window.print()">
+    <i class="fas fa-file-pdf"></i> Download Resume PDF
+</button>
 
 <script>
     function updateResume() {
         const fields = [
-            {in: 'in-name', out: 'out-name', default: 'Your Name'},
-            {in: 'in-contact', out: 'out-contact', default: 'john@email.com | +123'},
-            {in: 'in-loc', out: 'out-loc', default: 'Location'},
-            {in: 'in-sum', out: 'out-sum', default: 'Summary appears here...'},
-            {in: 'in-exp', out: 'out-exp', default: 'Experience appears here...'},
-            {in: 'in-edu', out: 'out-edu', default: 'Education appears here...'},
-            {in: 'in-skills', out: 'out-skills', default: 'Skill 1, Skill 2'}
+            {in: 'in-name', out: 'out-name', default: 'YOUR NAME'},
+            {in: 'in-contact', out: 'out-contact', default: 'EMAIL & PHONE'},
+            {in: 'in-loc', out: 'out-loc', default: 'LOCATION / LINKEDIN'},
+            {in: 'in-sum', out: 'out-sum', default: 'Professional profile summary...'},
+            {in: 'in-exp', out: 'out-exp', default: 'Work history details...'},
+            {in: 'in-edu', out: 'out-edu', default: 'Education details...'},
+            {in: 'in-skills', out: 'out-skills', default: 'Relevant skills...'}
         ];
 
         fields.forEach(field => {
             const val = document.getElementById(field.in).value;
-            document.getElementById(field.out).innerText = val || field.default;
+            const output = document.getElementById(field.out);
+            
+            // Clean display for multi-line inputs
+            output.innerText = val || field.default;
         });
     }
+
+    // Auto-update on load
+    window.onload = updateResume;
 </script>
 </body>
 </html>
