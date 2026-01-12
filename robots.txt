@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /index.html
-Allow: /sitemap.xml
+Allow: /sitemap_v2.xml
 
-# Tell Search Engines where your Map is
-Sitemap: https://jiban70.github.io/sitemap.xml
+# Tell Search Engines where your NEW Map is
+Sitemap: https://jiban70.github.io/sitemap_v2.xml
